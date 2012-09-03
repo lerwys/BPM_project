@@ -1,0 +1,8 @@
+#
+#
+
+config ARMADEUS_WISHBONE_EXAMPLE_BUTTON_DRIVER
+        tristate "Wishbone Button driver"
+        default m
+        depends on ARMADEUS_WISHBONE_EXAMPLE_DRIVERS
+        ---help---

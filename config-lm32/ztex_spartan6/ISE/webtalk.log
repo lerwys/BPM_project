@@ -1,0 +1,16 @@
+Release 12.2 - WebTalk (M.63c)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+Project Information
+--------------------
+ProjectID=1B89FA1EA8E2406099BA0144B7CE95A5
+ProjectIteration=6
+
+WebTalk Summary
+----------------
+INFO:WebTalk:2 - WebTalk is enabled.
+
+INFO:WebTalk:8 - WebTalk Install setting is ON.
+INFO:WebTalk:6 - WebTalk User setting is ON.
+
+INFO:WebTalk:5 - C:/Elektronik/FPGA/LM32/Spartan6/ztex_spartan6/ISE/usage_statistics_webtalk.html WebTalk report has not been sent to Xilinx.  Please check your network and proxy settings.  For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/12.2/ISE_DS/ISE/data/reports/webtalk_introduction.html

@@ -1,0 +1,131 @@
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/soft/LED_Blink/Debug/Debug
+END
+LatticeMico32Uart.d
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/soft/LED_Blink/Debug/Debug/LatticeMico32Uart.d
+END
+MicoFileSeek.d
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/soft/LED_Blink/Debug/Debug/MicoFileSeek.d
+END
+MicoStdStreams.d
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/soft/LED_Blink/Debug/Debug/MicoStdStreams.d
+END
+MicoFileWrite.d
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/soft/LED_Blink/Debug/Debug/MicoFileWrite.d
+END
+LatticeMico32.d
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/soft/LED_Blink/Debug/Debug/LatticeMico32.d
+END
+LCD.d
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/soft/LED_Blink/Debug/Debug/LCD.d
+END
+MicoGPIO.d
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/soft/LED_Blink/Debug/Debug/MicoGPIO.d
+END
+MicoUtils.d
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/soft/LED_Blink/Debug/Debug/MicoUtils.d
+END
+MicoFileOpen.d
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/soft/LED_Blink/Debug/Debug/MicoFileOpen.d
+END
+MicoSbrk.d
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/soft/LED_Blink/Debug/Debug/MicoSbrk.d
+END
+DDInit.d
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/soft/LED_Blink/Debug/Debug/DDInit.d
+END
+MicoFileClose.d
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/soft/LED_Blink/Debug/Debug/MicoFileClose.d
+END
+LookupServices.d
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/soft/LED_Blink/Debug/Debug/LookupServices.d
+END
+DDStructs.d
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/soft/LED_Blink/Debug/Debug/DDStructs.d
+END
+printf_shrink.d
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/soft/LED_Blink/Debug/Debug/printf_shrink.d
+END
+MicoFileStat.d
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/soft/LED_Blink/Debug/Debug/MicoFileStat.d
+END
+MicoFileRead.d
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/soft/LED_Blink/Debug/Debug/MicoFileRead.d
+END
+MicoFileIsAtty.d
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/soft/LED_Blink/Debug/Debug/MicoFileIsAtty.d
+END
+MicoGPIOService.d
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/soft/LED_Blink/Debug/Debug/MicoGPIOService.d
+END
+MicoInterrupts.d
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/soft/LED_Blink/Debug/Debug/MicoInterrupts.d
+END
+MicoFileDevices.d
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/soft/LED_Blink/Debug/Debug/MicoFileDevices.d
+END

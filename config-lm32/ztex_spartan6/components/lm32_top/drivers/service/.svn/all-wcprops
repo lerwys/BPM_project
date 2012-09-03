@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/drivers/service
+END
+MicoFileSeek.c
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/drivers/service/MicoFileSeek.c
+END
+MicoFileDevices.h
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/drivers/service/MicoFileDevices.h
+END
+MicoSleepHelper.S
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/drivers/service/MicoSleepHelper.S
+END
+MicoMacros.h
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/drivers/service/MicoMacros.h
+END
+MicoExit.S
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/drivers/service/MicoExit.S
+END
+MicoFileWrite.c
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/drivers/service/MicoFileWrite.c
+END
+MicoUtils.c
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/drivers/service/MicoUtils.c
+END
+MicoSbrk.c
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/drivers/service/MicoSbrk.c
+END
+MicoFileOpen.c
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/drivers/service/MicoFileOpen.c
+END
+MicoFileClose.c
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/drivers/service/MicoFileClose.c
+END
+LookupServices.c
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/drivers/service/LookupServices.c
+END
+MicoUtils.h
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/drivers/service/MicoUtils.h
+END
+printf_shrink.c
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/drivers/service/printf_shrink.c
+END
+MicoTypes.h
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/drivers/service/MicoTypes.h
+END
+LookupServices.h
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/drivers/service/LookupServices.h
+END
+MicoFileStat.c
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/drivers/service/MicoFileStat.c
+END
+MicoFileRead.c
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/drivers/service/MicoFileRead.c
+END
+MicoFileIsAtty.c
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/drivers/service/MicoFileIsAtty.c
+END
+MicoFileDevices.c
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/drivers/service/MicoFileDevices.c
+END

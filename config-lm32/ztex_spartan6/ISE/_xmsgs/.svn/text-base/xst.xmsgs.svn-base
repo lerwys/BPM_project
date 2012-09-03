@@ -1,0 +1,1036 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="924" delta="old" >"../components/lm32_top/rtl/verilog/lm32_cpu.v" Line 599: Attribute target identifier <arg fmt="%s" index="1">preserve_driver</arg> not found in this scope
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="924" delta="old" >"../components/lm32_top/rtl/verilog/lm32_cpu.v" Line 598: Attribute target identifier <arg fmt="%s" index="1">preserve_signal</arg> not found in this scope
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="224" delta="old" >"../components/lm32_top/rtl/verilog/lm32_functions.v" Line 33: Assignment to input <arg fmt="%s" index="1">value</arg>
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="924" delta="old" >"../components/lm32_top/rtl/verilog/lm32_interrupt.v" Line 109: Attribute target identifier <arg fmt="%s" index="1">preserve_signal</arg> not found in this scope
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="old" >"../components/wb_ebr_ctrl/rtl/verilog/wb_ebr_ctrl.v" Line 97: Parameter declaration becomes local in <arg fmt="%s" index="1">wb_ebr_ctrl</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="old" >"../components/wb_ebr_ctrl/rtl/verilog/wb_ebr_ctrl.v" Line 98: Parameter declaration becomes local in <arg fmt="%s" index="1">wb_ebr_ctrl</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="old" >"../components/wb_ebr_ctrl/rtl/verilog/wb_ebr_ctrl.v" Line 99: Parameter declaration becomes local in <arg fmt="%s" index="1">wb_ebr_ctrl</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="old" >"../components/wb_ebr_ctrl/rtl/verilog/wb_ebr_ctrl.v" Line 100: Parameter declaration becomes local in <arg fmt="%s" index="1">wb_ebr_ctrl</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="old" >"../components/wb_ebr_ctrl/rtl/verilog/wb_ebr_ctrl.v" Line 101: Parameter declaration becomes local in <arg fmt="%s" index="1">wb_ebr_ctrl</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="old" >"../components/wb_ebr_ctrl/rtl/verilog/wb_ebr_ctrl.v" Line 102: Parameter declaration becomes local in <arg fmt="%s" index="1">wb_ebr_ctrl</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="old" >"../components/wb_ebr_ctrl/rtl/verilog/wb_ebr_ctrl.v" Line 103: Parameter declaration becomes local in <arg fmt="%s" index="1">wb_ebr_ctrl</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="old" >"../components/wb_ebr_ctrl/rtl/verilog/wb_ebr_ctrl.v" Line 104: Parameter declaration becomes local in <arg fmt="%s" index="1">wb_ebr_ctrl</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="old" >"../components/wb_ebr_ctrl/rtl/verilog/wb_ebr_ctrl.v" Line 105: Parameter declaration becomes local in <arg fmt="%s" index="1">wb_ebr_ctrl</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 179: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 189: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 200: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 211: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 224: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 234: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 245: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 256: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 275: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 290: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 306: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 322: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 340: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 355: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 371: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 387: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 810: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 820: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 831: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 842: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 853: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 863: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 874: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 885: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 899: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 909: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 920: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 931: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 942: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 952: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 963: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 974: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 1002: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 1014: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 1027: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 1040: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 1057: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 1069: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 1082: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 1095: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 1126: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 1150: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 1175: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 1200: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 1227: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 1251: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 1276: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 1301: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 1338: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 1350: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 1363: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 1376: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 1393: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 1405: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 1418: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 1431: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 1462: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 1485: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 1509: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 1533: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 1560: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 1583: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 1607: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 1631: Block identifier is required on this block
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 147: Parameter declaration becomes local in <arg fmt="%s" index="1">gpio</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="old" >"../components/gpio/rtl/verilog/tpio.v" Line 64: Parameter declaration becomes local in <arg fmt="%s" index="1">TRI_PIO</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"\Elektronik\FPGA\LM32\Spartan6\ztex_spartan6\ISE\../soc/ztex_spartan6.v" Line 285: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">4</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"\Elektronik\FPGA\LM32\Spartan6\ztex_spartan6\ISE\../soc/ztex_spartan6.v" Line 289: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"\Elektronik\FPGA\LM32\Spartan6\ztex_spartan6\ISE\../soc/ztex_spartan6.v" Line 293: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"\Elektronik\FPGA\LM32\Spartan6\ztex_spartan6\ISE\../soc/ztex_spartan6.v" Line 297: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">2</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"\Elektronik\FPGA\LM32\Spartan6\ztex_spartan6\ISE\../soc/ztex_spartan6.v" Line 301: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"\Elektronik\FPGA\LM32\Spartan6\ztex_spartan6\ISE\../soc/ztex_spartan6.v" Line 305: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"\Elektronik\FPGA\LM32\Spartan6\ztex_spartan6\ISE\../soc/ztex_spartan6.v" Line 309: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"\Elektronik\FPGA\LM32\Spartan6\ztex_spartan6\ISE\../soc/ztex_spartan6.v" Line 315: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"\Elektronik\FPGA\LM32\Spartan6\ztex_spartan6\ISE\../soc/ztex_spartan6.v" Line 316: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"\Elektronik\FPGA\LM32\Spartan6\ztex_spartan6\ISE\../soc/ztex_spartan6.v" Line 317: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"\Elektronik\FPGA\LM32\Spartan6\ztex_spartan6\ISE\../soc/ztex_spartan6.v" Line 320: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"\Elektronik\FPGA\LM32\Spartan6\ztex_spartan6\ISE\../soc/ztex_spartan6.v" Line 321: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"\Elektronik\FPGA\LM32\Spartan6\ztex_spartan6\ISE\../soc/ztex_spartan6.v" Line 322: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"\Elektronik\FPGA\LM32\Spartan6\ztex_spartan6\ISE\../soc/ztex_spartan6.v" Line 486: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"\Elektronik\FPGA\LM32\Spartan6\ztex_spartan6\ISE\../soc/ztex_spartan6.v" Line 490: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"../components/lm32_top/rtl/verilog/lm32_cpu.v" Line 802: Assignment to <arg fmt="%s" index="1">pc_x</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"../components/lm32_top/rtl/verilog/lm32_cpu.v" Line 804: Assignment to <arg fmt="%s" index="1">pc_w</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"../components/lm32_top/rtl/verilog/lm32_decoder.v" Line 373: Assignment to <arg fmt="%s" index="1">op_user</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"../components/lm32_top/rtl/verilog/lm32_decoder.v" Line 400: Assignment to <arg fmt="%s" index="1">multiply</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"../components/lm32_top/rtl/verilog/lm32_decoder.v" Line 578: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">30</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"../components/lm32_top/rtl/verilog/lm32_shifter.v" Line 128: Result of <arg fmt="%d" index="1">64</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">32</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"../components/lm32_top/rtl/verilog/lm32_interrupt.v" Line 135: Result of <arg fmt="%d" index="1">2</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"../components/lm32_top/rtl/verilog/lm32_interrupt.v" Line 135: Assignment to <arg fmt="%s" index="1">ie_csr_read_data</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"../components/lm32_top/rtl/verilog/lm32_interrupt.v" Line 144: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"../components/lm32_top/rtl/verilog/lm32_interrupt.v" Line 144: Assignment to <arg fmt="%s" index="1">ip_csr_read_data</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"../components/lm32_top/rtl/verilog/lm32_interrupt.v" Line 145: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"../components/lm32_top/rtl/verilog/lm32_interrupt.v" Line 145: Assignment to <arg fmt="%s" index="1">im_csr_read_data</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"../components/lm32_top/rtl/verilog/lm32_cpu.v" Line 2244: Assignment to <arg fmt="%s" index="1">x_result_sel_logic_x</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"../components/lm32_top/rtl/verilog/lm32_top.v" Line 344: Assignment to <arg fmt="%s" index="1">TRACE_ACK_O</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"../components/lm32_top/rtl/verilog/lm32_top.v" Line 345: Assignment to <arg fmt="%s" index="1">TRACE_DAT_O</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"\Elektronik\FPGA\LM32\Spartan6\ztex_spartan6\ISE\../soc/ztex_spartan6.v" Line 529: Assignment to <arg fmt="%s" index="1">LM32DEBUG_DAT_O</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"\Elektronik\FPGA\LM32\Spartan6\ztex_spartan6\ISE\../soc/ztex_spartan6.v" Line 532: Assignment to <arg fmt="%s" index="1">LM32DEBUG_ACK_O</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"\Elektronik\FPGA\LM32\Spartan6\ztex_spartan6\ISE\../soc/ztex_spartan6.v" Line 533: Assignment to <arg fmt="%s" index="1">LM32DEBUG_ERR_O</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"\Elektronik\FPGA\LM32\Spartan6\ztex_spartan6\ISE\../soc/ztex_spartan6.v" Line 534: Assignment to <arg fmt="%s" index="1">LM32DEBUG_RTY_O</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"../components/wb_ebr_ctrl/rtl/verilog/wb_ebr_ctrl.v" Line 176: Assignment to <arg fmt="%s" index="1">read_enable</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"../components/wb_ebr_ctrl/rtl/verilog/wb_ebr_ctrl.v" Line 258: Signal &lt;<arg fmt="%s" index="1">EBR_SEL_I</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"../components/wb_ebr_ctrl/rtl/verilog/wb_ebr_ctrl.v" Line 260: Signal &lt;<arg fmt="%s" index="1">EBR_SEL_I</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"../components/wb_ebr_ctrl/rtl/verilog/wb_ebr_ctrl.v" Line 265: Signal &lt;<arg fmt="%s" index="1">EBR_SEL_I</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"../components/wb_ebr_ctrl/rtl/verilog/wb_ebr_ctrl.v" Line 267: Signal &lt;<arg fmt="%s" index="1">EBR_SEL_I</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"\Elektronik\FPGA\LM32\Spartan6\ztex_spartan6\ISE\../soc/ztex_spartan6.v" Line 580: Assignment to <arg fmt="%s" index="1">ebrEBR_ERR_O</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 151: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 152: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 153: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"../components/gpio/rtl/verilog/gpio.v" Line 154: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"../components/gpio/rtl/verilog/tpio.v" Line 86: Net &lt;<arg fmt="%s" index="1">IRQ_MASK</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"\Elektronik\FPGA\LM32\Spartan6\ztex_spartan6\ISE\../soc/ztex_spartan6.v" Line 619: Assignment to <arg fmt="%s" index="1">gpioGPIO_ERR_O</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"\Elektronik\FPGA\LM32\Spartan6\ztex_spartan6\ISE\../soc/ztex_spartan6.v" Line 631: Assignment to <arg fmt="%s" index="1">gpioIRQ_O</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="552" delta="old" >"\Elektronik\FPGA\LM32\Spartan6\ztex_spartan6\ISE\../soc/ztex_spartan6.v" Line 612: Input port <arg fmt="%s" index="1">PIO_IN[7]</arg> is not connected on this instance
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">PIO_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">gpio</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">PIO_BOTH_IN</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">gpio</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="info" file="Xst" num="3010" delta="old" >&quot;<arg fmt="%s" index="1">/elektronik/fpga/lm32/spartan6/ztex_spartan6/soc/ztex_spartan6.v</arg>&quot; line <arg fmt="%d" index="2">500</arg>: Output port &lt;<arg fmt="%s" index="3">DEBUG_DAT_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">LM32</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3010" delta="old" >&quot;<arg fmt="%s" index="1">/elektronik/fpga/lm32/spartan6/ztex_spartan6/soc/ztex_spartan6.v</arg>&quot; line <arg fmt="%d" index="2">500</arg>: Output port &lt;<arg fmt="%s" index="3">DEBUG_ACK_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">LM32</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3010" delta="old" >&quot;<arg fmt="%s" index="1">/elektronik/fpga/lm32/spartan6/ztex_spartan6/soc/ztex_spartan6.v</arg>&quot; line <arg fmt="%d" index="2">500</arg>: Output port &lt;<arg fmt="%s" index="3">DEBUG_ERR_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">LM32</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3010" delta="old" >&quot;<arg fmt="%s" index="1">/elektronik/fpga/lm32/spartan6/ztex_spartan6/soc/ztex_spartan6.v</arg>&quot; line <arg fmt="%d" index="2">500</arg>: Output port &lt;<arg fmt="%s" index="3">DEBUG_RTY_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">LM32</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3010" delta="old" >&quot;<arg fmt="%s" index="1">/elektronik/fpga/lm32/spartan6/ztex_spartan6/soc/ztex_spartan6.v</arg>&quot; line <arg fmt="%d" index="2">573</arg>: Output port &lt;<arg fmt="%s" index="3">EBR_ERR_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ebr</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3010" delta="old" >&quot;<arg fmt="%s" index="1">/elektronik/fpga/lm32/spartan6/ztex_spartan6/soc/ztex_spartan6.v</arg>&quot; line <arg fmt="%d" index="2">612</arg>: Output port &lt;<arg fmt="%s" index="3">PIO_BOTH_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gpio</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3010" delta="old" >&quot;<arg fmt="%s" index="1">/elektronik/fpga/lm32/spartan6/ztex_spartan6/soc/ztex_spartan6.v</arg>&quot; line <arg fmt="%d" index="2">612</arg>: Output port &lt;<arg fmt="%s" index="3">GPIO_ERR_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gpio</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3010" delta="old" >&quot;<arg fmt="%s" index="1">/elektronik/fpga/lm32/spartan6/ztex_spartan6/soc/ztex_spartan6.v</arg>&quot; line <arg fmt="%d" index="2">612</arg>: Output port &lt;<arg fmt="%s" index="3">IRQ_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gpio</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">DEBUG_ADR_I&lt;31:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">DEBUG_DAT_I&lt;31:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">DEBUG_SEL_I&lt;3:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">DEBUG_CTI_I&lt;2:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">DEBUG_BTE_I&lt;1:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">DEBUG_WE_I</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">DEBUG_LOCK_I</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">DEBUG_CYC_I</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">DEBUG_STB_I</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">DEBUG_DAT_O</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">DEBUG_ACK_O</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">DEBUG_ERR_O</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">DEBUG_RTY_O</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">I_RTY_I</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="info" file="Xst" num="3010" delta="old" >&quot;<arg fmt="%s" index="1">c:/elektronik/fpga/lm32/spartan6/ztex_spartan6/components/lm32_top/rtl/verilog/lm32_cpu.v</arg>&quot; line <arg fmt="%d" index="2">750</arg>: Output port &lt;<arg fmt="%s" index="3">pc_x</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">instruction_unit</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3010" delta="old" >&quot;<arg fmt="%s" index="1">c:/elektronik/fpga/lm32/spartan6/ztex_spartan6/components/lm32_top/rtl/verilog/lm32_cpu.v</arg>&quot; line <arg fmt="%d" index="2">750</arg>: Output port &lt;<arg fmt="%s" index="3">pc_w</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">instruction_unit</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3010" delta="old" >&quot;<arg fmt="%s" index="1">c:/elektronik/fpga/lm32/spartan6/ztex_spartan6/components/lm32_top/rtl/verilog/lm32_cpu.v</arg>&quot; line <arg fmt="%d" index="2">840</arg>: Output port &lt;<arg fmt="%s" index="3">x_result_sel_logic</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">decoder</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">valid_f</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">kill_f</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">instruction&lt;1:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">load_store_address_x&lt;31:2&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">stall_a</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">load_x</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">store_x</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">store_q_x</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">d_rty_i</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">operand_1_x&lt;31:5&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">csr_write_data&lt;2:31&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">EBR_ADR_I&lt;31:12&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">EBR_BTE_I&lt;1:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">EBR_LOCK_I</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">GPIO_CTI_I&lt;2:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">GPIO_BTE_I&lt;1:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">GPIO_ADR_I&lt;1:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">PIO_IN&lt;7:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">PIO_BOTH_IN&lt;0:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">GPIO_CYC_I</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">GPIO_LOCK_I</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="info" file="Xst" num="3010" delta="old" >&quot;<arg fmt="%s" index="1">c:/elektronik/fpga/lm32/spartan6/ztex_spartan6/components/gpio/rtl/verilog/gpio.v</arg>&quot; line <arg fmt="%d" index="2">583</arg>: Output port &lt;<arg fmt="%s" index="3">DAT_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">itio_inst[0].TP</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3010" delta="old" >&quot;<arg fmt="%s" index="1">c:/elektronik/fpga/lm32/spartan6/ztex_spartan6/components/gpio/rtl/verilog/gpio.v</arg>&quot; line <arg fmt="%d" index="2">583</arg>: Output port &lt;<arg fmt="%s" index="3">IRQ_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">itio_inst[0].TP</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3010" delta="old" >&quot;<arg fmt="%s" index="1">c:/elektronik/fpga/lm32/spartan6/ztex_spartan6/components/gpio/rtl/verilog/gpio.v</arg>&quot; line <arg fmt="%d" index="2">583</arg>: Output port &lt;<arg fmt="%s" index="3">DAT_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">itio_inst[1].TP</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3010" delta="old" >&quot;<arg fmt="%s" index="1">c:/elektronik/fpga/lm32/spartan6/ztex_spartan6/components/gpio/rtl/verilog/gpio.v</arg>&quot; line <arg fmt="%d" index="2">583</arg>: Output port &lt;<arg fmt="%s" index="3">IRQ_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">itio_inst[1].TP</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3010" delta="old" >&quot;<arg fmt="%s" index="1">c:/elektronik/fpga/lm32/spartan6/ztex_spartan6/components/gpio/rtl/verilog/gpio.v</arg>&quot; line <arg fmt="%d" index="2">583</arg>: Output port &lt;<arg fmt="%s" index="3">DAT_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">itio_inst[2].TP</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3010" delta="old" >&quot;<arg fmt="%s" index="1">c:/elektronik/fpga/lm32/spartan6/ztex_spartan6/components/gpio/rtl/verilog/gpio.v</arg>&quot; line <arg fmt="%d" index="2">583</arg>: Output port &lt;<arg fmt="%s" index="3">IRQ_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">itio_inst[2].TP</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3010" delta="old" >&quot;<arg fmt="%s" index="1">c:/elektronik/fpga/lm32/spartan6/ztex_spartan6/components/gpio/rtl/verilog/gpio.v</arg>&quot; line <arg fmt="%d" index="2">583</arg>: Output port &lt;<arg fmt="%s" index="3">DAT_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">itio_inst[3].TP</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3010" delta="old" >&quot;<arg fmt="%s" index="1">c:/elektronik/fpga/lm32/spartan6/ztex_spartan6/components/gpio/rtl/verilog/gpio.v</arg>&quot; line <arg fmt="%d" index="2">583</arg>: Output port &lt;<arg fmt="%s" index="3">IRQ_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">itio_inst[3].TP</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3010" delta="old" >&quot;<arg fmt="%s" index="1">c:/elektronik/fpga/lm32/spartan6/ztex_spartan6/components/gpio/rtl/verilog/gpio.v</arg>&quot; line <arg fmt="%d" index="2">583</arg>: Output port &lt;<arg fmt="%s" index="3">DAT_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">itio_inst[4].TP</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3010" delta="old" >&quot;<arg fmt="%s" index="1">c:/elektronik/fpga/lm32/spartan6/ztex_spartan6/components/gpio/rtl/verilog/gpio.v</arg>&quot; line <arg fmt="%d" index="2">583</arg>: Output port &lt;<arg fmt="%s" index="3">IRQ_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">itio_inst[4].TP</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3010" delta="old" >&quot;<arg fmt="%s" index="1">c:/elektronik/fpga/lm32/spartan6/ztex_spartan6/components/gpio/rtl/verilog/gpio.v</arg>&quot; line <arg fmt="%d" index="2">583</arg>: Output port &lt;<arg fmt="%s" index="3">DAT_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">itio_inst[5].TP</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3010" delta="old" >&quot;<arg fmt="%s" index="1">c:/elektronik/fpga/lm32/spartan6/ztex_spartan6/components/gpio/rtl/verilog/gpio.v</arg>&quot; line <arg fmt="%d" index="2">583</arg>: Output port &lt;<arg fmt="%s" index="3">IRQ_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">itio_inst[5].TP</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3010" delta="old" >&quot;<arg fmt="%s" index="1">c:/elektronik/fpga/lm32/spartan6/ztex_spartan6/components/gpio/rtl/verilog/gpio.v</arg>&quot; line <arg fmt="%d" index="2">583</arg>: Output port &lt;<arg fmt="%s" index="3">DAT_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">itio_inst[6].TP</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3010" delta="old" >&quot;<arg fmt="%s" index="1">c:/elektronik/fpga/lm32/spartan6/ztex_spartan6/components/gpio/rtl/verilog/gpio.v</arg>&quot; line <arg fmt="%d" index="2">583</arg>: Output port &lt;<arg fmt="%s" index="3">IRQ_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">itio_inst[6].TP</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3010" delta="old" >&quot;<arg fmt="%s" index="1">c:/elektronik/fpga/lm32/spartan6/ztex_spartan6/components/gpio/rtl/verilog/gpio.v</arg>&quot; line <arg fmt="%d" index="2">583</arg>: Output port &lt;<arg fmt="%s" index="3">DAT_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">itio_inst[7].TP</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3010" delta="old" >&quot;<arg fmt="%s" index="1">c:/elektronik/fpga/lm32/spartan6/ztex_spartan6/components/gpio/rtl/verilog/gpio.v</arg>&quot; line <arg fmt="%d" index="2">583</arg>: Output port &lt;<arg fmt="%s" index="3">IRQ_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">itio_inst[7].TP</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">PIO_BOTH_OUT</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">IRQ_MASK_WR_EN</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">EDGE_CAP_WR_EN</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">IRQ_MASK</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="info" file="Xst" num="1767" delta="old" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">itio_inst[0].TP</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">gpio</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">itio_inst[1].TP</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">gpio</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">itio_inst[2].TP</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">gpio</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">itio_inst[3].TP</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">gpio</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">itio_inst[4].TP</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">gpio</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">itio_inst[5].TP</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">gpio</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">itio_inst[6].TP</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">gpio</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">itio_inst[7].TP</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">gpio</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">i_cyc_o</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">instruction_unit</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_stb_o&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">d_stb_o</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">load_store_unit</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;d_cyc_o&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">ip_31</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">ip_30</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">ip_29</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">ip_28</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">ip_27</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">ip_26</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">ip_25</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">ip_24</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">ip_23</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">ip_22</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">ip_21</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">ip_20</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">ip_19</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">ip_18</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">ip_17</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">ip_16</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">i_lock_o</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">instruction_unit</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">ip_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">ip_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">ip_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">ip_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">ip_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">ip_5</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">ip_6</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">ip_7</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">ip_8</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">ip_9</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">ip_10</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">ip_11</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">ip_12</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">ip_13</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">ip_14</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">ip_15</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="info" file="Xst" num="2385" delta="old" >HDL ADVISOR - You can improve the performance of the multiplier <arg fmt="%s" index="1">Mmult_n0023</arg> by adding <arg fmt="%d" index="2">6</arg> register level(s).
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">i_lock_o</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">lm32_instruction_unit</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">ip_31</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">lm32_interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ip_30</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">lm32_interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ip_29</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">lm32_interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ip_28</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">lm32_interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ip_27</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">lm32_interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ip_26</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">lm32_interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ip_25</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">lm32_interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ip_24</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">lm32_interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ip_23</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">lm32_interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ip_22</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">lm32_interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ip_21</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">lm32_interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ip_20</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">lm32_interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ip_19</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">lm32_interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ip_18</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">lm32_interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ip_17</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">lm32_interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ip_16</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">lm32_interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ip_15</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">lm32_interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ip_14</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">lm32_interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ip_13</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">lm32_interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ip_12</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">lm32_interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ip_11</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">lm32_interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ip_10</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">lm32_interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ip_9</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">lm32_interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ip_8</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">lm32_interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ip_7</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">lm32_interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ip_6</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">lm32_interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ip_5</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">lm32_interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ip_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">lm32_interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ip_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">lm32_interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ip_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">lm32_interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ip_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">lm32_interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">ip_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">lm32_interrupt</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">i_cyc_o</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lm32_instruction_unit</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_stb_o&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">d_stb_o</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lm32_load_store_unit</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;d_cyc_o&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">itio_inst[7].TP/PIO_DATA_I</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gpio</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">itio_inst[6].TP/PIO_DATA_I</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gpio</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">itio_inst[5].TP/PIO_DATA_I</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gpio</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">itio_inst[4].TP/PIO_DATA_I</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gpio</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">itio_inst[3].TP/PIO_DATA_I</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gpio</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">itio_inst[2].TP/PIO_DATA_I</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gpio</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">itio_inst[1].TP/PIO_DATA_I</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gpio</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">itio_inst[0].TP/PIO_DATA_I</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gpio</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mmult_n00233</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">lm32_multiplier</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">i_adr_o_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">lm32_instruction_unit</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">i_adr_o_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">lm32_instruction_unit</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="2042" delta="old" >Unit <arg fmt="%s" index="1">gpio</arg>: <arg fmt="%d" index="2">8</arg> internal tristates are replaced by logic (pull-up <arg fmt="%s" index="3">yes</arg>): </msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">SOC/arbiter/locked</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">main</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SOC/LM32/cpu/instruction_unit/pc_w_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SOC/LM32/cpu/instruction_unit/pc_w_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SOC/LM32/cpu/instruction_unit/pc_w_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SOC/LM32/cpu/instruction_unit/pc_w_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SOC/LM32/cpu/instruction_unit/pc_w_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SOC/LM32/cpu/instruction_unit/pc_w_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SOC/LM32/cpu/instruction_unit/pc_w_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SOC/LM32/cpu/instruction_unit/pc_w_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SOC/LM32/cpu/instruction_unit/pc_w_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SOC/LM32/cpu/instruction_unit/pc_w_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SOC/LM32/cpu/instruction_unit/pc_w_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SOC/LM32/cpu/instruction_unit/pc_w_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SOC/LM32/cpu/instruction_unit/pc_w_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SOC/LM32/cpu/instruction_unit/pc_w_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SOC/LM32/cpu/instruction_unit/pc_w_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SOC/LM32/cpu/instruction_unit/pc_w_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SOC/LM32/cpu/instruction_unit/pc_w_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SOC/LM32/cpu/instruction_unit/pc_w_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SOC/LM32/cpu/instruction_unit/pc_w_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SOC/LM32/cpu/instruction_unit/pc_w_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SOC/LM32/cpu/instruction_unit/pc_w_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SOC/LM32/cpu/instruction_unit/pc_w_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SOC/LM32/cpu/instruction_unit/pc_w_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SOC/LM32/cpu/instruction_unit/pc_w_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SOC/LM32/cpu/instruction_unit/pc_w_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SOC/LM32/cpu/instruction_unit/pc_w_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SOC/LM32/cpu/instruction_unit/pc_w_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SOC/LM32/cpu/instruction_unit/pc_w_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SOC/LM32/cpu/instruction_unit/pc_w_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SOC/LM32/cpu/instruction_unit/pc_w_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SOC/gpio/itio_inst[0].TP/PIO_TRI</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SOC/gpio/itio_inst[0].TP/PIO_DATA_O</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SOC/gpio/itio_inst[1].TP/PIO_TRI</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SOC/gpio/itio_inst[1].TP/PIO_DATA_O</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SOC/gpio/itio_inst[2].TP/PIO_TRI</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SOC/gpio/itio_inst[2].TP/PIO_DATA_O</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SOC/gpio/itio_inst[3].TP/PIO_TRI</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SOC/gpio/itio_inst[3].TP/PIO_DATA_O</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SOC/gpio/itio_inst[4].TP/PIO_TRI</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SOC/gpio/itio_inst[4].TP/PIO_DATA_O</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SOC/gpio/itio_inst[5].TP/PIO_TRI</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SOC/gpio/itio_inst[5].TP/PIO_DATA_O</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SOC/gpio/itio_inst[6].TP/PIO_TRI</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SOC/gpio/itio_inst[6].TP/PIO_DATA_O</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SOC/gpio/itio_inst[7].TP/PIO_TRI</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SOC/gpio/itio_inst[7].TP/PIO_DATA_O</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">SOC/LM32/cpu/load_x</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">main</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;SOC/LM32/cpu/w_result_sel_load_x&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">SOC/LM32/cpu/logic_op_x_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">main</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;SOC/LM32/cpu/direction_x&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">SOC/LM32/cpu/condition_x_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">main</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;SOC/LM32/cpu/logic_op_x_2&gt; &lt;SOC/LM32/cpu/sign_extend_x&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">SOC/LM32/cpu/condition_x_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">main</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;SOC/LM32/cpu/logic_op_x_1&gt; &lt;SOC/LM32/cpu/size_x_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">SOC/LM32/cpu/condition_x_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">main</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;SOC/LM32/cpu/logic_op_x_0&gt; &lt;SOC/LM32/cpu/size_x_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+</msg>
+
+</messages>
+

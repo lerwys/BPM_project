@@ -1,0 +1,2 @@
+SETPROJECT "C:/Elektronik/FPGA/LM32/Spartan6/ztex_spartan6/ISE/ipcore_dir/coregen.cgp"
+LAUNCHXCO "C:/Elektronik/FPGA/LM32/Spartan6/ztex_spartan6/ISE/ipcore_dir/memory.xco"

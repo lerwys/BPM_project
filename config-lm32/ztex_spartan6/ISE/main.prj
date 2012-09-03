@@ -1,0 +1,3 @@
+vhdl work "ipcore_dir/memory.vhd"
+verilog work "../soc/ztex_spartan6.v"
+verilog work "main.v"

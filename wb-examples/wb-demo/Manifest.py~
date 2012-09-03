@@ -1,0 +1,8 @@
+modules =	{
+				"local" : 
+				[ 	"modules/custom/xwb_irq_mngr.vhd",
+					"modules/general-cores
+
+				],
+				"git" : "git://ohwr.org/hdl-core-lib/general-cores.git"
+			}

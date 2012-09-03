@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated   -->
+<!--     by the Xilinx ISE software.  Any direct editing or        -->
+<!--     changes made to this file may result in unpredictable     -->
+<!--     behavior or data corruption.  It is strongly advised that -->
+<!--     users do not edit the contents of this file.              -->
+<!--                                                               -->
+<!-- Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.    -->
+
+<messages>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/LR/BPM_Project/config-LM32/ztex_spartan6/ISE/main.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/LR/BPM_Project/config-LM32/ztex_spartan6/soc/ztex_spartan6.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">D:/LR/BPM_Project/config-LM32/ztex_spartan6/soc/ztex_spartan6.v</arg>&quot; Line <arg fmt="%d" index="2">326</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/LR/BPM_Project/config-LM32/ztex_spartan6/soc/system_conf.v&apos; in file &quot;D:/LR/BPM_Project/config-LM32/ztex_spartan6/soc/ztex_spartan6.v&quot; line 326
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">D:/LR/BPM_Project/config-LM32/ztex_spartan6/soc/ztex_spartan6.v</arg>&quot; Line <arg fmt="%d" index="2">327</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/LR/BPM_Project/config-LM32/ztex_spartan6/ISE/../components/lm32_top/rtl/verilog/lm32_include_all.v&apos; in file &quot;D:/LR/BPM_Project/config-LM32/ztex_spartan6/soc/ztex_spartan6.v&quot; line 327
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">../components/lm32_top/rtl/verilog/lm32_include_all.v</arg>&quot; Line <arg fmt="%d" index="2">33</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/LR/BPM_Project/config-LM32/ztex_spartan6/soc/system_conf.v&apos; in file &quot;../components/lm32_top/rtl/verilog/lm32_include_all.v&quot; line 33
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">../components/lm32_top/rtl/verilog/lm32_include_all.v</arg>&quot; Line <arg fmt="%d" index="2">44</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/LR/BPM_Project/config-LM32/ztex_spartan6/ISE/../components/lm32_top/rtl/verilog/lm32_addsub.v&apos; in file &quot;../components/lm32_top/rtl/verilog/lm32_include_all.v&quot; line 44
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">../components/lm32_top/rtl/verilog/lm32_addsub.v</arg>&quot; Line <arg fmt="%d" index="2">28</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/LR/BPM_Project/config-LM32/ztex_spartan6/ISE/../components/lm32_top/rtl/verilog/lm32_include.v&apos; in file &quot;../components/lm32_top/rtl/verilog/lm32_addsub.v&quot; line 28
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">../components/lm32_top/rtl/verilog/lm32_include.v</arg>&quot; Line <arg fmt="%d" index="2">37</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/LR/BPM_Project/config-LM32/ztex_spartan6/soc/system_conf.v&apos; in file &quot;../components/lm32_top/rtl/verilog/lm32_include.v&quot; line 37
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">../components/lm32_top/rtl/verilog/lm32_include_all.v</arg>&quot; Line <arg fmt="%d" index="2">45</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/LR/BPM_Project/config-LM32/ztex_spartan6/ISE/../components/lm32_top/rtl/verilog/lm32_adder.v&apos; in file &quot;../components/lm32_top/rtl/verilog/lm32_include_all.v&quot; line 45
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">../components/lm32_top/rtl/verilog/lm32_adder.v</arg>&quot; Line <arg fmt="%d" index="2">29</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/LR/BPM_Project/config-LM32/ztex_spartan6/ISE/../components/lm32_top/rtl/verilog/lm32_include.v&apos; in file &quot;../components/lm32_top/rtl/verilog/lm32_adder.v&quot; line 29
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">../components/lm32_top/rtl/verilog/lm32_include_all.v</arg>&quot; Line <arg fmt="%d" index="2">46</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/LR/BPM_Project/config-LM32/ztex_spartan6/ISE/../components/lm32_top/rtl/verilog/lm32_cpu.v&apos; in file &quot;../components/lm32_top/rtl/verilog/lm32_include_all.v&quot; line 46
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">../components/lm32_top/rtl/verilog/lm32_cpu.v</arg>&quot; Line <arg fmt="%d" index="2">65</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/LR/BPM_Project/config-LM32/ztex_spartan6/ISE/../components/lm32_top/rtl/verilog/lm32_include.v&apos; in file &quot;../components/lm32_top/rtl/verilog/lm32_cpu.v&quot; line 65
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">../components/lm32_top/rtl/verilog/lm32_cpu.v</arg>&quot; Line <arg fmt="%d" index="2">737</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/LR/BPM_Project/config-LM32/ztex_spartan6/ISE/../components/lm32_top/rtl/verilog/lm32_functions.v&apos; in file &quot;../components/lm32_top/rtl/verilog/lm32_cpu.v&quot; line 737
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">../components/lm32_top/rtl/verilog/lm32_include_all.v</arg>&quot; Line <arg fmt="%d" index="2">47</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/LR/BPM_Project/config-LM32/ztex_spartan6/ISE/../components/lm32_top/rtl/verilog/lm32_dcache.v&apos; in file &quot;../components/lm32_top/rtl/verilog/lm32_include_all.v&quot; line 47
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">../components/lm32_top/rtl/verilog/lm32_dcache.v</arg>&quot; Line <arg fmt="%d" index="2">31</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/LR/BPM_Project/config-LM32/ztex_spartan6/ISE/../components/lm32_top/rtl/verilog/lm32_include.v&apos; in file &quot;../components/lm32_top/rtl/verilog/lm32_dcache.v&quot; line 31
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">../components/lm32_top/rtl/verilog/lm32_include_all.v</arg>&quot; Line <arg fmt="%d" index="2">48</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/LR/BPM_Project/config-LM32/ztex_spartan6/ISE/../components/lm32_top/rtl/verilog/lm32_debug.v&apos; in file &quot;../components/lm32_top/rtl/verilog/lm32_include_all.v&quot; line 48
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">../components/lm32_top/rtl/verilog/lm32_debug.v</arg>&quot; Line <arg fmt="%d" index="2">32</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/LR/BPM_Project/config-LM32/ztex_spartan6/ISE/../components/lm32_top/rtl/verilog/lm32_include.v&apos; in file &quot;../components/lm32_top/rtl/verilog/lm32_debug.v&quot; line 32
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">../components/lm32_top/rtl/verilog/lm32_include_all.v</arg>&quot; Line <arg fmt="%d" index="2">49</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/LR/BPM_Project/config-LM32/ztex_spartan6/ISE/../components/lm32_top/rtl/verilog/lm32_decoder.v&apos; in file &quot;../components/lm32_top/rtl/verilog/lm32_include_all.v&quot; line 49
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">../components/lm32_top/rtl/verilog/lm32_decoder.v</arg>&quot; Line <arg fmt="%d" index="2">35</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/LR/BPM_Project/config-LM32/ztex_spartan6/ISE/../components/lm32_top/rtl/verilog/lm32_include.v&apos; in file &quot;../components/lm32_top/rtl/verilog/lm32_decoder.v&quot; line 35
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">../components/lm32_top/rtl/verilog/lm32_decoder.v</arg>&quot; Line <arg fmt="%d" index="2">315</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/LR/BPM_Project/config-LM32/ztex_spartan6/ISE/../components/lm32_top/rtl/verilog/lm32_functions.v&apos; in file &quot;../components/lm32_top/rtl/verilog/lm32_decoder.v&quot; line 315
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">../components/lm32_top/rtl/verilog/lm32_include_all.v</arg>&quot; Line <arg fmt="%d" index="2">50</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/LR/BPM_Project/config-LM32/ztex_spartan6/ISE/../components/lm32_top/rtl/verilog/lm32_icache.v&apos; in file &quot;../components/lm32_top/rtl/verilog/lm32_include_all.v&quot; line 50
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">../components/lm32_top/rtl/verilog/lm32_icache.v</arg>&quot; Line <arg fmt="%d" index="2">36</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/LR/BPM_Project/config-LM32/ztex_spartan6/ISE/../components/lm32_top/rtl/verilog/lm32_include.v&apos; in file &quot;../components/lm32_top/rtl/verilog/lm32_icache.v&quot; line 36
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">../components/lm32_top/rtl/verilog/lm32_include_all.v</arg>&quot; Line <arg fmt="%d" index="2">51</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/LR/BPM_Project/config-LM32/ztex_spartan6/ISE/../components/lm32_top/rtl/verilog/lm32_instruction_unit.v&apos; in file &quot;../components/lm32_top/rtl/verilog/lm32_include_all.v&quot; line 51
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">../components/lm32_top/rtl/verilog/lm32_instruction_unit.v</arg>&quot; Line <arg fmt="%d" index="2">47</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/LR/BPM_Project/config-LM32/ztex_spartan6/ISE/../components/lm32_top/rtl/verilog/lm32_include.v&apos; in file &quot;../components/lm32_top/rtl/verilog/lm32_instruction_unit.v&quot; line 47
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">../components/lm32_top/rtl/verilog/lm32_instruction_unit.v</arg>&quot; Line <arg fmt="%d" index="2">341</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/LR/BPM_Project/config-LM32/ztex_spartan6/ISE/../components/lm32_top/rtl/verilog/lm32_functions.v&apos; in file &quot;../components/lm32_top/rtl/verilog/lm32_instruction_unit.v&quot; line 341
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">../components/lm32_top/rtl/verilog/lm32_include_all.v</arg>&quot; Line <arg fmt="%d" index="2">52</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/LR/BPM_Project/config-LM32/ztex_spartan6/ISE/../components/lm32_top/rtl/verilog/lm32_interrupt.v&apos; in file &quot;../components/lm32_top/rtl/verilog/lm32_include_all.v&quot; line 52
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">../components/lm32_top/rtl/verilog/lm32_interrupt.v</arg>&quot; Line <arg fmt="%d" index="2">29</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/LR/BPM_Project/config-LM32/ztex_spartan6/ISE/../components/lm32_top/rtl/verilog/lm32_include.v&apos; in file &quot;../components/lm32_top/rtl/verilog/lm32_interrupt.v&quot; line 29
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">../components/lm32_top/rtl/verilog/lm32_include_all.v</arg>&quot; Line <arg fmt="%d" index="2">53</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/LR/BPM_Project/config-LM32/ztex_spartan6/ISE/../components/lm32_top/rtl/verilog/lm32_load_store_unit.v&apos; in file &quot;../components/lm32_top/rtl/verilog/lm32_include_all.v&quot; line 53
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">../components/lm32_top/rtl/verilog/lm32_load_store_unit.v</arg>&quot; Line <arg fmt="%d" index="2">42</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/LR/BPM_Project/config-LM32/ztex_spartan6/ISE/../components/lm32_top/rtl/verilog/lm32_include.v&apos; in file &quot;../components/lm32_top/rtl/verilog/lm32_load_store_unit.v&quot; line 42
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">../components/lm32_top/rtl/verilog/lm32_load_store_unit.v</arg>&quot; Line <arg fmt="%d" index="2">262</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/LR/BPM_Project/config-LM32/ztex_spartan6/ISE/../components/lm32_top/rtl/verilog/lm32_functions.v&apos; in file &quot;../components/lm32_top/rtl/verilog/lm32_load_store_unit.v&quot; line 262
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">../components/lm32_top/rtl/verilog/lm32_include_all.v</arg>&quot; Line <arg fmt="%d" index="2">54</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/LR/BPM_Project/config-LM32/ztex_spartan6/ISE/../components/lm32_top/rtl/verilog/lm32_logic_op.v&apos; in file &quot;../components/lm32_top/rtl/verilog/lm32_include_all.v&quot; line 54
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">../components/lm32_top/rtl/verilog/lm32_logic_op.v</arg>&quot; Line <arg fmt="%d" index="2">29</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/LR/BPM_Project/config-LM32/ztex_spartan6/ISE/../components/lm32_top/rtl/verilog/lm32_include.v&apos; in file &quot;../components/lm32_top/rtl/verilog/lm32_logic_op.v&quot; line 29
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">../components/lm32_top/rtl/verilog/lm32_include_all.v</arg>&quot; Line <arg fmt="%d" index="2">56</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/LR/BPM_Project/config-LM32/ztex_spartan6/ISE/../components/lm32_top/rtl/verilog/lm32_mc_arithmetic.v&apos; in file &quot;../components/lm32_top/rtl/verilog/lm32_include_all.v&quot; line 56
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">../components/lm32_top/rtl/verilog/lm32_mc_arithmetic.v</arg>&quot; Line <arg fmt="%d" index="2">29</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/LR/BPM_Project/config-LM32/ztex_spartan6/ISE/../components/lm32_top/rtl/verilog/lm32_include.v&apos; in file &quot;../components/lm32_top/rtl/verilog/lm32_mc_arithmetic.v&quot; line 29
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">../components/lm32_top/rtl/verilog/lm32_include_all.v</arg>&quot; Line <arg fmt="%d" index="2">59</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/LR/BPM_Project/config-LM32/ztex_spartan6/ISE/../components/lm32_top/rtl/verilog/lm32_multiplier.v&apos; in file &quot;../components/lm32_top/rtl/verilog/lm32_include_all.v&quot; line 59
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">../components/lm32_top/rtl/verilog/lm32_multiplier.v</arg>&quot; Line <arg fmt="%d" index="2">29</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/LR/BPM_Project/config-LM32/ztex_spartan6/ISE/../components/lm32_top/rtl/verilog/lm32_include.v&apos; in file &quot;../components/lm32_top/rtl/verilog/lm32_multiplier.v&quot; line 29
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">../components/lm32_top/rtl/verilog/lm32_include_all.v</arg>&quot; Line <arg fmt="%d" index="2">62</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/LR/BPM_Project/config-LM32/ztex_spartan6/ISE/../components/lm32_top/rtl/verilog/lm32_shifter.v&apos; in file &quot;../components/lm32_top/rtl/verilog/lm32_include_all.v&quot; line 62
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">../components/lm32_top/rtl/verilog/lm32_shifter.v</arg>&quot; Line <arg fmt="%d" index="2">29</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/LR/BPM_Project/config-LM32/ztex_spartan6/ISE/../components/lm32_top/rtl/verilog/lm32_include.v&apos; in file &quot;../components/lm32_top/rtl/verilog/lm32_shifter.v&quot; line 29
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">../components/lm32_top/rtl/verilog/lm32_include_all.v</arg>&quot; Line <arg fmt="%d" index="2">64</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/LR/BPM_Project/config-LM32/ztex_spartan6/ISE/../components/lm32_top/rtl/verilog/lm32_top.v&apos; in file &quot;../components/lm32_top/rtl/verilog/lm32_include_all.v&quot; line 64
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">../components/lm32_top/rtl/verilog/lm32_top.v</arg>&quot; Line <arg fmt="%d" index="2">29</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/LR/BPM_Project/config-LM32/ztex_spartan6/ISE/../components/lm32_top/rtl/verilog/lm32_include.v&apos; in file &quot;../components/lm32_top/rtl/verilog/lm32_top.v&quot; line 29
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">../components/lm32_top/rtl/verilog/lm32_top.v</arg>&quot; Line <arg fmt="%d" index="2">239</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/LR/BPM_Project/config-LM32/ztex_spartan6/ISE/../components/lm32_top/rtl/verilog/lm32_functions.v&apos; in file &quot;../components/lm32_top/rtl/verilog/lm32_top.v&quot; line 239
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">../components/lm32_top/rtl/verilog/lm32_include_all.v</arg>&quot; Line <arg fmt="%d" index="2">84</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/LR/BPM_Project/config-LM32/ztex_spartan6/ISE/../components/lm32_top/rtl/verilog/lm32_trace.v&apos; in file &quot;../components/lm32_top/rtl/verilog/lm32_include_all.v&quot; line 84
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">../components/lm32_top/rtl/verilog/lm32_trace.v</arg>&quot; Line <arg fmt="%d" index="2">29</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/LR/BPM_Project/config-LM32/ztex_spartan6/ISE/../components/lm32_top/rtl/verilog/lm32_include.v&apos; in file &quot;../components/lm32_top/rtl/verilog/lm32_trace.v&quot; line 29
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">../components/lm32_top/rtl/verilog/lm32_trace.v</arg>&quot; Line <arg fmt="%d" index="2">30</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/LR/BPM_Project/config-LM32/ztex_spartan6/soc/system_conf.v&apos; in file &quot;../components/lm32_top/rtl/verilog/lm32_trace.v&quot; line 30
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">D:/LR/BPM_Project/config-LM32/ztex_spartan6/soc/ztex_spartan6.v</arg>&quot; Line <arg fmt="%d" index="2">328</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/LR/BPM_Project/config-LM32/ztex_spartan6/ISE/../components/wb_ebr_ctrl/rtl/verilog/wb_ebr_ctrl.v&apos; in file &quot;D:/LR/BPM_Project/config-LM32/ztex_spartan6/soc/ztex_spartan6.v&quot; line 328
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">../components/wb_ebr_ctrl/rtl/verilog/wb_ebr_ctrl.v</arg>&quot; Line <arg fmt="%d" index="2">57</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/LR/BPM_Project/config-LM32/ztex_spartan6/soc/system_conf.v&apos; in file &quot;../components/wb_ebr_ctrl/rtl/verilog/wb_ebr_ctrl.v&quot; line 57
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">D:/LR/BPM_Project/config-LM32/ztex_spartan6/soc/ztex_spartan6.v</arg>&quot; Line <arg fmt="%d" index="2">329</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/LR/BPM_Project/config-LM32/ztex_spartan6/ISE/../components/gpio/rtl/verilog/gpio.v&apos; in file &quot;D:/LR/BPM_Project/config-LM32/ztex_spartan6/soc/ztex_spartan6.v&quot; line 329
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">../components/gpio/rtl/verilog/gpio.v</arg>&quot; Line <arg fmt="%d" index="2">50</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/LR/BPM_Project/config-LM32/ztex_spartan6/soc/system_conf.v&apos; in file &quot;../components/gpio/rtl/verilog/gpio.v&quot; line 50
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">D:/LR/BPM_Project/config-LM32/ztex_spartan6/soc/ztex_spartan6.v</arg>&quot; Line <arg fmt="%d" index="2">330</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/LR/BPM_Project/config-LM32/ztex_spartan6/ISE/../components/gpio/rtl/verilog/tpio.v&apos; in file &quot;D:/LR/BPM_Project/config-LM32/ztex_spartan6/soc/ztex_spartan6.v&quot; line 330
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">../components/gpio/rtl/verilog/tpio.v</arg>&quot; Line <arg fmt="%d" index="2">42</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/LR/BPM_Project/config-LM32/ztex_spartan6/soc/system_conf.v&apos; in file &quot;../components/gpio/rtl/verilog/tpio.v&quot; line 42
+</arg>
+</msg>
+
+</messages>
+

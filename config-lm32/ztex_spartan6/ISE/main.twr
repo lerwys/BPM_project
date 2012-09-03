@@ -1,0 +1,629 @@
+--------------------------------------------------------------------------------
+Release 12.2 Trace  (nt)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\12.2\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 3 -n
+3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf -ucf pins.ucf
+
+Design file:              main.ncd
+Physical constraint file: main.pcf
+Device,package,speed:     xc6slx25,ftg256,C,-3 (ADVANCED 1.10 2010-06-28)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: ts_clk = PERIOD TIMEGRP "clk" 20.833 ns HIGH 50%;
+
+ 226639 paths analyzed, 8516 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  12.820ns.
+--------------------------------------------------------------------------------
+
+Paths for end point SOC/LM32/cpu/multiplier/Mmult_n00232 (DSP48_X1Y9.B12), 366 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     8.013ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               SOC/LM32/cpu/operand_w_1 (FF)
+  Destination:          SOC/LM32/cpu/multiplier/Mmult_n00232 (DSP)
+  Requirement:          20.833ns
+  Data Path Delay:      12.750ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.035ns (0.362 - 0.397)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.833ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: SOC/LM32/cpu/operand_w_1 to SOC/LM32/cpu/multiplier/Mmult_n00232
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X28Y33.BQ      Tcko                  0.476   SOC/LM32/cpu/operand_w<2>
+                                                       SOC/LM32/cpu/operand_w_1
+    SLICE_X24Y27.D2      net (fanout=29)       1.666   SOC/LM32/cpu/operand_w<1>
+    SLICE_X24Y27.DMUX    Tilo                  0.298   SOC/LM32/cpu/load_store_unit/N11
+                                                       SOC/LM32/cpu/load_store_unit/load_data_w<17>1111
+    SLICE_X22Y33.D1      net (fanout=3)        1.298   SOC/LM32/cpu/load_store_unit/N13
+    SLICE_X22Y33.D       Tilo                  0.254   SOC/LM32/cpu/registers_31<1014>
+                                                       SOC/LM32/cpu/load_store_unit/load_data_w<10>21
+    SLICE_X7Y30.A5       net (fanout=14)       1.623   SOC/LM32/cpu/load_store_unit/N8
+    SLICE_X7Y30.A        Tilo                  0.259   SOC/LM32/cpu/registers_31<1023>
+                                                       SOC/LM32/cpu/w_result_sel_load_w12
+    SLICE_X15Y37.A5      net (fanout=34)       1.841   SOC/LM32/cpu/w_result_sel_load_w_mmx_out2
+    SLICE_X15Y37.A       Tilo                  0.259   SOC/LM32/cpu/Mmux_bypass_data_1221
+                                                       SOC/LM32/cpu/Mmux_bypass_data_1222
+    SLICE_X27Y44.C3      net (fanout=1)        1.486   SOC/LM32/cpu/Mmux_bypass_data_1221
+    SLICE_X27Y44.C       Tilo                  0.259   SOC/LM32/cpu/operand_1_x<30>
+                                                       SOC/LM32/cpu/Mmux_bypass_data_1223
+    SLICE_X27Y44.A2      net (fanout=1)        0.534   SOC/LM32/cpu/bypass_data_1<29>
+    SLICE_X27Y44.A       Tilo                  0.259   SOC/LM32/cpu/operand_1_x<30>
+                                                       SOC/LM32/cpu/Mmux_d_result_1221
+    DSP48_X1Y9.B12       net (fanout=2)        2.066   SOC/LM32/cpu/d_result_1<29>
+    DSP48_X1Y9.CLK       Tdspdck_B_B0REG       0.172   SOC/LM32/cpu/multiplier/Mmult_n00232
+                                                       SOC/LM32/cpu/multiplier/Mmult_n00232
+    -------------------------------------------------  ---------------------------
+    Total                                     12.750ns (2.236ns logic, 10.514ns route)
+                                                       (17.5% logic, 82.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     8.197ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               SOC/LM32/cpu/operand_w_1 (FF)
+  Destination:          SOC/LM32/cpu/multiplier/Mmult_n00232 (DSP)
+  Requirement:          20.833ns
+  Data Path Delay:      12.566ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.035ns (0.362 - 0.397)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.833ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: SOC/LM32/cpu/operand_w_1 to SOC/LM32/cpu/multiplier/Mmult_n00232
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X28Y33.BQ      Tcko                  0.476   SOC/LM32/cpu/operand_w<2>
+                                                       SOC/LM32/cpu/operand_w_1
+    SLICE_X24Y27.D2      net (fanout=29)       1.666   SOC/LM32/cpu/operand_w<1>
+    SLICE_X24Y27.D       Tilo                  0.235   SOC/LM32/cpu/load_store_unit/N11
+                                                       SOC/LM32/cpu/load_store_unit/load_data_w<9>21
+    SLICE_X22Y33.D4      net (fanout=6)        1.177   SOC/LM32/cpu/load_store_unit/N11
+    SLICE_X22Y33.D       Tilo                  0.254   SOC/LM32/cpu/registers_31<1014>
+                                                       SOC/LM32/cpu/load_store_unit/load_data_w<10>21
+    SLICE_X7Y30.A5       net (fanout=14)       1.623   SOC/LM32/cpu/load_store_unit/N8
+    SLICE_X7Y30.A        Tilo                  0.259   SOC/LM32/cpu/registers_31<1023>
+                                                       SOC/LM32/cpu/w_result_sel_load_w12
+    SLICE_X15Y37.A5      net (fanout=34)       1.841   SOC/LM32/cpu/w_result_sel_load_w_mmx_out2
+    SLICE_X15Y37.A       Tilo                  0.259   SOC/LM32/cpu/Mmux_bypass_data_1221
+                                                       SOC/LM32/cpu/Mmux_bypass_data_1222
+    SLICE_X27Y44.C3      net (fanout=1)        1.486   SOC/LM32/cpu/Mmux_bypass_data_1221
+    SLICE_X27Y44.C       Tilo                  0.259   SOC/LM32/cpu/operand_1_x<30>
+                                                       SOC/LM32/cpu/Mmux_bypass_data_1223
+    SLICE_X27Y44.A2      net (fanout=1)        0.534   SOC/LM32/cpu/bypass_data_1<29>
+    SLICE_X27Y44.A       Tilo                  0.259   SOC/LM32/cpu/operand_1_x<30>
+                                                       SOC/LM32/cpu/Mmux_d_result_1221
+    DSP48_X1Y9.B12       net (fanout=2)        2.066   SOC/LM32/cpu/d_result_1<29>
+    DSP48_X1Y9.CLK       Tdspdck_B_B0REG       0.172   SOC/LM32/cpu/multiplier/Mmult_n00232
+                                                       SOC/LM32/cpu/multiplier/Mmult_n00232
+    -------------------------------------------------  ---------------------------
+    Total                                     12.566ns (2.173ns logic, 10.393ns route)
+                                                       (17.3% logic, 82.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     8.287ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               SOC/LM32/cpu/load_store_unit/data_w_31 (FF)
+  Destination:          SOC/LM32/cpu/multiplier/Mmult_n00232 (DSP)
+  Requirement:          20.833ns
+  Data Path Delay:      12.508ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.003ns (0.362 - 0.365)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.833ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: SOC/LM32/cpu/load_store_unit/data_w_31 to SOC/LM32/cpu/multiplier/Mmult_n00232
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X32Y30.DQ      Tcko                  0.476   SOC/LM32/cpu/load_store_unit/data_w<31>
+                                                       SOC/LM32/cpu/load_store_unit/data_w_31
+    SLICE_X24Y27.D1      net (fanout=5)        1.608   SOC/LM32/cpu/load_store_unit/data_w<31>
+    SLICE_X24Y27.D       Tilo                  0.235   SOC/LM32/cpu/load_store_unit/N11
+                                                       SOC/LM32/cpu/load_store_unit/load_data_w<9>21
+    SLICE_X22Y33.D4      net (fanout=6)        1.177   SOC/LM32/cpu/load_store_unit/N11
+    SLICE_X22Y33.D       Tilo                  0.254   SOC/LM32/cpu/registers_31<1014>
+                                                       SOC/LM32/cpu/load_store_unit/load_data_w<10>21
+    SLICE_X7Y30.A5       net (fanout=14)       1.623   SOC/LM32/cpu/load_store_unit/N8
+    SLICE_X7Y30.A        Tilo                  0.259   SOC/LM32/cpu/registers_31<1023>
+                                                       SOC/LM32/cpu/w_result_sel_load_w12
+    SLICE_X15Y37.A5      net (fanout=34)       1.841   SOC/LM32/cpu/w_result_sel_load_w_mmx_out2
+    SLICE_X15Y37.A       Tilo                  0.259   SOC/LM32/cpu/Mmux_bypass_data_1221
+                                                       SOC/LM32/cpu/Mmux_bypass_data_1222
+    SLICE_X27Y44.C3      net (fanout=1)        1.486   SOC/LM32/cpu/Mmux_bypass_data_1221
+    SLICE_X27Y44.C       Tilo                  0.259   SOC/LM32/cpu/operand_1_x<30>
+                                                       SOC/LM32/cpu/Mmux_bypass_data_1223
+    SLICE_X27Y44.A2      net (fanout=1)        0.534   SOC/LM32/cpu/bypass_data_1<29>
+    SLICE_X27Y44.A       Tilo                  0.259   SOC/LM32/cpu/operand_1_x<30>
+                                                       SOC/LM32/cpu/Mmux_d_result_1221
+    DSP48_X1Y9.B12       net (fanout=2)        2.066   SOC/LM32/cpu/d_result_1<29>
+    DSP48_X1Y9.CLK       Tdspdck_B_B0REG       0.172   SOC/LM32/cpu/multiplier/Mmult_n00232
+                                                       SOC/LM32/cpu/multiplier/Mmult_n00232
+    -------------------------------------------------  ---------------------------
+    Total                                     12.508ns (2.173ns logic, 10.335ns route)
+                                                       (17.4% logic, 82.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point SOC/LM32/cpu/multiplier/Mmult_n00232 (DSP48_X1Y9.B11), 358 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     8.032ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               SOC/LM32/cpu/operand_w_1 (FF)
+  Destination:          SOC/LM32/cpu/multiplier/Mmult_n00232 (DSP)
+  Requirement:          20.833ns
+  Data Path Delay:      12.731ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.035ns (0.362 - 0.397)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.833ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: SOC/LM32/cpu/operand_w_1 to SOC/LM32/cpu/multiplier/Mmult_n00232
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X28Y33.BQ      Tcko                  0.476   SOC/LM32/cpu/operand_w<2>
+                                                       SOC/LM32/cpu/operand_w_1
+    SLICE_X24Y27.D2      net (fanout=29)       1.666   SOC/LM32/cpu/operand_w<1>
+    SLICE_X24Y27.DMUX    Tilo                  0.298   SOC/LM32/cpu/load_store_unit/N11
+                                                       SOC/LM32/cpu/load_store_unit/load_data_w<17>1111
+    SLICE_X22Y33.D1      net (fanout=3)        1.298   SOC/LM32/cpu/load_store_unit/N13
+    SLICE_X22Y33.D       Tilo                  0.254   SOC/LM32/cpu/registers_31<1014>
+                                                       SOC/LM32/cpu/load_store_unit/load_data_w<10>21
+    SLICE_X7Y30.B5       net (fanout=14)       1.628   SOC/LM32/cpu/load_store_unit/N8
+    SLICE_X7Y30.B        Tilo                  0.259   SOC/LM32/cpu/registers_31<1023>
+                                                       SOC/LM32/cpu/w_result_sel_load_w11
+    SLICE_X23Y38.A4      net (fanout=34)       2.671   SOC/LM32/cpu/w_result_sel_load_w_mmx_out1
+    SLICE_X23Y38.A       Tilo                  0.259   N80
+                                                       SOC/LM32/cpu/Mmux_bypass_data_1212
+    SLICE_X25Y43.D3      net (fanout=1)        0.890   SOC/LM32/cpu/Mmux_bypass_data_1211
+    SLICE_X25Y43.D       Tilo                  0.259   SOC/LM32/cpu/store_operand_x<28>
+                                                       SOC/LM32/cpu/Mmux_bypass_data_1213
+    SLICE_X25Y43.B2      net (fanout=1)        0.535   SOC/LM32/cpu/bypass_data_1<28>
+    SLICE_X25Y43.B       Tilo                  0.259   SOC/LM32/cpu/store_operand_x<28>
+                                                       SOC/LM32/cpu/Mmux_d_result_1211
+    DSP48_X1Y9.B11       net (fanout=2)        1.807   SOC/LM32/cpu/d_result_1<28>
+    DSP48_X1Y9.CLK       Tdspdck_B_B0REG       0.172   SOC/LM32/cpu/multiplier/Mmult_n00232
+                                                       SOC/LM32/cpu/multiplier/Mmult_n00232
+    -------------------------------------------------  ---------------------------
+    Total                                     12.731ns (2.236ns logic, 10.495ns route)
+                                                       (17.6% logic, 82.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     8.216ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               SOC/LM32/cpu/operand_w_1 (FF)
+  Destination:          SOC/LM32/cpu/multiplier/Mmult_n00232 (DSP)
+  Requirement:          20.833ns
+  Data Path Delay:      12.547ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.035ns (0.362 - 0.397)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.833ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: SOC/LM32/cpu/operand_w_1 to SOC/LM32/cpu/multiplier/Mmult_n00232
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X28Y33.BQ      Tcko                  0.476   SOC/LM32/cpu/operand_w<2>
+                                                       SOC/LM32/cpu/operand_w_1
+    SLICE_X24Y27.D2      net (fanout=29)       1.666   SOC/LM32/cpu/operand_w<1>
+    SLICE_X24Y27.D       Tilo                  0.235   SOC/LM32/cpu/load_store_unit/N11
+                                                       SOC/LM32/cpu/load_store_unit/load_data_w<9>21
+    SLICE_X22Y33.D4      net (fanout=6)        1.177   SOC/LM32/cpu/load_store_unit/N11
+    SLICE_X22Y33.D       Tilo                  0.254   SOC/LM32/cpu/registers_31<1014>
+                                                       SOC/LM32/cpu/load_store_unit/load_data_w<10>21
+    SLICE_X7Y30.B5       net (fanout=14)       1.628   SOC/LM32/cpu/load_store_unit/N8
+    SLICE_X7Y30.B        Tilo                  0.259   SOC/LM32/cpu/registers_31<1023>
+                                                       SOC/LM32/cpu/w_result_sel_load_w11
+    SLICE_X23Y38.A4      net (fanout=34)       2.671   SOC/LM32/cpu/w_result_sel_load_w_mmx_out1
+    SLICE_X23Y38.A       Tilo                  0.259   N80
+                                                       SOC/LM32/cpu/Mmux_bypass_data_1212
+    SLICE_X25Y43.D3      net (fanout=1)        0.890   SOC/LM32/cpu/Mmux_bypass_data_1211
+    SLICE_X25Y43.D       Tilo                  0.259   SOC/LM32/cpu/store_operand_x<28>
+                                                       SOC/LM32/cpu/Mmux_bypass_data_1213
+    SLICE_X25Y43.B2      net (fanout=1)        0.535   SOC/LM32/cpu/bypass_data_1<28>
+    SLICE_X25Y43.B       Tilo                  0.259   SOC/LM32/cpu/store_operand_x<28>
+                                                       SOC/LM32/cpu/Mmux_d_result_1211
+    DSP48_X1Y9.B11       net (fanout=2)        1.807   SOC/LM32/cpu/d_result_1<28>
+    DSP48_X1Y9.CLK       Tdspdck_B_B0REG       0.172   SOC/LM32/cpu/multiplier/Mmult_n00232
+                                                       SOC/LM32/cpu/multiplier/Mmult_n00232
+    -------------------------------------------------  ---------------------------
+    Total                                     12.547ns (2.173ns logic, 10.374ns route)
+                                                       (17.3% logic, 82.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     8.306ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               SOC/LM32/cpu/load_store_unit/data_w_31 (FF)
+  Destination:          SOC/LM32/cpu/multiplier/Mmult_n00232 (DSP)
+  Requirement:          20.833ns
+  Data Path Delay:      12.489ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.003ns (0.362 - 0.365)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.833ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: SOC/LM32/cpu/load_store_unit/data_w_31 to SOC/LM32/cpu/multiplier/Mmult_n00232
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X32Y30.DQ      Tcko                  0.476   SOC/LM32/cpu/load_store_unit/data_w<31>
+                                                       SOC/LM32/cpu/load_store_unit/data_w_31
+    SLICE_X24Y27.D1      net (fanout=5)        1.608   SOC/LM32/cpu/load_store_unit/data_w<31>
+    SLICE_X24Y27.D       Tilo                  0.235   SOC/LM32/cpu/load_store_unit/N11
+                                                       SOC/LM32/cpu/load_store_unit/load_data_w<9>21
+    SLICE_X22Y33.D4      net (fanout=6)        1.177   SOC/LM32/cpu/load_store_unit/N11
+    SLICE_X22Y33.D       Tilo                  0.254   SOC/LM32/cpu/registers_31<1014>
+                                                       SOC/LM32/cpu/load_store_unit/load_data_w<10>21
+    SLICE_X7Y30.B5       net (fanout=14)       1.628   SOC/LM32/cpu/load_store_unit/N8
+    SLICE_X7Y30.B        Tilo                  0.259   SOC/LM32/cpu/registers_31<1023>
+                                                       SOC/LM32/cpu/w_result_sel_load_w11
+    SLICE_X23Y38.A4      net (fanout=34)       2.671   SOC/LM32/cpu/w_result_sel_load_w_mmx_out1
+    SLICE_X23Y38.A       Tilo                  0.259   N80
+                                                       SOC/LM32/cpu/Mmux_bypass_data_1212
+    SLICE_X25Y43.D3      net (fanout=1)        0.890   SOC/LM32/cpu/Mmux_bypass_data_1211
+    SLICE_X25Y43.D       Tilo                  0.259   SOC/LM32/cpu/store_operand_x<28>
+                                                       SOC/LM32/cpu/Mmux_bypass_data_1213
+    SLICE_X25Y43.B2      net (fanout=1)        0.535   SOC/LM32/cpu/bypass_data_1<28>
+    SLICE_X25Y43.B       Tilo                  0.259   SOC/LM32/cpu/store_operand_x<28>
+                                                       SOC/LM32/cpu/Mmux_d_result_1211
+    DSP48_X1Y9.B11       net (fanout=2)        1.807   SOC/LM32/cpu/d_result_1<28>
+    DSP48_X1Y9.CLK       Tdspdck_B_B0REG       0.172   SOC/LM32/cpu/multiplier/Mmult_n00232
+                                                       SOC/LM32/cpu/multiplier/Mmult_n00232
+    -------------------------------------------------  ---------------------------
+    Total                                     12.489ns (2.173ns logic, 10.316ns route)
+                                                       (17.4% logic, 82.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point SOC/LM32/cpu/multiplier/Mmult_n0023 (DSP48_X1Y7.B16), 286 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     8.219ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               SOC/LM32/cpu/operand_w_1 (FF)
+  Destination:          SOC/LM32/cpu/multiplier/Mmult_n0023 (DSP)
+  Requirement:          20.833ns
+  Data Path Delay:      12.527ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.052ns (0.345 - 0.397)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.833ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: SOC/LM32/cpu/operand_w_1 to SOC/LM32/cpu/multiplier/Mmult_n0023
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X28Y33.BQ      Tcko                  0.476   SOC/LM32/cpu/operand_w<2>
+                                                       SOC/LM32/cpu/operand_w_1
+    SLICE_X24Y27.D2      net (fanout=29)       1.666   SOC/LM32/cpu/operand_w<1>
+    SLICE_X24Y27.DMUX    Tilo                  0.298   SOC/LM32/cpu/load_store_unit/N11
+                                                       SOC/LM32/cpu/load_store_unit/load_data_w<17>1111
+    SLICE_X22Y33.D1      net (fanout=3)        1.298   SOC/LM32/cpu/load_store_unit/N13
+    SLICE_X22Y33.D       Tilo                  0.254   SOC/LM32/cpu/registers_31<1014>
+                                                       SOC/LM32/cpu/load_store_unit/load_data_w<10>21
+    SLICE_X22Y21.C6      net (fanout=14)       1.621   SOC/LM32/cpu/load_store_unit/N8
+    SLICE_X22Y21.C       Tilo                  0.255   SOC/LM32/cpu/registers_31<1007>
+                                                       SOC/LM32/cpu/w_result_sel_load_w14
+    SLICE_X21Y35.A3      net (fanout=34)       1.764   SOC/LM32/cpu/w_result_sel_load_w_mmx_out21
+    SLICE_X21Y35.A       Tilo                  0.259   SOC/LM32/cpu/Mmux_bypass_data_181
+                                                       SOC/LM32/cpu/Mmux_bypass_data_182
+    SLICE_X34Y40.C1      net (fanout=1)        2.020   SOC/LM32/cpu/Mmux_bypass_data_181
+    SLICE_X34Y40.CMUX    Tilo                  0.326   SOC/LM32/cpu/operand_1_x<18>
+                                                       SOC/LM32/cpu/Mmux_bypass_data_183
+    SLICE_X34Y40.B6      net (fanout=2)        0.166   SOC/LM32/cpu/bypass_data_1<16>
+    SLICE_X34Y40.B       Tilo                  0.254   SOC/LM32/cpu/operand_1_x<18>
+                                                       SOC/LM32/cpu/Mmux_d_result_181
+    DSP48_X1Y7.B16       net (fanout=3)        1.698   SOC/LM32/cpu/d_result_1<16>
+    DSP48_X1Y7.CLK       Tdspdck_B_B0REG       0.172   SOC/LM32/cpu/multiplier/Mmult_n0023
+                                                       SOC/LM32/cpu/multiplier/Mmult_n0023
+    -------------------------------------------------  ---------------------------
+    Total                                     12.527ns (2.294ns logic, 10.233ns route)
+                                                       (18.3% logic, 81.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     8.403ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               SOC/LM32/cpu/operand_w_1 (FF)
+  Destination:          SOC/LM32/cpu/multiplier/Mmult_n0023 (DSP)
+  Requirement:          20.833ns
+  Data Path Delay:      12.343ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.052ns (0.345 - 0.397)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.833ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: SOC/LM32/cpu/operand_w_1 to SOC/LM32/cpu/multiplier/Mmult_n0023
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X28Y33.BQ      Tcko                  0.476   SOC/LM32/cpu/operand_w<2>
+                                                       SOC/LM32/cpu/operand_w_1
+    SLICE_X24Y27.D2      net (fanout=29)       1.666   SOC/LM32/cpu/operand_w<1>
+    SLICE_X24Y27.D       Tilo                  0.235   SOC/LM32/cpu/load_store_unit/N11
+                                                       SOC/LM32/cpu/load_store_unit/load_data_w<9>21
+    SLICE_X22Y33.D4      net (fanout=6)        1.177   SOC/LM32/cpu/load_store_unit/N11
+    SLICE_X22Y33.D       Tilo                  0.254   SOC/LM32/cpu/registers_31<1014>
+                                                       SOC/LM32/cpu/load_store_unit/load_data_w<10>21
+    SLICE_X22Y21.C6      net (fanout=14)       1.621   SOC/LM32/cpu/load_store_unit/N8
+    SLICE_X22Y21.C       Tilo                  0.255   SOC/LM32/cpu/registers_31<1007>
+                                                       SOC/LM32/cpu/w_result_sel_load_w14
+    SLICE_X21Y35.A3      net (fanout=34)       1.764   SOC/LM32/cpu/w_result_sel_load_w_mmx_out21
+    SLICE_X21Y35.A       Tilo                  0.259   SOC/LM32/cpu/Mmux_bypass_data_181
+                                                       SOC/LM32/cpu/Mmux_bypass_data_182
+    SLICE_X34Y40.C1      net (fanout=1)        2.020   SOC/LM32/cpu/Mmux_bypass_data_181
+    SLICE_X34Y40.CMUX    Tilo                  0.326   SOC/LM32/cpu/operand_1_x<18>
+                                                       SOC/LM32/cpu/Mmux_bypass_data_183
+    SLICE_X34Y40.B6      net (fanout=2)        0.166   SOC/LM32/cpu/bypass_data_1<16>
+    SLICE_X34Y40.B       Tilo                  0.254   SOC/LM32/cpu/operand_1_x<18>
+                                                       SOC/LM32/cpu/Mmux_d_result_181
+    DSP48_X1Y7.B16       net (fanout=3)        1.698   SOC/LM32/cpu/d_result_1<16>
+    DSP48_X1Y7.CLK       Tdspdck_B_B0REG       0.172   SOC/LM32/cpu/multiplier/Mmult_n0023
+                                                       SOC/LM32/cpu/multiplier/Mmult_n0023
+    -------------------------------------------------  ---------------------------
+    Total                                     12.343ns (2.231ns logic, 10.112ns route)
+                                                       (18.1% logic, 81.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     8.498ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               SOC/LM32/cpu/load_store_unit/data_w_31 (FF)
+  Destination:          SOC/LM32/cpu/multiplier/Mmult_n0023 (DSP)
+  Requirement:          20.833ns
+  Data Path Delay:      12.285ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.015ns (0.254 - 0.269)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.833ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: SOC/LM32/cpu/load_store_unit/data_w_31 to SOC/LM32/cpu/multiplier/Mmult_n0023
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X32Y30.DQ      Tcko                  0.476   SOC/LM32/cpu/load_store_unit/data_w<31>
+                                                       SOC/LM32/cpu/load_store_unit/data_w_31
+    SLICE_X24Y27.D1      net (fanout=5)        1.608   SOC/LM32/cpu/load_store_unit/data_w<31>
+    SLICE_X24Y27.D       Tilo                  0.235   SOC/LM32/cpu/load_store_unit/N11
+                                                       SOC/LM32/cpu/load_store_unit/load_data_w<9>21
+    SLICE_X22Y33.D4      net (fanout=6)        1.177   SOC/LM32/cpu/load_store_unit/N11
+    SLICE_X22Y33.D       Tilo                  0.254   SOC/LM32/cpu/registers_31<1014>
+                                                       SOC/LM32/cpu/load_store_unit/load_data_w<10>21
+    SLICE_X22Y21.C6      net (fanout=14)       1.621   SOC/LM32/cpu/load_store_unit/N8
+    SLICE_X22Y21.C       Tilo                  0.255   SOC/LM32/cpu/registers_31<1007>
+                                                       SOC/LM32/cpu/w_result_sel_load_w14
+    SLICE_X21Y35.A3      net (fanout=34)       1.764   SOC/LM32/cpu/w_result_sel_load_w_mmx_out21
+    SLICE_X21Y35.A       Tilo                  0.259   SOC/LM32/cpu/Mmux_bypass_data_181
+                                                       SOC/LM32/cpu/Mmux_bypass_data_182
+    SLICE_X34Y40.C1      net (fanout=1)        2.020   SOC/LM32/cpu/Mmux_bypass_data_181
+    SLICE_X34Y40.CMUX    Tilo                  0.326   SOC/LM32/cpu/operand_1_x<18>
+                                                       SOC/LM32/cpu/Mmux_bypass_data_183
+    SLICE_X34Y40.B6      net (fanout=2)        0.166   SOC/LM32/cpu/bypass_data_1<16>
+    SLICE_X34Y40.B       Tilo                  0.254   SOC/LM32/cpu/operand_1_x<18>
+                                                       SOC/LM32/cpu/Mmux_d_result_181
+    DSP48_X1Y7.B16       net (fanout=3)        1.698   SOC/LM32/cpu/d_result_1<16>
+    DSP48_X1Y7.CLK       Tdspdck_B_B0REG       0.172   SOC/LM32/cpu/multiplier/Mmult_n0023
+                                                       SOC/LM32/cpu/multiplier/Mmult_n0023
+    -------------------------------------------------  ---------------------------
+    Total                                     12.285ns (2.231ns logic, 10.054ns route)
+                                                       (18.2% logic, 81.8% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: ts_clk = PERIOD TIMEGRP "clk" 20.833 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point SOC/LM32/cpu/load_store_unit/data_w_14 (SLICE_X34Y31.CX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.403ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               SOC/LM32/cpu/load_store_unit/wb_data_m_14 (FF)
+  Destination:          SOC/LM32/cpu/load_store_unit/data_w_14 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.405ns (Levels of Logic = 0)
+  Clock Path Skew:      0.002ns (0.046 - 0.044)
+  Source Clock:         clk_BUFGP rising at 20.833ns
+  Destination Clock:    clk_BUFGP rising at 20.833ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: SOC/LM32/cpu/load_store_unit/wb_data_m_14 to SOC/LM32/cpu/load_store_unit/data_w_14
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X35Y31.CQ      Tcko                  0.198   SOC/LM32/cpu/load_store_unit/wb_data_m<15>
+                                                       SOC/LM32/cpu/load_store_unit/wb_data_m_14
+    SLICE_X34Y31.CX      net (fanout=1)        0.166   SOC/LM32/cpu/load_store_unit/wb_data_m<14>
+    SLICE_X34Y31.CLK     Tckdi       (-Th)    -0.041   SOC/LM32/cpu/load_store_unit/data_w<15>
+                                                       SOC/LM32/cpu/load_store_unit/data_w_14
+    -------------------------------------------------  ---------------------------
+    Total                                      0.405ns (0.239ns logic, 0.166ns route)
+                                                       (59.0% logic, 41.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point SOC/ebr/state_FSM_FFd2 (SLICE_X48Y43.B5), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.416ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               SOC/ebr/EBR_ACK_O (FF)
+  Destination:          SOC/ebr/state_FSM_FFd2 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.416ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 20.833ns
+  Destination Clock:    clk_BUFGP rising at 20.833ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: SOC/ebr/EBR_ACK_O to SOC/ebr/state_FSM_FFd2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X48Y43.BQ      Tcko                  0.200   SOC/ebr/write_data_d<22>
+                                                       SOC/ebr/EBR_ACK_O
+    SLICE_X48Y43.B5      net (fanout=4)        0.095   SOC/ebr/EBR_ACK_O
+    SLICE_X48Y43.CLK     Tah         (-Th)    -0.121   SOC/ebr/write_data_d<22>
+                                                       SOC/ebr/state_FSM_FFd2-In111
+                                                       SOC/ebr/state_FSM_FFd2
+    -------------------------------------------------  ---------------------------
+    Total                                      0.416ns (0.321ns logic, 0.095ns route)
+                                                       (77.2% logic, 22.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point SOC/gpio/GPIO_ACK_O (SLICE_X48Y46.A6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.423ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               SOC/gpio/GPIO_ACK_O (FF)
+  Destination:          SOC/gpio/GPIO_ACK_O (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.423ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 20.833ns
+  Destination Clock:    clk_BUFGP rising at 20.833ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: SOC/gpio/GPIO_ACK_O to SOC/gpio/GPIO_ACK_O
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X48Y46.AQ      Tcko                  0.200   SOC/gpio/GPIO_ACK_O
+                                                       SOC/gpio/GPIO_ACK_O
+    SLICE_X48Y46.A6      net (fanout=4)        0.033   SOC/gpio/GPIO_ACK_O
+    SLICE_X48Y46.CLK     Tah         (-Th)    -0.190   SOC/gpio/GPIO_ACK_O
+                                                       SOC/gpio/GPIO_STB_I_GPIO_ACK_O_AND_1256_o1
+                                                       SOC/gpio/GPIO_ACK_O
+    -------------------------------------------------  ---------------------------
+    Total                                      0.423ns (0.390ns logic, 0.033ns route)
+                                                       (92.2% logic, 7.8% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: ts_clk = PERIOD TIMEGRP "clk" 20.833 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 15.981ns (period - min period limit)
+  Period: 20.833ns
+  Min period limit: 4.852ns (206.101MHz) (Tdspper_AREG_PREG)
+  Physical resource: SOC/LM32/cpu/multiplier/Mmult_n00232/CLK
+  Logical resource: SOC/LM32/cpu/multiplier/Mmult_n00232/CLK
+  Location pin: DSP48_X1Y9.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 17.263ns (period - min period limit)
+  Period: 20.833ns
+  Min period limit: 3.570ns (280.112MHz) (Trper_CLKA(Fmax))
+  Physical resource: SOC/ebr/memory/BU2/U0/blk_mem_generator/valid.cstr/ramloop[1].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram/CLKA
+  Logical resource: SOC/ebr/memory/BU2/U0/blk_mem_generator/valid.cstr/ramloop[1].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram/CLKA
+  Location pin: RAMB16_X2Y18.CLKA
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 17.263ns (period - min period limit)
+  Period: 20.833ns
+  Min period limit: 3.570ns (280.112MHz) (Trper_CLKA(Fmax))
+  Physical resource: SOC/ebr/memory/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram/CLKA
+  Logical resource: SOC/ebr/memory/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram/CLKA
+  Location pin: RAMB16_X2Y16.CLKA
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   12.820|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 226639 paths, 0 nets, and 15032 connections
+
+Design statistics:
+   Minimum period:  12.820ns{1}   (Maximum frequency:  78.003MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Thu Feb 24 22:59:09 2011 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 204 MB
+
+
+

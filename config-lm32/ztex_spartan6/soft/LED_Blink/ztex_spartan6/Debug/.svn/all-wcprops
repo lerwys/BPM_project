@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/soft/LED_Blink/ztex_spartan6/Debug
+END
+settings.xml
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/soft/LED_Blink/ztex_spartan6/Debug/settings.xml
+END
+inherited_settings.mk
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/soft/LED_Blink/ztex_spartan6/Debug/inherited_settings.mk
+END
+linker.ld
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/soft/LED_Blink/ztex_spartan6/Debug/linker.ld
+END
+drivers.mk
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/soft/LED_Blink/ztex_spartan6/Debug/drivers.mk
+END
+platform_rules.mk
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/soft/LED_Blink/ztex_spartan6/Debug/platform_rules.mk
+END
+linker_settings.mk
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/soft/LED_Blink/ztex_spartan6/Debug/linker_settings.mk
+END
+makefile
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/soft/LED_Blink/ztex_spartan6/Debug/makefile
+END

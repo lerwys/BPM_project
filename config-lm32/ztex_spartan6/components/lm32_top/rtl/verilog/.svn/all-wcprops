@@ -1,0 +1,191 @@
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/rtl/verilog
+END
+lm32_instruction_unit.v
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/rtl/verilog/lm32_instruction_unit.v
+END
+jtag_cores.v
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/rtl/verilog/jtag_cores.v
+END
+typea.v
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/rtl/verilog/typea.v
+END
+typeb.v
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/rtl/verilog/typeb.v
+END
+spiprog.v
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/rtl/verilog/spiprog.v
+END
+lm32_multiplier.v
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/rtl/verilog/lm32_multiplier.v
+END
+lm32_monitor_ram.v
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/rtl/verilog/lm32_monitor_ram.v
+END
+lm32_debug.v
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/rtl/verilog/lm32_debug.v
+END
+lm32_cpu.v
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/rtl/verilog/lm32_cpu.v
+END
+lm32_load_store_unit.v
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/rtl/verilog/lm32_load_store_unit.v
+END
+lm32_logic_op.v
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/rtl/verilog/lm32_logic_op.v
+END
+lm32_interrupt.v
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/rtl/verilog/lm32_interrupt.v
+END
+lm32_addsub.v
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/rtl/verilog/lm32_addsub.v
+END
+lm32_shifter.v
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/rtl/verilog/lm32_shifter.v
+END
+lm32_dcache.v
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/rtl/verilog/lm32_dcache.v
+END
+lm32_include_all.v
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/rtl/verilog/lm32_include_all.v
+END
+lm32_ram.v
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/rtl/verilog/lm32_ram.v
+END
+lm32_adder.v
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/rtl/verilog/lm32_adder.v
+END
+lm32_include.v
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/rtl/verilog/lm32_include.v
+END
+lm32_jtag.v
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/rtl/verilog/lm32_jtag.v
+END
+jtag_lm32.v
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/rtl/verilog/jtag_lm32.v
+END
+lm32_monitor.v
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/rtl/verilog/lm32_monitor.v
+END
+JTAGB.v
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/rtl/verilog/JTAGB.v
+END
+er1.v
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/rtl/verilog/er1.v
+END
+system.sdc
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/rtl/verilog/system.sdc
+END
+lm32_trace.v
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/rtl/verilog/lm32_trace.v
+END
+lm32_top.v
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/rtl/verilog/lm32_top.v
+END
+lm32_decoder.v
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/rtl/verilog/lm32_decoder.v
+END
+lm32_mc_arithmetic.v
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/rtl/verilog/lm32_mc_arithmetic.v
+END
+lm32_functions.v
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/rtl/verilog/lm32_functions.v
+END
+lm32_icache.v
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/backup/Elektronik/!svn/ver/4/FPGA/LM32/Spartan6/ztex_spartan6/components/lm32_top/rtl/verilog/lm32_icache.v
+END
