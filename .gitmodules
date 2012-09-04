@@ -1,0 +1,12 @@
+[submodule "cores/general-cores"]
+	path = cores/general-cores
+	url = git://ohwr.org/hdl-core-lib/general-cores.git
+[submodule "cores/hdl-make"]
+	path = cores/hdl-make
+	url = git://ohwr.org/misc/hdl-make.git
+[submodule "cores/wishbone-gen"]
+	path = cores/wishbone-gen
+	url = git://ohwr.org/hdl-core-lib/wishbone-gen.git
+[submodule "cores/wr-cores"]
+	path = cores/wr-cores
+	url = git://ohwr.org/hdl-core-lib/wr-cores.git
