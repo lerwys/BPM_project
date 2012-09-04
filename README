@@ -2,20 +2,39 @@ Repository containing the BPM firmware
 
 ===============================================
 
-The project is based on tools developed by CERN and others:
+The project is based on tools and projects developed by CERN and others:
 
 hdl-make:
 	http://www.ohwr.org/projects/hdl-make
 wishbone-gen:
-	http://www.ohwr.org/projects/wishbone-gen/repository
-platform-independent core-collection: 
-	http://www.ohwr.org/projects/general-cores/repository
+	http://www.ohwr.org/projects/wishbone-gen
+platform-independent core collection: 
+	http://www.ohwr.org/projects/general-cores
+white-rabbit core collection:
+	http://www.ohwr.org/projects/wr-cores
 
 ===============================================
 
-As this repository makes use of git submodules (cores folder),
-use the following command to clone it.
+This repository makes use of git submodules, located at 'cores' folder:
+	cores/general-cores
+	cores/hdl-make
+	cores/wishbone-gen
+	cores/wr-cores
 
-git clone --recursive git://github.com/lerwys/BPM_project.git
-or
-git clione --recursive git@github.com:lerwys/BPM_project.git
+To clone the whole repository use the following command:
+
+	$ git clone --recursive git://github.com/lerwys/BPM_project.git
+	or
+	$ git clone --recursive git@github.com:lerwys/BPM_project.git
+
+For older versions of Git (<1.6.5), use the following:
+
+	$ git clone git://github.com/lerwys/BPM_project.git
+	or
+	$ git clone git@github.com:lerwys/BPM_project.git
+
+	$ cd <path_to_submodule>
+	$ git submodule init
+	$ git submodule update
+
+

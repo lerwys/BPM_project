@@ -37,7 +37,7 @@ entity xwb_irq_mngr is
     );
 end entity;
     
-architecture rtl of irq_mngr is
+architecture rtl of xwb_irq_mngr is
 
 	-- Read addresses regs
 	constant c_IRQ_MASK 			: std_logic_vector(1 downto 0) := "00";  -- *reg* IRQ mask
@@ -67,7 +67,7 @@ begin
 --  External signals synchronization process
 -- ----------------------------------------------------------------------------
 
-	gen_sync_ff : for i in 0 to g_num_pins-1 generate
+	gen_sync_ff : for i in 0 to g_irq_count-1 generate
 		cmp_input_sync : gc_sync_ffs
 		generic map (
 			g_sync_edge => "positive")
@@ -116,13 +116,13 @@ begin
 		elsif rising_edge(clk_sys_i) then
 			rd_ack  			<= '0';
 			-- WB READ classic cycle
-			if(slave_i.strobe = '1' and slave_i.write = '0' and slave_i.cycle = '1') then
+			if(slave_i.stb = '1' and slave_i.we = '0' and slave_i.cyc = '1') then
 				rd_ack  		<= '1';
 
 			-- Decode address (partial decoding only)
-		  	if(slave_i.addr = c_IRQ_MASK) then
+		  	if(slave_i.adr = c_IRQ_MASK) then
 				readdata(g_irq_count-1 downto 0)	<= irq_mask;
-		  	elsif(slave_i.addr = c_IRQ_PEND) then
+		  	elsif(slave_i.adr = c_IRQ_PEND) then
 				readdata(g_irq_count-1 downto 0) 	<= irq_pend;
 		  	--elsif(wbs_s1_address="10") then
 				--readdata <= std_logic_vector(to_unsigned(id,16));
@@ -147,22 +147,22 @@ begin
 			wr_ack  			<= '0';
 
 		-- WB WRITE classic cycle
-			if(slave_i.strobe = '1' and slave_i.write = '0' and slave_i.cycle = '1' and sel = '1') then
+			if(slave_i.stb = '1' and slave_i.we = '0' and slave_i.cyc = '1' and sel = '1') then
       			wr_ack  		<= '1';
-		  		if(slave_i.addr = c_IRQ_MASK) then
-		    		irq_mask 		<= slave_i.dat(irq_count-1 downto 0);
-		  		elsif(slave_i.addr = c_IRQ_ACK) then
-		    		irq_ack 		<= slave_i.dat(irq_count-1 downto 0);
+		  		if(slave_i.adr = c_IRQ_MASK) then
+		    		irq_mask 		<= slave_i.dat(g_irq_count-1 downto 0);
+		  		elsif(slave_i.adr = c_IRQ_ACK) then
+		    		irq_ack 		<= slave_i.dat(g_irq_count-1 downto 0);
 				end if;
 			end if;
   		end if;
 	end process;
 
-	irq_req_o 							<= irq_level when(unsigned(irq_pend) /= 0 and rst_n_i = '1') else
-		       								not irq_level;
+	irq_req_o 							<= g_irq_level when(unsigned(irq_pend) /= 0 and rst_n_i = '1') else
+		       								not g_irq_level;
 
 	slave_o.ack 						<= rd_ack or wr_ack;
-	slave_o.dat  						<= readdata when (slave_i.strobe = '1' and slave_i.write = '0' and slave_i.cycle = '1') else (others => '0');
+	slave_o.dat  						<= readdata when (slave_i.stb = '1' and slave_i.we = '0' and slave_i.cyc = '1') else (others => '0');
 
 	slave_o.err   						<= '0';
 	slave_o.int   						<= '0';

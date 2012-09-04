@@ -9,7 +9,7 @@ library work;
 use work.wishbone_pkg.all;
 use work.gencores_pkg.all;
 
-entity deb_demo_top is
+entity dbe_demo_top is
 	port(
 		-----------------------------------------
 		-- Clocking pins
@@ -26,20 +26,9 @@ entity deb_demo_top is
 		-----------------------------------------
 		leds_o							: out std_logic_vector(7 downto 0)
 	);
-end deb_demo_top;
+end dbe_demo_top;
 
-architecture rtl of deb_demo_top is
-
-	-- Xilinx Megafunction
-  	component sys_pll
-    port(
-    	inclk0 				: in  std_logic;			-- 100 MHz free running clock
-     	areset 				: in  std_logic;
-      	c0     				: out std_logic;			-- 100 MHz locked clock
-      	c1     				: out std_logic;			-- 200 MHz locked clock
-      	mmcm_locked 		: out std_logic);
-  	end component;
-
+architecture rtl of dbe_demo_top is
 
 	-- Simple GPIO interface device
 	constant c_xwb_gpio32_sdb : t_sdb_device := (
@@ -73,10 +62,10 @@ architecture rtl of deb_demo_top is
 		device_id     => x"35aa6b95",		
 		version       => x"00000001",
 		date          => x"20120903",			-- YY/MM/DD ??
-		name          => "LNLS_IRQMNGR        ")));
+		name          => "LNLS_IRQMNGR       ")));
     
 	-- Top crossbar layout
-	constant c_slaves : natural := 3;			-- LED, Button and IRQ manager slaves
+	constant c_slaves : natural := 4;			-- LED, Button and IRQ manager slaves
 	constant c_masters : natural := 2;			-- LM32 master. Data + Instruction
 	constant c_dpram_size : natural := 16384; -- in 32-bit words (64KB)
 
@@ -87,12 +76,14 @@ architecture rtl of deb_demo_top is
 	-- WB SDB (Self describing bus) layout
 	constant c_layout : t_sdb_record_array(c_slaves-1 downto 0) :=
 	(0 => f_sdb_embed_device(f_xwb_dpram(c_dpram_size), 	x"00000000"),		-- 64KB RAM
-	1 => f_sdb_embed_device(c_xwb_gpio32_sdb,          		x"00100400"),		-- GPIO LED
-	2 => f_sdb_embed_device(c_xwb_gpio32_sdb,             	x"00100500")		-- GPIO Button
-	--3 => f_sdb_embed_device(c_xwb_irqmngr_sdb,				x"00100600") 	-- IRQ_MNGR
+	1 => f_sdb_embed_device(f_xwb_dpram(c_dpram_size), 		x"10000000"),		-- Second port to the same memory
+	2 => f_sdb_embed_device(c_xwb_gpio32_sdb,          		x"20000400"),		-- GPIO LED
+	3 => f_sdb_embed_device(c_xwb_gpio32_sdb,             	x"20000500")		-- GPIO Button
+	--4 => f_sdb_embed_device(c_xwb_irqmngr_sdb,				x"00100600") 	-- IRQ_MNGR
 	);	
 
-	constant c_sdb_address : t_wishbone_address := x"00100000";
+	-- Self Describing Bus ROM Address. It is addressed as slave as well.
+	constant c_sdb_address : t_wishbone_address := x"20000000";
 
 	-- Crossbar master/slave arrays
 	signal cbar_slave_i  : t_wishbone_slave_in_array (c_masters-1 downto 0);
@@ -129,7 +120,18 @@ architecture rtl of deb_demo_top is
 	--signal r_leds : std_logic_vector(7 downto 0);
 	--signal r_reset : std_logic;
 
-	-- Component
+	-- Components
+
+	-- Xilinx Megafunction
+  	component sys_pll is
+    port(
+    	inclk0 				: in  std_logic;			-- 100 MHz free running clock
+     	areset 				: in  std_logic;
+      	c0     				: out std_logic;			-- 100 MHz locked clock
+      	c1     				: out std_logic;			-- 200 MHz locked clock
+      	mmcm_locked 		: out std_logic);
+  	end component;
+
 	component xwb_irq_mngr is
 		generic(
 			g_irq_count				: integer := 16;
@@ -161,7 +163,7 @@ begin
 		areset 				=> '0',
 		c0     				=> clk_sys,     -- 100MHz locked clock
 		c1     				=> open,     	-- 200Mhz locked clock
-		locked 				=> locked);     -- '1' when the PLL has locked
+		mmcm_locked 		=> locked);     -- '1' when the PLL has locked
   
 	-- Reset synchronization
 	reset : gc_reset
@@ -194,7 +196,7 @@ begin
 		master_o      => cbar_master_o);
   
 	-- The LM32 is master 1+2
-	lm32_rstn <= clk_sys_rstn and not r_reset;
+	lm32_rstn <= clk_sys_rstn; --and not r_reset;
 
 	LM32 : xwb_lm32
 	generic map(
@@ -211,44 +213,46 @@ begin
 	-- The other 31 interrupt pins are unconnected
 	lm32_interrupt(31 downto 1) <= (others => '0');
   
-  	-- Slave 0 is the RAM. Load a input file containing a simple led blink program!
+  	-- Slave 1+2 is the RAM. Load a input file containing a simple led blink program!
 	ram : xwb_dpram
 	generic map(
-		g_size                  => c_dpram_size,
-		g_slave1_interface_mode => PIPELINED, -- Why isn't this the default?!
-		g_slave2_interface_mode => PIPELINED,
-		g_slave1_granularity    => BYTE,
-		g_slave2_granularity    => WORD)
+      g_size                  => c_dpram_size, -- must agree with sw/target/lm32/ram.ld:LENGTH / 4
+      g_init_file             => "sw/main.ram",
+      g_must_have_init_file   => true,
+      g_slave1_interface_mode => PIPELINED,
+      g_slave2_interface_mode => PIPELINED,
+      g_slave1_granularity    => BYTE,
+      g_slave2_granularity    => BYTE)
 	port map(
 		clk_sys_i 				=> clk_sys,
 		rst_n_i   				=> clk_sys_rstn,
 		-- First port connected to the crossbar
 		slave1_i  				=> cbar_master_o(0),
 		slave1_o  				=> cbar_master_i(0),
-		-- Second port disconnected
-		slave2_i  				=> cc_dummy_slave_in, -- CYC always low
-		slave2_o  				=> open);
+		-- Second port connected to the crossbar
+		slave2_i  				=> cbar_master_o(1),
+		slave2_o  				=> cbar_master_i(1));
 
 	-- Slave 1 is the example LED driver
 	cmp_leds : xwb_gpio_port
 	generic map(
 	--g_interface_mode         => CLASSIC;
 	--g_address_granularity    => WORD;
-	g_num_pins => c_leds_num_pins)
-	--g_with_builtin_tristates => false)
+	g_num_pins => c_leds_num_pins,
+	g_with_builtin_tristates => false)
 	port map(
 		clk_sys_i 				=> clk_sys,
 		rst_n_i   				=> clk_sys_rstn,
 
 		-- Wishbone
-		slave_i 				=> cbar_master_i(1),
-		slave_o 				=> cbar_master_o(1),
+		slave_i 				=> cbar_master_o(2),
+		slave_o 				=> cbar_master_i(2),
 		desc_o  				=> open,	-- Not implemented
 
 		--gpio_b : inout std_logic_vector(g_num_pins-1 downto 0);
 
 		gpio_out_o 				=> leds_o,
-		gpio_in_i  : 			=> leds_gpio_dummy_in,
+		gpio_in_i 				=> leds_gpio_dummy_in,
 		gpio_oen_o 				=> open
     );
 
@@ -257,15 +261,15 @@ begin
 	generic map(
 	--g_interface_mode         => CLASSIC;
 	--g_address_granularity    => WORD;
-	g_num_pins => c_buttons_num_pins)
-	--g_with_builtin_tristates => false)
+	g_num_pins => c_buttons_num_pins,
+	g_with_builtin_tristates => false)
 	port map(
 		clk_sys_i 				=> clk_sys,
 		rst_n_i   				=> clk_sys_rstn,
 
 		-- Wishbone
-		slave_i 				=> cbar_master_i(2),
-		slave_o 				=> cbar_master_o(2),
+		slave_i 				=> cbar_master_o(3),
+		slave_o 				=> cbar_master_i(3),
 		desc_o  				=> open,	-- Not implemented
 
 		--gpio_b : inout std_logic_vector(g_num_pins-1 downto 0);

@@ -19,8 +19,11 @@
 
 
 
-Library UNISIM;
+library UNISIM;
 use UNISIM.vcomponents.all;
+
+library ieee;
+use ieee.std_logic_1164.all;
 
 entity sys_pll is
 	port
@@ -37,6 +40,7 @@ architecture syn of sys_pll is
 
 	signal mmcm_fbin 		: std_logic;
 	signal mmcm_fbout		: std_logic;
+begin
 
    	-- MMCM_BASE: Base Mixed Mode Clock Manager
    	--            Virtex-6
@@ -52,14 +56,14 @@ architecture syn of sys_pll is
         COMPENSATION         => "ZHOLD",
         STARTUP_WAIT         => FALSE,
         DIVCLK_DIVIDE        => 1,
-        CLKFBOUT_MULT_F      => 16.000,
+        CLKFBOUT_MULT_F      => 8.000,
         CLKFBOUT_PHASE       => 0.000,
         CLKFBOUT_USE_FINE_PS => FALSE,
-        CLKOUT0_DIVIDE_F     => 16.000,
+        CLKOUT0_DIVIDE_F     => 8.000,
         CLKOUT0_PHASE        => 0.000,
         CLKOUT0_DUTY_CYCLE   => 0.500,
         CLKOUT0_USE_FINE_PS  => FALSE,
-        CLKOUT1_DIVIDE       => 8,
+        CLKOUT1_DIVIDE       => 4,
         CLKOUT1_PHASE        => 0.000,
         CLKOUT1_DUTY_CYCLE   => 0.500,
         CLKOUT1_USE_FINE_PS  => FALSE,
@@ -118,4 +122,5 @@ architecture syn of sys_pll is
         O => mmcm_fbin,
         I => mmcm_fbout
     );
+end syn;
 				

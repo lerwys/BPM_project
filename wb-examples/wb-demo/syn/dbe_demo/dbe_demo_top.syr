@@ -1,0 +1,822 @@
+Release 13.4 - xst O.87xd (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> 
+Reading design: dbe_demo_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "dbe_demo_top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "dbe_demo_top"
+Output Format                      : NGC
+Target Device                      : xc6vlx75t-1-ff484
+
+---- Source Options
+Top Module Name                    : dbe_demo_top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+INFO:Xst - Part-select index evaluated to out of bound value may lead to incorrect synthesis results; it is recommended not to use them in RTL
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_onewire_master/sockit_owm.v" into library work
+Parsing module <sockit_owm>.
+Analyzing Verilog file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_spi/spi_clgen.v" into library work
+Parsing verilog file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_spi/spi_defines.v" included at line 41.
+Parsing verilog file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_spi/timescale.v" included at line 42.
+Parsing module <spi_clgen>.
+Analyzing Verilog file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_spi/spi_shift.v" into library work
+Parsing verilog file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_spi/spi_defines.v" included at line 41.
+Parsing verilog file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_spi/timescale.v" included at line 42.
+Parsing module <spi_shift>.
+Analyzing Verilog file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_spi/spi_top.v" into library work
+Parsing verilog file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_spi/spi_defines.v" included at line 42.
+Parsing verilog file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_spi/timescale.v" included at line 43.
+Parsing module <spi_top>.
+Analyzing Verilog file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/lm32_allprofiles.v" into library work
+Parsing module <lm32_top_full_debug>.
+Parsing module <lm32_mc_arithmetic_full_debug>.
+Parsing module <lm32_cpu_full_debug>.
+Parsing module <lm32_load_store_unit_full_debug>.
+Parsing module <lm32_decoder_full_debug>.
+Parsing module <lm32_icache_full_debug>.
+Parsing module <lm32_dcache_full_debug>.
+Parsing module <lm32_debug_full_debug>.
+Parsing module <lm32_instruction_unit_full_debug>.
+Parsing module <lm32_jtag_full_debug>.
+Parsing module <lm32_interrupt_full_debug>.
+Parsing module <lm32_top_full>.
+Parsing module <lm32_mc_arithmetic_full>.
+Parsing module <lm32_cpu_full>.
+Parsing module <lm32_load_store_unit_full>.
+Parsing module <lm32_decoder_full>.
+Parsing module <lm32_icache_full>.
+Parsing module <lm32_dcache_full>.
+Parsing module <lm32_instruction_unit_full>.
+Parsing module <lm32_interrupt_full>.
+Parsing module <lm32_top_medium_debug>.
+Parsing module <lm32_mc_arithmetic_medium_debug>.
+Parsing module <lm32_cpu_medium_debug>.
+Parsing module <lm32_load_store_unit_medium_debug>.
+Parsing module <lm32_decoder_medium_debug>.
+Parsing module <lm32_icache_medium_debug>.
+Parsing module <lm32_debug_medium_debug>.
+Parsing module <lm32_instruction_unit_medium_debug>.
+Parsing module <lm32_jtag_medium_debug>.
+Parsing module <lm32_interrupt_medium_debug>.
+Parsing module <lm32_top_medium_icache_debug>.
+Parsing module <lm32_mc_arithmetic_medium_icache_debug>.
+Parsing module <lm32_cpu_medium_icache_debug>.
+Parsing module <lm32_load_store_unit_medium_icache_debug>.
+Parsing module <lm32_decoder_medium_icache_debug>.
+Parsing module <lm32_icache_medium_icache_debug>.
+Parsing module <lm32_debug_medium_icache_debug>.
+Parsing module <lm32_instruction_unit_medium_icache_debug>.
+Parsing module <lm32_jtag_medium_icache_debug>.
+Parsing module <lm32_interrupt_medium_icache_debug>.
+Parsing module <lm32_top_medium_icache>.
+Parsing module <lm32_mc_arithmetic_medium_icache>.
+Parsing module <lm32_cpu_medium_icache>.
+Parsing module <lm32_load_store_unit_medium_icache>.
+Parsing module <lm32_decoder_medium_icache>.
+Parsing module <lm32_icache_medium_icache>.
+Parsing module <lm32_instruction_unit_medium_icache>.
+Parsing module <lm32_interrupt_medium_icache>.
+Parsing module <lm32_top_medium>.
+Parsing module <lm32_mc_arithmetic_medium>.
+Parsing module <lm32_cpu_medium>.
+Parsing module <lm32_load_store_unit_medium>.
+Parsing module <lm32_decoder_medium>.
+Parsing module <lm32_instruction_unit_medium>.
+Parsing module <lm32_interrupt_medium>.
+Parsing module <lm32_top_minimal>.
+Parsing module <lm32_mc_arithmetic_minimal>.
+Parsing module <lm32_cpu_minimal>.
+Parsing module <lm32_load_store_unit_minimal>.
+Parsing module <lm32_decoder_minimal>.
+Parsing module <lm32_instruction_unit_minimal>.
+Parsing module <lm32_interrupt_minimal>.
+Analyzing Verilog file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/src/lm32_mc_arithmetic.v" into library work
+Parsing verilog file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/src/lm32_include.v" included at line 29.
+Parsing module <lm32_mc_arithmetic>.
+Analyzing Verilog file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/src/jtag_cores.v" into library work
+Parsing module <jtag_cores>.
+Analyzing Verilog file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/src/lm32_adder.v" into library work
+Parsing verilog file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/src/lm32_include.v" included at line 29.
+Parsing module <lm32_adder>.
+Analyzing Verilog file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/src/lm32_addsub.v" into library work
+Parsing verilog file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/src/lm32_include.v" included at line 28.
+Parsing module <lm32_addsub>.
+Analyzing Verilog file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/src/lm32_dp_ram.v" into library work
+Parsing module <lm32_dp_ram>.
+Analyzing Verilog file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/src/lm32_logic_op.v" into library work
+Parsing verilog file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/src/lm32_include.v" included at line 29.
+Parsing module <lm32_logic_op>.
+Analyzing Verilog file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/src/lm32_ram.v" into library work
+Parsing verilog file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/src/lm32_include.v" included at line 34.
+Parsing module <lm32_ram>.
+Analyzing Verilog file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/src/lm32_shifter.v" into library work
+Parsing verilog file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/src/lm32_include.v" included at line 29.
+Parsing module <lm32_shifter>.
+Analyzing Verilog file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/platform/generic/lm32_multiplier.v" into library work
+Parsing verilog file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/platform/generic/../../src/lm32_include.v" included at line 29.
+Parsing module <lm32_multiplier>.
+Analyzing Verilog file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/platform/generic/jtag_tap.v" into library work
+Parsing module <jtag_tap>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/genram_pkg.vhd" into library work
+Parsing package <genram_pkg>.
+Parsing package body <genram_pkg>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wishbone_pkg.vhd" into library work
+Parsing package <wishbone_pkg>.
+Parsing package body <wishbone_pkg>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/common/gencores_pkg.vhd" into library work
+Parsing package <gencores_pkg>.
+Parsing package body <gencores_pkg>.
+Parsing VHDL file "/home/lerwys/BPM_Project/wb-examples/wb-demo/top/ml_605_dbe/dbe_demo/dbe_demo_top.vhd" into library work
+Parsing entity <dbe_demo_top>.
+Parsing architecture <rtl> of entity <dbe_demo_top>.
+Parsing VHDL file "/home/lerwys/BPM_Project/wb-examples/wb-demo/top/ml_605_dbe/dbe_demo/sys_pll.vhd" into library work
+Parsing entity <sys_pll>.
+Parsing architecture <syn> of entity <sys_pll>.
+Parsing VHDL file "/home/lerwys/BPM_Project/wb-examples/wb-demo/modules/custom/xwb_irq_mngr.vhd" into library work
+Parsing entity <xwb_irq_mngr>.
+Parsing architecture <rtl> of entity <xwb_irq_mngr>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/common/gc_crc_gen.vhd" into library work
+Parsing entity <gc_crc_gen>.
+Parsing architecture <rtl> of entity <gc_crc_gen>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/common/gc_moving_average.vhd" into library work
+Parsing entity <gc_moving_average>.
+Parsing architecture <rtl> of entity <gc_moving_average>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/common/gc_extend_pulse.vhd" into library work
+Parsing entity <gc_extend_pulse>.
+Parsing architecture <rtl> of entity <gc_extend_pulse>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/common/gc_delay_gen.vhd" into library work
+Parsing entity <gc_delay_gen>.
+Parsing architecture <behavioral> of entity <gc_delay_gen>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/common/gc_dual_pi_controller.vhd" into library work
+Parsing entity <gc_dual_pi_controller>.
+Parsing architecture <behavioral> of entity <gc_dual_pi_controller>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/common/gc_reset.vhd" into library work
+Parsing entity <gc_reset>.
+Parsing architecture <rtl> of entity <gc_reset>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/common/gc_serial_dac.vhd" into library work
+Parsing entity <gc_serial_dac>.
+Parsing architecture <syn> of entity <gc_serial_dac>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/common/gc_sync_ffs.vhd" into library work
+Parsing entity <gc_sync_ffs>.
+Parsing architecture <behavioral> of entity <gc_sync_ffs>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/common/gc_arbitrated_mux.vhd" into library work
+Parsing entity <gc_arbitrated_mux>.
+Parsing architecture <rtl> of entity <gc_arbitrated_mux>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/common/gc_pulse_synchronizer.vhd" into library work
+Parsing entity <gc_pulse_synchronizer>.
+Parsing architecture <rtl> of entity <gc_pulse_synchronizer>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/common/gc_frequency_meter.vhd" into library work
+Parsing entity <gc_frequency_meter>.
+Parsing architecture <behavioral> of entity <gc_frequency_meter>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/common/gc_dual_clock_ram.vhd" into library work
+Parsing entity <gc_dual_clock_ram>.
+Parsing architecture <rtl> of entity <gc_dual_clock_ram>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/common/gc_wfifo.vhd" into library work
+Parsing entity <gc_wfifo>.
+Parsing architecture <rtl> of entity <gc_wfifo>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/memory_loader_pkg.vhd" into library work
+Parsing package <memory_loader_pkg>.
+Parsing package body <memory_loader_pkg>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/generic_shiftreg_fifo.vhd" into library work
+Parsing entity <generic_shiftreg_fifo>.
+Parsing architecture <rtl> of entity <generic_shiftreg_fifo>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/xilinx/generic_dpram.vhd" into library work
+Parsing entity <generic_dpram>.
+Parsing architecture <syn> of entity <generic_dpram>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/xilinx/generic_dpram_sameclock.vhd" into library work
+Parsing entity <generic_dpram_sameclock>.
+Parsing architecture <syn> of entity <generic_dpram_sameclock>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/xilinx/generic_dpram_dualclock.vhd" into library work
+Parsing entity <generic_dpram_dualclock>.
+Parsing architecture <syn> of entity <generic_dpram_dualclock>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/xilinx/generic_spram.vhd" into library work
+Parsing entity <generic_spram>.
+Parsing architecture <syn> of entity <generic_spram>.
+WARNING:HDLCompiler:443 - "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/xilinx/generic_spram.vhd" Line 58: Function f_bitstring_2_slv does not always return a value.
+WARNING:HDLCompiler:443 - "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/xilinx/generic_spram.vhd" Line 63: Function f_load_from_file does not always return a value.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/fifo_generator_v6_1_pkg.vhd" into library fifo_generator_v6_1
+Parsing package <fifo_generator_v6_1_pkg>.
+Parsing package body <fifo_generator_v6_1_pkg>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/fifo_generator_v6_1_defaults.vhd" into library fifo_generator_v6_1
+Parsing package <fifo_generator_v6_1_defaults>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/fifo_generator_v6_1_xst_comp.vhd" into library fifo_generator_v6_1
+Parsing package <fifo_generator_v6_1_xst_comp>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/input_blk.vhd" into library fifo_generator_v6_1
+Parsing entity <input_blk>.
+Parsing architecture <xilinx> of entity <input_blk>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/output_blk.vhd" into library fifo_generator_v6_1
+Parsing entity <output_blk>.
+Parsing architecture <xilinx> of entity <output_blk>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/shft_wrapper.vhd" into library fifo_generator_v6_1
+Parsing entity <shft_wrapper>.
+Parsing architecture <xilinx> of entity <shft_wrapper>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/shft_ram.vhd" into library fifo_generator_v6_1
+Parsing entity <shft_ram>.
+Parsing architecture <xilinx> of entity <shft_ram>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/dmem.vhd" into library fifo_generator_v6_1
+Parsing entity <dmem>.
+Parsing architecture <Xilinx> of entity <dmem>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/blk_mem_gen_v4_1/blk_mem_gen_v4_1_xst_comp.vhd" into library blk_mem_gen_v4_1
+Parsing package <blk_mem_gen_v4_1_xst_comp>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/memory.vhd" into library fifo_generator_v6_1
+Parsing entity <memory>.
+Parsing architecture <xilinx> of entity <memory>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/compare.vhd" into library fifo_generator_v6_1
+Parsing entity <compare>.
+Parsing architecture <Xilinx> of entity <compare>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/wr_bin_cntr.vhd" into library fifo_generator_v6_1
+Parsing entity <wr_bin_cntr>.
+Parsing architecture <xilinx> of entity <wr_bin_cntr>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/rd_bin_cntr.vhd" into library fifo_generator_v6_1
+Parsing entity <rd_bin_cntr>.
+Parsing architecture <xilinx> of entity <rd_bin_cntr>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/updn_cntr.vhd" into library fifo_generator_v6_1
+Parsing entity <updn_cntr>.
+Parsing architecture <xilinx> of entity <updn_cntr>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/rd_status_flags_as.vhd" into library fifo_generator_v6_1
+Parsing entity <rd_status_flags_as>.
+Parsing architecture <xilinx> of entity <rd_status_flags_as>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/rd_status_flags_ss.vhd" into library fifo_generator_v6_1
+Parsing entity <rd_status_flags_ss>.
+Parsing architecture <xilinx> of entity <rd_status_flags_ss>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/rd_pe_as.vhd" into library fifo_generator_v6_1
+Parsing entity <rd_pe_as>.
+Parsing architecture <xilinx> of entity <rd_pe_as>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/rd_pe_ss.vhd" into library fifo_generator_v6_1
+Parsing entity <rd_pe_ss>.
+Parsing architecture <xilinx> of entity <rd_pe_ss>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/rd_handshaking_flags.vhd" into library fifo_generator_v6_1
+Parsing entity <rd_handshaking_flags>.
+Parsing architecture <xilinx> of entity <rd_handshaking_flags>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/rd_dc_as.vhd" into library fifo_generator_v6_1
+Parsing entity <rd_dc_as>.
+Parsing architecture <xilinx> of entity <rd_dc_as>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/rd_dc_fwft_ext_as.vhd" into library fifo_generator_v6_1
+Parsing entity <rd_dc_fwft_ext_as>.
+Parsing architecture <xilinx> of entity <rd_dc_fwft_ext_as>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/dc_ss.vhd" into library fifo_generator_v6_1
+Parsing entity <dc_ss>.
+Parsing architecture <xilinx> of entity <dc_ss>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/dc_ss_fwft.vhd" into library fifo_generator_v6_1
+Parsing entity <dc_ss_fwft>.
+Parsing architecture <xilinx> of entity <dc_ss_fwft>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/rd_fwft.vhd" into library fifo_generator_v6_1
+Parsing entity <rd_fwft>.
+Parsing architecture <xilinx> of entity <rd_fwft>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/rd_logic.vhd" into library fifo_generator_v6_1
+Parsing entity <rd_logic>.
+Parsing architecture <xilinx> of entity <rd_logic>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/reset_blk_ramfifo.vhd" into library fifo_generator_v6_1
+Parsing entity <reset_blk_ramfifo>.
+Parsing architecture <xilinx> of entity <reset_blk_ramfifo>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/clk_x_pntrs.vhd" into library fifo_generator_v6_1
+Parsing entity <clk_x_pntrs>.
+Parsing architecture <xilinx> of entity <clk_x_pntrs>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/wr_status_flags_as.vhd" into library fifo_generator_v6_1
+Parsing entity <wr_status_flags_as>.
+Parsing architecture <xilinx> of entity <wr_status_flags_as>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/wr_status_flags_ss.vhd" into library fifo_generator_v6_1
+Parsing entity <wr_status_flags_ss>.
+Parsing architecture <xilinx> of entity <wr_status_flags_ss>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/wr_pf_as.vhd" into library fifo_generator_v6_1
+Parsing entity <wr_pf_as>.
+Parsing architecture <xilinx> of entity <wr_pf_as>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/wr_pf_ss.vhd" into library fifo_generator_v6_1
+Parsing entity <wr_pf_ss>.
+Parsing architecture <xilinx> of entity <wr_pf_ss>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/wr_handshaking_flags.vhd" into library fifo_generator_v6_1
+Parsing entity <wr_handshaking_flags>.
+Parsing architecture <xilinx> of entity <wr_handshaking_flags>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/wr_dc_as.vhd" into library fifo_generator_v6_1
+Parsing entity <wr_dc_as>.
+Parsing architecture <xilinx> of entity <wr_dc_as>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/wr_dc_fwft_ext_as.vhd" into library fifo_generator_v6_1
+Parsing entity <wr_dc_fwft_ext_as>.
+Parsing architecture <xilinx> of entity <wr_dc_fwft_ext_as>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/wr_logic.vhd" into library fifo_generator_v6_1
+Parsing entity <wr_logic>.
+Parsing architecture <xilinx> of entity <wr_logic>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/wr_status_flags_sshft.vhd" into library fifo_generator_v6_1
+Parsing entity <wr_status_flags_sshft>.
+Parsing architecture <xilinx> of entity <wr_status_flags_sshft>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/rd_status_flags_sshft.vhd" into library fifo_generator_v6_1
+Parsing entity <rd_status_flags_sshft>.
+Parsing architecture <xilinx> of entity <rd_status_flags_sshft>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/wr_pf_sshft.vhd" into library fifo_generator_v6_1
+Parsing entity <wr_pf_sshft>.
+Parsing architecture <xilinx> of entity <wr_pf_sshft>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/rd_pe_sshft.vhd" into library fifo_generator_v6_1
+Parsing entity <rd_pe_sshft>.
+Parsing architecture <xilinx> of entity <rd_pe_sshft>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/logic_sshft.vhd" into library fifo_generator_v6_1
+Parsing entity <logic_sshft>.
+Parsing architecture <xilinx> of entity <logic_sshft>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/fifo_generator_ramfifo.vhd" into library fifo_generator_v6_1
+Parsing entity <fifo_generator_ramfifo>.
+Parsing architecture <xilinx> of entity <fifo_generator_ramfifo>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/fifo_generator_v6_1_comps_builtin.vhd" into library fifo_generator_v6_1
+Parsing package <fifo_generator_v6_1_comps_builtin>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/delay.vhd" into library fifo_generator_v6_1
+Parsing entity <delay>.
+Parsing architecture <xilinx> of entity <delay>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/clk_x_pntrs_builtin.vhd" into library fifo_generator_v6_1
+Parsing entity <clk_x_pntrs_builtin>.
+Parsing architecture <xilinx> of entity <clk_x_pntrs_builtin>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/bin_cntr.vhd" into library fifo_generator_v6_1
+Parsing entity <bin_cntr>.
+Parsing architecture <xilinx> of entity <bin_cntr>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/logic_builtin.vhd" into library fifo_generator_v6_1
+Parsing entity <logic_builtin>.
+Parsing architecture <xilinx> of entity <logic_builtin>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/reset_builtin.vhd" into library fifo_generator_v6_1
+Parsing entity <reset_builtin>.
+Parsing architecture <xilinx> of entity <reset_builtin>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/builtin_prim.vhd" into library fifo_generator_v6_1
+Parsing entity <builtin_prim>.
+Parsing architecture <xilinx> of entity <builtin_prim>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/builtin_extdepth.vhd" into library fifo_generator_v6_1
+Parsing entity <builtin_extdepth>.
+Parsing architecture <xilinx> of entity <builtin_extdepth>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/builtin_top.vhd" into library fifo_generator_v6_1
+Parsing entity <builtin_top>.
+Parsing architecture <xilinx> of entity <builtin_top>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/builtin_prim_v6.vhd" into library fifo_generator_v6_1
+Parsing entity <builtin_prim_v6>.
+Parsing architecture <xilinx> of entity <builtin_prim_v6>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/builtin_extdepth_v6.vhd" into library fifo_generator_v6_1
+Parsing entity <builtin_extdepth_v6>.
+Parsing architecture <xilinx> of entity <builtin_extdepth_v6>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/builtin_top_v6.vhd" into library fifo_generator_v6_1
+Parsing entity <builtin_top_v6>.
+Parsing architecture <xilinx> of entity <builtin_top_v6>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/fifo_generator_v6_1_builtin.vhd" into library fifo_generator_v6_1
+Parsing entity <fifo_generator_v6_1_builtin>.
+Parsing architecture <xilinx> of entity <fifo_generator_v6_1_builtin>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/rgtw.vhd" into library fifo_generator_v6_1
+Parsing entity <rgtw>.
+Parsing architecture <xilinx> of entity <rgtw>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/wgtr.vhd" into library fifo_generator_v6_1
+Parsing entity <wgtr>.
+Parsing architecture <xilinx> of entity <wgtr>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/input_block_fifo16_patch.vhd" into library fifo_generator_v6_1
+Parsing entity <input_block_fifo16_patch>.
+Parsing architecture <xilinx> of entity <input_block_fifo16_patch>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/output_block_fifo16_patch.vhd" into library fifo_generator_v6_1
+Parsing entity <output_block_fifo16_patch>.
+Parsing architecture <xilinx> of entity <output_block_fifo16_patch>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/fifo16_patch_top.vhd" into library fifo_generator_v6_1
+Parsing entity <fifo16_patch_top>.
+Parsing architecture <xilinx> of entity <fifo16_patch_top>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/fifo_generator_v6_1_fifo16_patch.vhd" into library fifo_generator_v6_1
+Parsing entity <fifo_generator_v6_1_fifo16_patch>.
+Parsing architecture <xilinx> of entity <fifo_generator_v6_1_fifo16_patch>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/fifo_generator_v6_1/fifo_generator_v6_1_xst.vhd" into library fifo_generator_v6_1
+Parsing entity <fifo_generator_v6_1_xst>.
+Parsing architecture <xilinx> of entity <fifo_generator_v6_1_xst>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/xilinx/virtex6/generic_async_fifo.vhd" into library work
+Parsing entity <generic_async_fifo>.
+Parsing architecture <syn> of entity <generic_async_fifo>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/xilinx/virtex6/generic_sync_fifo.vhd" into library work
+Parsing entity <generic_sync_fifo>.
+Parsing architecture <syn> of entity <generic_sync_fifo>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/blk_mem_gen_v4_1/blk_mem_gen_v4_1_defaults.vhd" into library blk_mem_gen_v4_1
+Parsing package <blk_mem_gen_v4_1_defaults>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/blk_mem_gen_v4_1/blk_mem_gen_v4_1_pkg.vhd" into library blk_mem_gen_v4_1
+Parsing package <blk_mem_gen_pkg>.
+Parsing package body <blk_mem_gen_pkg>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/blk_mem_gen_v4_1/blk_mem_gen_getinit_pkg.vhd" into library blk_mem_gen_v4_1
+Parsing package <blk_mem_gen_getinit_pkg>.
+Parsing package body <blk_mem_gen_getinit_pkg>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/blk_mem_gen_v4_1/blk_mem_min_area_pkg.vhd" into library blk_mem_gen_v4_1
+Parsing package <blk_mem_min_area_pkg>.
+Parsing package body <blk_mem_min_area_pkg>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/blk_mem_gen_v4_1/blk_mem_gen_bindec.vhd" into library blk_mem_gen_v4_1
+Parsing entity <bindec>.
+Parsing architecture <xilinx> of entity <bindec>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/blk_mem_gen_v4_1/blk_mem_gen_mux.vhd" into library blk_mem_gen_v4_1
+Parsing entity <blk_mem_gen_mux>.
+Parsing architecture <xilinx> of entity <blk_mem_gen_mux>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/blk_mem_gen_v4_1/blk_mem_gen_prim_wrapper_s6.vhd" into library blk_mem_gen_v4_1
+Parsing entity <blk_mem_gen_prim_wrapper_s6>.
+Parsing architecture <xilinx> of entity <blk_mem_gen_prim_wrapper_s6>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/blk_mem_gen_v4_1/blk_mem_gen_prim_wrapper_s6_init.vhd" into library blk_mem_gen_v4_1
+Parsing entity <blk_mem_gen_prim_wrapper_s6_init>.
+Parsing architecture <xilinx> of entity <blk_mem_gen_prim_wrapper_s6_init>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/blk_mem_gen_v4_1/blk_mem_gen_prim_wrapper_s3adsp.vhd" into library blk_mem_gen_v4_1
+Parsing entity <blk_mem_gen_prim_wrapper_s3adsp>.
+Parsing architecture <xilinx> of entity <blk_mem_gen_prim_wrapper_s3adsp>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/blk_mem_gen_v4_1/blk_mem_gen_prim_wrapper_s3adsp_init.vhd" into library blk_mem_gen_v4_1
+Parsing entity <blk_mem_gen_prim_wrapper_s3adsp_init>.
+Parsing architecture <xilinx> of entity <blk_mem_gen_prim_wrapper_s3adsp_init>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/blk_mem_gen_v4_1/blk_mem_gen_prim_wrapper_s3a.vhd" into library blk_mem_gen_v4_1
+Parsing entity <blk_mem_gen_prim_wrapper_s3a>.
+Parsing architecture <xilinx> of entity <blk_mem_gen_prim_wrapper_s3a>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/blk_mem_gen_v4_1/blk_mem_gen_prim_wrapper_s3a_init.vhd" into library blk_mem_gen_v4_1
+Parsing entity <blk_mem_gen_prim_wrapper_s3a_init>.
+Parsing architecture <xilinx> of entity <blk_mem_gen_prim_wrapper_s3a_init>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/blk_mem_gen_v4_1/blk_mem_gen_prim_wrapper_v6.vhd" into library blk_mem_gen_v4_1
+Parsing entity <blk_mem_gen_prim_wrapper_v6>.
+Parsing architecture <xilinx> of entity <blk_mem_gen_prim_wrapper_v6>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/blk_mem_gen_v4_1/blk_mem_gen_prim_wrapper_v6_init.vhd" into library blk_mem_gen_v4_1
+Parsing entity <blk_mem_gen_prim_wrapper_v6_init>.
+Parsing architecture <xilinx> of entity <blk_mem_gen_prim_wrapper_v6_init>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/blk_mem_gen_v4_1/blk_mem_gen_prim_wrapper_v5.vhd" into library blk_mem_gen_v4_1
+Parsing entity <blk_mem_gen_prim_wrapper_v5>.
+Parsing architecture <xilinx> of entity <blk_mem_gen_prim_wrapper_v5>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/blk_mem_gen_v4_1/blk_mem_gen_prim_wrapper_v5_init.vhd" into library blk_mem_gen_v4_1
+Parsing entity <blk_mem_gen_prim_wrapper_v5_init>.
+Parsing architecture <xilinx> of entity <blk_mem_gen_prim_wrapper_v5_init>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/blk_mem_gen_v4_1/blk_mem_gen_prim_wrapper_v4.vhd" into library blk_mem_gen_v4_1
+Parsing entity <blk_mem_gen_prim_wrapper_v4>.
+Parsing architecture <xilinx> of entity <blk_mem_gen_prim_wrapper_v4>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/blk_mem_gen_v4_1/blk_mem_gen_prim_wrapper_v4_init.vhd" into library blk_mem_gen_v4_1
+Parsing entity <blk_mem_gen_prim_wrapper_v4_init>.
+Parsing architecture <xilinx> of entity <blk_mem_gen_prim_wrapper_v4_init>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/blk_mem_gen_v4_1/blk_mem_gen_prim_wrapper_s3.vhd" into library blk_mem_gen_v4_1
+Parsing entity <blk_mem_gen_prim_wrapper_s3>.
+Parsing architecture <xilinx> of entity <blk_mem_gen_prim_wrapper_s3>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/blk_mem_gen_v4_1/blk_mem_gen_prim_wrapper_s3_init.vhd" into library blk_mem_gen_v4_1
+Parsing entity <blk_mem_gen_prim_wrapper_s3_init>.
+Parsing architecture <xilinx> of entity <blk_mem_gen_prim_wrapper_s3_init>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/blk_mem_gen_v4_1/blk_mem_gen_prim_width.vhd" into library blk_mem_gen_v4_1
+Parsing entity <blk_mem_gen_prim_width>.
+Parsing architecture <xilinx> of entity <blk_mem_gen_prim_width>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/blk_mem_gen_v4_1/blk_mem_gen_generic_cstr.vhd" into library blk_mem_gen_v4_1
+Parsing entity <blk_mem_gen_generic_cstr>.
+Parsing architecture <xilinx> of entity <blk_mem_gen_generic_cstr>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/blk_mem_gen_v4_1/blk_mem_gen_ecc_encoder.vhd" into library blk_mem_gen_v4_1
+Parsing entity <blk_mem_gen_ecc_encoder>.
+Parsing architecture <xilinx> of entity <blk_mem_gen_ecc_encoder>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/blk_mem_gen_v4_1/blk_mem_gen_ecc_decoder.vhd" into library blk_mem_gen_v4_1
+Parsing entity <blk_mem_gen_ecc_decoder>.
+Parsing architecture <xilinx> of entity <blk_mem_gen_ecc_decoder>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/blk_mem_gen_v4_1/blk_mem_input_block.vhd" into library blk_mem_gen_v4_1
+Parsing entity <blk_mem_input_block>.
+Parsing architecture <xilinx> of entity <blk_mem_input_block>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/blk_mem_gen_v4_1/blk_mem_output_block.vhd" into library blk_mem_gen_v4_1
+Parsing entity <blk_mem_output_block>.
+Parsing architecture <xilinx> of entity <blk_mem_output_block>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/blk_mem_gen_v4_1/blk_mem_gen_top.vhd" into library blk_mem_gen_v4_1
+Parsing entity <blk_mem_gen_top>.
+Parsing architecture <xilinx> of entity <blk_mem_gen_top>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/coregen_ip/blk_mem_gen_v4_1/blk_mem_gen_v4_1_xst.vhd" into library blk_mem_gen_v4_1
+Parsing entity <blk_mem_gen_v4_1_xst>.
+Parsing architecture <xilinx> of entity <blk_mem_gen_v4_1_xst>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_async_bridge/wb_async_bridge.vhd" into library work
+Parsing entity <wb_async_bridge>.
+Parsing architecture <behavioral> of entity <wb_async_bridge>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_async_bridge/xwb_async_bridge.vhd" into library work
+Parsing entity <xwb_async_bridge>.
+Parsing architecture <wrapper> of entity <xwb_async_bridge>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_onewire_master/wb_onewire_master.vhd" into library work
+Parsing entity <wb_onewire_master>.
+Parsing architecture <rtl> of entity <wb_onewire_master>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_onewire_master/xwb_onewire_master.vhd" into library work
+Parsing entity <xwb_onewire_master>.
+Parsing architecture <rtl> of entity <xwb_onewire_master>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_i2c_master/i2c_master_bit_ctrl.vhd" into library work
+Parsing entity <i2c_master_bit_ctrl>.
+Parsing architecture <structural> of entity <i2c_master_bit_ctrl>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_i2c_master/i2c_master_byte_ctrl.vhd" into library work
+Parsing entity <i2c_master_byte_ctrl>.
+Parsing architecture <structural> of entity <i2c_master_byte_ctrl>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_i2c_master/i2c_master_top.vhd" into library work
+Parsing entity <i2c_master_top>.
+Parsing architecture <structural> of entity <i2c_master_top>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_i2c_master/wb_i2c_master.vhd" into library work
+Parsing entity <wb_i2c_master>.
+Parsing architecture <rtl> of entity <wb_i2c_master>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_i2c_master/xwb_i2c_master.vhd" into library work
+Parsing entity <xwb_i2c_master>.
+Parsing architecture <rtl> of entity <xwb_i2c_master>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_bus_fanout/xwb_bus_fanout.vhd" into library work
+Parsing entity <xwb_bus_fanout>.
+Parsing architecture <rtl> of entity <xwb_bus_fanout>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_dpram/xwb_dpram.vhd" into library work
+Parsing entity <xwb_dpram>.
+Parsing architecture <struct> of entity <xwb_dpram>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_gpio_port/wb_gpio_port.vhd" into library work
+Parsing entity <wb_gpio_port>.
+Parsing architecture <behavioral> of entity <wb_gpio_port>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_gpio_port/xwb_gpio_port.vhd" into library work
+Parsing entity <xwb_gpio_port>.
+Parsing architecture <rtl> of entity <xwb_gpio_port>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_simple_timer/wb_tics.vhd" into library work
+Parsing entity <wb_tics>.
+Parsing architecture <behaviour> of entity <wb_tics>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_simple_timer/xwb_tics.vhd" into library work
+Parsing entity <xwb_tics>.
+Parsing architecture <rtl> of entity <xwb_tics>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_uart/uart_async_rx.vhd" into library work
+Parsing entity <uart_async_rx>.
+Parsing architecture <behavioral> of entity <uart_async_rx>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_uart/uart_async_tx.vhd" into library work
+Parsing entity <uart_async_tx>.
+Parsing architecture <behavioral> of entity <uart_async_tx>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_uart/uart_baud_gen.vhd" into library work
+Parsing entity <uart_baud_gen>.
+Parsing architecture <behavioral> of entity <uart_baud_gen>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_uart/simple_uart_pkg.vhd" into library work
+Parsing package <uart_wbgen2_pkg>.
+Parsing package body <uart_wbgen2_pkg>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_uart/simple_uart_wb.vhd" into library work
+Parsing entity <simple_uart_wb>.
+Parsing architecture <syn> of entity <simple_uart_wb>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_uart/wb_simple_uart.vhd" into library work
+Parsing entity <wb_simple_uart>.
+Parsing architecture <syn> of entity <wb_simple_uart>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_uart/xwb_simple_uart.vhd" into library work
+Parsing entity <xwb_simple_uart>.
+Parsing architecture <rtl> of entity <xwb_simple_uart>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_vic/vic_prio_enc.vhd" into library work
+Parsing entity <vic_prio_enc>.
+Parsing architecture <syn> of entity <vic_prio_enc>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wbgen2/wbgen2_pkg.vhd" into library work
+Parsing package <wbgen2_pkg>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_vic/wb_slave_vic.vhd" into library work
+Parsing entity <wb_slave_vic>.
+Parsing architecture <syn> of entity <wb_slave_vic>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_vic/wb_vic.vhd" into library work
+Parsing entity <wb_vic>.
+Parsing architecture <syn> of entity <wb_vic>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_vic/xwb_vic.vhd" into library work
+Parsing entity <xwb_vic>.
+Parsing architecture <wrapper> of entity <xwb_vic>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_spi/wb_spi.vhd" into library work
+Parsing entity <wb_spi>.
+Parsing architecture <rtl> of entity <wb_spi>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_spi/xwb_spi.vhd" into library work
+Parsing entity <xwb_spi>.
+Parsing architecture <rtl> of entity <xwb_spi>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_crossbar/sdb_rom.vhd" into library work
+Parsing entity <sdb_rom>.
+Parsing architecture <rtl> of entity <sdb_rom>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_crossbar/xwb_crossbar.vhd" into library work
+Parsing entity <xwb_crossbar>.
+Parsing architecture <rtl> of entity <xwb_crossbar>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_crossbar/xwb_sdb_crossbar.vhd" into library work
+Parsing entity <xwb_sdb_crossbar>.
+Parsing architecture <rtl> of entity <xwb_sdb_crossbar>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/xwb_lm32.vhd" into library work
+Parsing entity <xwb_lm32>.
+Parsing architecture <rtl> of entity <xwb_lm32>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_slave_adapter/wb_slave_adapter.vhd" into library work
+Parsing entity <wb_slave_adapter>.
+Parsing architecture <rtl> of entity <wb_slave_adapter>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_xilinx_fpga_loader/xloader_registers_pkg.vhd" into library work
+Parsing package <xldr_wbgen2_pkg>.
+Parsing package body <xldr_wbgen2_pkg>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_xilinx_fpga_loader/wb_xilinx_fpga_loader.vhd" into library work
+Parsing entity <wb_xilinx_fpga_loader>.
+Parsing architecture <behavioral> of entity <wb_xilinx_fpga_loader>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_xilinx_fpga_loader/xwb_xilinx_fpga_loader.vhd" into library work
+Parsing entity <xwb_xilinx_fpga_loader>.
+Parsing architecture <rtl> of entity <xwb_xilinx_fpga_loader>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_xilinx_fpga_loader/xloader_wb.vhd" into library work
+Parsing entity <xloader_wb>.
+Parsing architecture <syn> of entity <xloader_wb>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_clock_crossing/xwb_clock_crossing.vhd" into library work
+Parsing entity <xwb_clock_crossing>.
+Parsing architecture <rtl> of entity <xwb_clock_crossing>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_dma/xwb_dma.vhd" into library work
+Parsing entity <xwb_dma>.
+Parsing architecture <rtl> of entity <xwb_dma>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wbgen2/wbgen2_dpssram.vhd" into library work
+Parsing entity <wbgen2_dpssram>.
+Parsing architecture <syn> of entity <wbgen2_dpssram>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wbgen2/wbgen2_eic.vhd" into library work
+Parsing entity <wbgen2_eic>.
+Parsing architecture <syn> of entity <wbgen2_eic>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wbgen2/wbgen2_fifo_async.vhd" into library work
+Parsing entity <wbgen2_fifo_async>.
+Parsing architecture <rtl> of entity <wbgen2_fifo_async>.
+Parsing VHDL file "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wbgen2/wbgen2_fifo_sync.vhd" into library work
+Parsing entity <wbgen2_fifo_sync>.
+Parsing architecture <rtl> of entity <wbgen2_fifo_sync>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+WARNING:HDLCompiler:746 - "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/genram_pkg.vhd" Line 50: Range is empty (null range)
+
+Elaborating entity <dbe_demo_top> (architecture <rtl>) from library <work>.
+
+Elaborating entity <sys_pll> (architecture <syn>) from library <work>.
+
+Elaborating entity <gc_reset> (architecture <rtl>) with generics from library <work>.
+
+Elaborating entity <xwb_sdb_crossbar> (architecture <rtl>) with generics from library <work>.
+
+Elaborating entity <sdb_rom> (architecture <rtl>) with generics from library <work>.
+
+Elaborating entity <xwb_crossbar> (architecture <rtl>) with generics from library <work>.
+Note: "Mapping slave #0[0x0/0xffff0000]"
+Note: "Mapping slave #1[0x10000000/0xffff0000]"
+Note: "Mapping slave #2[0x20000400/0xfffffff8]"
+Note: "Mapping slave #3[0x20000500/0xfffffff8]"
+Note: "Mapping slave #4[0x20000000/0xfffffe00]"
+
+Elaborating entity <xwb_lm32> (architecture <rtl>) with generics from library <work>.
+WARNING:HDLCompiler:321 - "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/xwb_lm32.vhd" Line 31: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/xwb_lm32.vhd" Line 32: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/xwb_lm32.vhd" Line 33: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/xwb_lm32.vhd" Line 34: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/xwb_lm32.vhd" Line 20: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/xwb_lm32.vhd" Line 21: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/xwb_lm32.vhd" Line 22: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/xwb_lm32.vhd" Line 23: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/xwb_lm32.vhd" Line 326: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/xwb_lm32.vhd" Line 367: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/xwb_lm32.vhd" Line 408: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/xwb_lm32.vhd" Line 449: Comparison between arrays of unequal length always returns FALSE.
+Going to verilog side to elaborate module lm32_top_medium_icache_debug
+
+Elaborating module <lm32_top_medium_icache_debug>.
+
+Elaborating module <lm32_cpu_medium_icache_debug>.
+
+Elaborating module <lm32_instruction_unit_medium_icache_debug(associativity=1,sets=256,bytes_per_line=16,base_address=32'b0,limit=32'b01111111111111111111111111111111)>.
+
+Elaborating module <lm32_icache_medium_icache_debug(associativity=1,sets=256,bytes_per_line=16,base_address=32'b0,limit=32'b01111111111111111111111111111111)>.
+
+Elaborating module <lm32_ram(data_width=32,address_width=32'sb01010)>.
+
+Elaborating module <lm32_ram(data_width=32'sb010100,address_width=32'sb01000)>.
+WARNING:HDLCompiler:413 - "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/lm32_allprofiles.v" Line 49056: Result of 30-bit expression is truncated to fit in 29-bit target.
+WARNING:HDLCompiler:1127 - "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/lm32_allprofiles.v" Line 41108: Assignment to pc_w ignored, since the identifier is never used
+
+Elaborating module <lm32_decoder_medium_icache_debug>.
+WARNING:HDLCompiler:1127 - "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/lm32_allprofiles.v" Line 45380: Assignment to op_user ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/lm32_allprofiles.v" Line 45414: Assignment to multiply ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/lm32_allprofiles.v" Line 45624: Result of 32-bit expression is truncated to fit in 29-bit target.
+
+Elaborating module <lm32_load_store_unit_medium_icache_debug(associativity=1,sets=512,bytes_per_line=16,base_address=0,limit=0)>.
+"/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/lm32_allprofiles.v" Line 44387. $display Data bus error. Address: 0
+"/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/lm32_allprofiles.v" Line 44535. $display Warning: Non-aligned halfword access. Address: 0x0 Time:  $time .
+"/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/lm32_allprofiles.v" Line 44537. $display Warning: Non-aligned word access. Address: 0x0 Time:  $time .
+
+Elaborating module <lm32_adder>.
+
+Elaborating module <lm32_addsub>.
+
+Elaborating module <lm32_logic_op>.
+
+Elaborating module <lm32_shifter>.
+WARNING:HDLCompiler:413 - "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/src/lm32_shifter.v" Line 128: Result of 64-bit expression is truncated to fit in 32-bit target.
+
+Elaborating module <lm32_multiplier>.
+
+Elaborating module <lm32_interrupt_medium_icache_debug>.
+WARNING:HDLCompiler:413 - "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/lm32_allprofiles.v" Line 50707: Result of 3-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:1127 - "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/lm32_allprofiles.v" Line 50707: Assignment to ie_csr_read_data ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/lm32_allprofiles.v" Line 50718: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:1127 - "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/lm32_allprofiles.v" Line 50718: Assignment to ip_csr_read_data ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/lm32_allprofiles.v" Line 50719: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:1127 - "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/lm32_allprofiles.v" Line 50719: Assignment to im_csr_read_data ignored, since the identifier is never used
+
+Elaborating module <lm32_jtag_medium_icache_debug>.
+
+Elaborating module <lm32_debug_medium_icache_debug(breakpoints=0,watchpoints=32'b0100)>.
+WARNING:HDLCompiler:634 - "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/lm32_allprofiles.v" Line 47797: Net <wp_match_n[4]> does not have a driver.
+
+Elaborating module <lm32_dp_ram(addr_depth=32'sb0100000,addr_width=5,data_width=32)>.
+WARNING:HDLCompiler:1127 - "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/lm32_allprofiles.v" Line 42753: Assignment to x_result_sel_logic_x ignored, since the identifier is never used
+
+Elaborating module <jtag_cores>.
+
+Elaborating module <jtag_tap>.
+WARNING:HDLCompiler:1127 - "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/lm32_allprofiles.v" Line 39170: Assignment to jrstn ignored, since the identifier is never used
+Back to vhdl to continue elaboration
+WARNING:HDLCompiler:321 - "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/xwb_lm32.vhd" Line 531: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/xwb_lm32.vhd" Line 572: Comparison between arrays of unequal length always returns FALSE.
+
+Elaborating entity <xwb_dpram> (architecture <struct>) with generics from library <work>.
+
+Elaborating entity <wb_slave_adapter> (architecture <rtl>) with generics from library <work>.
+
+Elaborating entity <generic_dpram> (architecture <syn>) with generics from library <work>.
+
+Elaborating entity <generic_dpram_sameclock> (architecture <syn>) with generics from library <work>.
+WARNING:HDLCompiler:321 - "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/memory_loader_pkg.vhd" Line 150: Comparison between arrays of unequal length always returns FALSE.
+ERROR:HDLCompiler:1242 - "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/memory_loader_pkg.vhd" Line 159: "f_load_mem_from_file(): can't open file 'sw/main.ram'": 
+ERROR:HDLCompiler:432 - "/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/xilinx/generic_dpram_sameclock.vhd" Line 82: Formal <arr> has no actual or default value.
+Netlist generic_dpram_sameclock(32,16384,true,"read_first","sw/main.ram","",true)(1,10,1,11,-1,0)(syn) remains a blackbox, due to errors in its contents
+WARNING:HDLCompiler:634 - "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_dpram/xwb_dpram.vhd" Line 72: Net <slave1_out_int> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_dpram/xwb_dpram.vhd" Line 74: Net <slave2_out_int> does not have a driver.
+
+Elaborating entity <xwb_gpio_port> (architecture <rtl>) with generics from library <work>.
+
+Elaborating entity <wb_gpio_port> (architecture <behavioral>) with generics from library <work>.
+
+Elaborating entity <wb_slave_adapter> (architecture <rtl>) with generics from library <work>.
+
+Elaborating entity <gc_sync_ffs> (architecture <behavioral>) with generics from library <work>.
+INFO:HDLCompiler:679 - "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_gpio_port/wb_gpio_port.vhd" Line 146. Case statement is complete. others clause is never selected
+WARNING:HDLCompiler:634 - "/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_gpio_port/wb_gpio_port.vhd" Line 78: Net <gpio_in_synced[31]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/lerwys/BPM_Project/wb-examples/wb-demo/top/ml_605_dbe/dbe_demo/dbe_demo_top.vhd" Line 96: Net <lm32_interrupt[0]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/lerwys/BPM_Project/wb-examples/wb-demo/top/ml_605_dbe/dbe_demo/dbe_demo_top.vhd" Line 109: Net <leds_gpio_dummy_in[7]> does not have a driver.
+--> 
+
+
+Total memory usage is 408640 kilobytes
+
+Number of errors   :    2 (   0 filtered)
+Number of warnings :   38 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

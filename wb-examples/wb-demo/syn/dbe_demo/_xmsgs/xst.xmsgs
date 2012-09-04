@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="Xst" num="0" delta="new" >Part-select index evaluated to out of bound value may lead to incorrect synthesis results; it is recommended not to use them in RTL
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="443" delta="new" >"/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/xilinx/generic_spram.vhd" Line 58: Function <arg fmt="%s" index="1">f_bitstring_2_slv</arg> does not always return a value.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="443" delta="new" >"/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/xilinx/generic_spram.vhd" Line 63: Function <arg fmt="%s" index="1">f_load_from_file</arg> does not always return a value.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="new" >"/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/genram_pkg.vhd" Line 50: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="321" delta="new" >"/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/xwb_lm32.vhd" Line 31: Comparison between arrays of unequal length always returns <arg fmt="%s" index="1">FALSE</arg>.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="321" delta="new" >"/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/xwb_lm32.vhd" Line 32: Comparison between arrays of unequal length always returns <arg fmt="%s" index="1">FALSE</arg>.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="321" delta="new" >"/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/xwb_lm32.vhd" Line 33: Comparison between arrays of unequal length always returns <arg fmt="%s" index="1">FALSE</arg>.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="321" delta="new" >"/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/xwb_lm32.vhd" Line 34: Comparison between arrays of unequal length always returns <arg fmt="%s" index="1">FALSE</arg>.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="321" delta="new" >"/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/xwb_lm32.vhd" Line 20: Comparison between arrays of unequal length always returns <arg fmt="%s" index="1">FALSE</arg>.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="321" delta="new" >"/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/xwb_lm32.vhd" Line 21: Comparison between arrays of unequal length always returns <arg fmt="%s" index="1">FALSE</arg>.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="321" delta="new" >"/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/xwb_lm32.vhd" Line 22: Comparison between arrays of unequal length always returns <arg fmt="%s" index="1">FALSE</arg>.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="321" delta="new" >"/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/xwb_lm32.vhd" Line 23: Comparison between arrays of unequal length always returns <arg fmt="%s" index="1">FALSE</arg>.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="321" delta="new" >"/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/xwb_lm32.vhd" Line 326: Comparison between arrays of unequal length always returns <arg fmt="%s" index="1">FALSE</arg>.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="321" delta="new" >"/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/xwb_lm32.vhd" Line 367: Comparison between arrays of unequal length always returns <arg fmt="%s" index="1">FALSE</arg>.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="321" delta="new" >"/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/xwb_lm32.vhd" Line 408: Comparison between arrays of unequal length always returns <arg fmt="%s" index="1">FALSE</arg>.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="321" delta="new" >"/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/xwb_lm32.vhd" Line 449: Comparison between arrays of unequal length always returns <arg fmt="%s" index="1">FALSE</arg>.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/lm32_allprofiles.v" Line 49056: Result of <arg fmt="%d" index="1">30</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">29</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/lm32_allprofiles.v" Line 41108: Assignment to <arg fmt="%s" index="1">pc_w</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/lm32_allprofiles.v" Line 45380: Assignment to <arg fmt="%s" index="1">op_user</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/lm32_allprofiles.v" Line 45414: Assignment to <arg fmt="%s" index="1">multiply</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/lm32_allprofiles.v" Line 45624: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">29</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/src/lm32_shifter.v" Line 128: Result of <arg fmt="%d" index="1">64</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">32</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/lm32_allprofiles.v" Line 50707: Result of <arg fmt="%d" index="1">3</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/lm32_allprofiles.v" Line 50707: Assignment to <arg fmt="%s" index="1">ie_csr_read_data</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/lm32_allprofiles.v" Line 50718: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/lm32_allprofiles.v" Line 50718: Assignment to <arg fmt="%s" index="1">ip_csr_read_data</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/lm32_allprofiles.v" Line 50719: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/lm32_allprofiles.v" Line 50719: Assignment to <arg fmt="%s" index="1">im_csr_read_data</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/lm32_allprofiles.v" Line 47797: Net &lt;<arg fmt="%s" index="1">wp_match_n[4]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/lm32_allprofiles.v" Line 42753: Assignment to <arg fmt="%s" index="1">x_result_sel_logic_x</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/lm32_allprofiles.v" Line 39170: Assignment to <arg fmt="%s" index="1">jrstn</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="321" delta="new" >"/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/xwb_lm32.vhd" Line 531: Comparison between arrays of unequal length always returns <arg fmt="%s" index="1">FALSE</arg>.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="321" delta="new" >"/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_lm32/generated/xwb_lm32.vhd" Line 572: Comparison between arrays of unequal length always returns <arg fmt="%s" index="1">FALSE</arg>.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="321" delta="new" >"/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/memory_loader_pkg.vhd" Line 150: Comparison between arrays of unequal length always returns <arg fmt="%s" index="1">FALSE</arg>.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="1242" delta="new" >"/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/memory_loader_pkg.vhd" Line 159: <arg fmt="%s" index="1">&quot;f_load_mem_from_file(): can&apos;t open file &apos;sw/main.ram&apos;&quot;</arg>: <arg fmt="%s" index="2"></arg>
+</msg>
+
+<msg type="error" file="HDLCompiler" num="432" delta="new" >"/home/lerwys/BPM_Project/cores/general-cores/modules/genrams/xilinx/generic_dpram_sameclock.vhd" Line 82: Formal &lt;<arg fmt="%s" index="1">arr</arg>&gt; has no actual or default value.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_dpram/xwb_dpram.vhd" Line 72: Net &lt;<arg fmt="%s" index="1">slave1_out_int</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_dpram/xwb_dpram.vhd" Line 74: Net &lt;<arg fmt="%s" index="1">slave2_out_int</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/lerwys/BPM_Project/cores/general-cores/modules/wishbone/wb_gpio_port/wb_gpio_port.vhd" Line 78: Net &lt;<arg fmt="%s" index="1">gpio_in_synced[31]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/lerwys/BPM_Project/wb-examples/wb-demo/top/ml_605_dbe/dbe_demo/dbe_demo_top.vhd" Line 96: Net &lt;<arg fmt="%s" index="1">lm32_interrupt[0]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/lerwys/BPM_Project/wb-examples/wb-demo/top/ml_605_dbe/dbe_demo/dbe_demo_top.vhd" Line 109: Net &lt;<arg fmt="%s" index="1">leds_gpio_dummy_in[7]</arg>&gt; does not have a driver.
+</msg>
+
+</messages>
+

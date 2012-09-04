@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/home/lerwys/BPM_Project/wb-examples/wb-demo/syn/dbe_demo/dbe_demo_top.xst" -ofn "/home/lerwys/BPM_Project/wb-examples/wb-demo/syn/dbe_demo/dbe_demo_top.syr" 

@@ -1,7 +1,1 @@
-modules =	{
-				"local" : 
-				[ 	"modules/custom",
-					"../../cores/general-cores"
-
-				]
-			}
+modules =	{ "local" : [ "modules/custom",	"../../cores/general-cores" ] };
