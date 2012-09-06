@@ -1,5 +1,6 @@
 vhdl work "../../top/ml_605_dbe/dbe_demo/dbe_demo_top.vhd"
 vhdl work "../../top/ml_605_dbe/dbe_demo/sys_pll.vhd"
+vhdl work "../../top/ml_605_dbe/dbe_demo/clk_gen.vhd"
 vhdl work "../../modules/custom/xwb_irq_mngr.vhd"
 vhdl work "../../../../cores/general-cores/modules/common/gencores_pkg.vhd"
 vhdl work "../../../../cores/general-cores/modules/common/gc_crc_gen.vhd"

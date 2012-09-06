@@ -3,15 +3,17 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pn" timeStamp="Tue Sep  4 16:32:05 2012">
+<application name="pn" timeStamp="Thu Sep  6 14:31:39 2012">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="AC4694EBDA714C5B25B9996BA24439BD" type="project"/>
-<property name="ProjectIteration" value="0" type="project"/>
+<property name="ProjectIteration" value="1" type="project"/>
 <property name="ProjectFile" value="/home/lerwys/BPM_Project/wb-examples/wb-demo/syn/dbe_demo/dbe_demo_top.xise" type="project"/>
 <property name="ProjectCreationTimestamp" value="2012-09-04T11:30:38" type="project"/>
 </section>
 <section name="Project Statistics" visible="true">
 <property name="PROP_Enable_Message_Filtering" value="false" type="design"/>
+<property name="PROP_LastAppliedGoal" value="Balanced" type="design"/>
+<property name="PROP_LastAppliedStrategy" value="Xilinx Default (unlocked)" type="design"/>
 <property name="PROP_ManualCompileOrderImp" value="true" type="design"/>
 <property name="PROP_PropSpecInProjFile" value="Store all values" type="design"/>
 <property name="PROP_Simulator" value="ISim (VHDL/Verilog)" type="design"/>
@@ -19,20 +21,22 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_UseSmartGuide" value="false" type="design"/>
 <property name="PROP_intProjectCreationTimestamp" value="2012-09-04T11:30:38" type="design"/>
 <property name="PROP_intWbtProjectID" value="AC4694EBDA714C5B25B9996BA24439BD" type="design"/>
+<property name="PROP_intWbtProjectIteration" value="1" type="process"/>
 <property name="PROP_intWorkingDirLocWRTProjDir" value="Same" type="design"/>
 <property name="PROP_intWorkingDirUsed" value="No" type="design"/>
+<property name="PROP_lockPinsUcfFile" value="changed" type="process"/>
 <property name="PROP_AutoCompileOrderImp" value="false" type="process"/>
 <property name="PROP_AutoTop" value="false" type="design"/>
 <property name="PROP_DevFamily" value="Virtex6" type="design"/>
 <property name="PROP_xilxMapEnableMultiThreading" value="2" type="process"/>
-<property name="PROP_DevDevice" value="xc6vlx75t" type="design"/>
+<property name="PROP_DevDevice" value="xc6vlx240t" type="design"/>
 <property name="PROP_DevFamilyPMName" value="virtex6" type="design"/>
-<property name="PROP_DevPackage" value="ff484" type="design"/>
+<property name="PROP_DevPackage" value="ff1156" type="design"/>
 <property name="PROP_Synthesis_Tool" value="XST (VHDL/Verilog)" type="design"/>
 <property name="PROP_DevSpeed" value="-1" type="design"/>
 <property name="PROP_PreferredLanguage" value="Verilog" type="design"/>
 <property name="FILE_VERILOG" value="15" type="source"/>
-<property name="FILE_VHDL" value="160" type="source"/>
+<property name="FILE_VHDL" value="161" type="source"/>
 </section>
 </application>
 </document>

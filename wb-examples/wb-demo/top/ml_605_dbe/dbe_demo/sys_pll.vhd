@@ -26,28 +26,36 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 entity sys_pll is
-	port
-	(
-		areset			: in std_logic  := '0';
-		inclk0			: in std_logic  := '0';
-		c0				: out std_logic ;
-		c1				: out std_logic ;
-		mmcm_locked		: out std_logic 
+	generic(
+		-- 200 MHz input clock
+		g_clkin_period			: real			:= 5.000;
+		g_clkbout_mult_f		: real			:= 5.000;
+		-- 200 MHz output clock
+		g_clk0_divide_f			: real			:= 5.000;
+		-- 100 MHz output clock	
+		g_clk1_divide			: integer		:= 10
+	);
+	port(
+		rst_i					: in std_logic  := '0';
+		clk_i					: in std_logic  := '0';
+		clk0_o					: out std_logic;
+		clk1_o					: out std_logic;
+		locked_o				: out std_logic 
 	);
 end sys_pll;
 
 architecture syn of sys_pll is
 
-	signal mmcm_fbin 		: std_logic;
-	signal mmcm_fbout		: std_logic;
+	signal s_mmcm_fbin 		: std_logic;
+	signal s_mmcm_fbout		: std_logic;
 begin
 
    	-- MMCM_BASE: Base Mixed Mode Clock Manager
    	--            Virtex-6
    	-- Xilinx HDL Language Template, version 13.4
 
-   	-- ADC Clock PLL
-    cmp_mmcm_adc : MMCM_ADV
+   	-- Clock PLL
+    cmp_mmcm : MMCM_ADV
     generic map
     (
         BANDWIDTH            => "OPTIMIZED",
@@ -56,29 +64,28 @@ begin
         COMPENSATION         => "ZHOLD",
         STARTUP_WAIT         => FALSE,
         DIVCLK_DIVIDE        => 1,
-        CLKFBOUT_MULT_F      => 8.000,
+        CLKFBOUT_MULT_F      => g_clkbout_mult_f,
         CLKFBOUT_PHASE       => 0.000,
         CLKFBOUT_USE_FINE_PS => FALSE,
-        CLKOUT0_DIVIDE_F     => 8.000,
+        CLKOUT0_DIVIDE_F     => g_clk0_divide_f,
         CLKOUT0_PHASE        => 0.000,
         CLKOUT0_DUTY_CYCLE   => 0.500,
         CLKOUT0_USE_FINE_PS  => FALSE,
-        CLKOUT1_DIVIDE       => 4,
+        CLKOUT1_DIVIDE       => g_clk1_divide,
         CLKOUT1_PHASE        => 0.000,
         CLKOUT1_DUTY_CYCLE   => 0.500,
         CLKOUT1_USE_FINE_PS  => FALSE,
-		-- 100 MHz input clock
-        CLKIN1_PERIOD        => 10.000,
+        CLKIN1_PERIOD        => g_clkin_period,
         REF_JITTER1          => 0.010
     )
     port map
     (
         -- Output clocks
-        CLKFBOUT            => mmcm_fbout,
+        CLKFBOUT            => s_mmcm_fbout,
         CLKFBOUTB           => open,
-        CLKOUT0             => c0,
+        CLKOUT0             => clk0_o,
         CLKOUT0B            => open,
-        CLKOUT1             => c1,
+        CLKOUT1             => clk1_o,
         CLKOUT1B            => open,
         CLKOUT2             => open,
         CLKOUT2B            => open,
@@ -88,8 +95,8 @@ begin
         CLKOUT5             => open,
         CLKOUT6             => open,
         -- Input clock control
-        CLKFBIN             => mmcm_fbin,
-        CLKIN1              => inclk0,
+        CLKFBIN             => s_mmcm_fbin,
+        CLKIN1              => clk_i,
         CLKIN2              => '0',
         -- Tied to always select the primary input clock
         CLKINSEL            => '1',
@@ -107,20 +114,19 @@ begin
         PSINCDEC            => '0',
         PSDONE              => open,
         -- Other control and status signals
-        LOCKED              => mmcm_locked,
+        LOCKED              => locked_o,
         CLKINSTOPPED        => open,
         CLKFBSTOPPED        => open,
         PWRDWN              => '0',
-        RST                 => areset
+        RST                 => rst_i
     );
-   	-- End of MMCM_BASE_inst instantiation
 
-   -- Global clock buffers for "cmp_mmcm_adc" instance
+	-- Global clock buffers for "cmp_mmcm" instance
     cmp_clkf_bufg : BUFG
     port map
     (
-        O => mmcm_fbin,
-        I => mmcm_fbout
+        O => s_mmcm_fbin,
+        I => s_mmcm_fbout
     );
 end syn;
 				

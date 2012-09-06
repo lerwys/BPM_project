@@ -14,7 +14,9 @@ entity dbe_demo_top is
 		-----------------------------------------
 		-- Clocking pins
 		-----------------------------------------
-		clk100_i 						: in std_logic;
+		--clk100_i 						: in std_logic;
+		sys_clk_p_i						: in std_logic;
+		sys_clk_n_i						: in std_logic;
 
 		-----------------------------------------
 		-- Button pins
@@ -65,13 +67,13 @@ architecture rtl of dbe_demo_top is
 		name          => "LNLS_IRQMNGR       ")));
     
 	-- Top crossbar layout
-	constant c_slaves : natural := 4;			-- LED, Button and IRQ manager slaves
-	constant c_masters : natural := 2;			-- LM32 master. Data + Instruction
-	constant c_dpram_size : natural := 16384; -- in 32-bit words (64KB)
+	constant c_slaves 				: natural := 4;			-- LED, Button and IRQ manager slaves
+	constant c_masters 				: natural := 2;			-- LM32 master. Data + Instruction
+	constant c_dpram_size 			: natural := 16384; -- in 32-bit words (64KB)
 
 	-- GPIO num pins
-	constant c_leds_num_pins : natural := 8;
-	constant c_buttons_num_pins : natural := 8;
+	constant c_leds_num_pins 		: natural := 8;
+	constant c_buttons_num_pins 	: natural := 8;
 
 	-- WB SDB (Self describing bus) layout
 	constant c_layout : t_sdb_record_array(c_slaves-1 downto 0) :=
@@ -83,38 +85,42 @@ architecture rtl of dbe_demo_top is
 	);	
 
 	-- Self Describing Bus ROM Address. It is addressed as slave as well.
-	constant c_sdb_address : t_wishbone_address := x"20000000";
+	constant c_sdb_address 			: t_wishbone_address := x"20000000";
 
 	-- Crossbar master/slave arrays
-	signal cbar_slave_i  : t_wishbone_slave_in_array (c_masters-1 downto 0);
-	signal cbar_slave_o  : t_wishbone_slave_out_array(c_masters-1 downto 0);
-	signal cbar_master_i : t_wishbone_master_in_array(c_slaves-1 downto 0);
-	signal cbar_master_o : t_wishbone_master_out_array(c_slaves-1 downto 0);
+	signal cbar_slave_i  			: t_wishbone_slave_in_array (c_masters-1 downto 0);
+	signal cbar_slave_o  			: t_wishbone_slave_out_array(c_masters-1 downto 0);
+	signal cbar_master_i 			: t_wishbone_master_in_array(c_slaves-1 downto 0);
+	signal cbar_master_o 			: t_wishbone_master_out_array(c_slaves-1 downto 0);
 
 	-- LM32 signals
-	signal clk_sys : std_logic;
-	signal lm32_interrupt : std_logic_vector(31 downto 0);
-	signal lm32_rstn : std_logic;
+	signal clk_sys 					: std_logic;
+	signal lm32_interrupt 			: std_logic_vector(31 downto 0);
+	signal lm32_rstn 				: std_logic;
 
 	-- Global clock and reset signals
-	signal locked : std_logic;
-	signal clk_sys_rstn : std_logic;
+	signal locked 					: std_logic;
+	signal clk_sys_rstn 			: std_logic;
+
 	-- Only one clock domain
-	signal reset_clks : std_logic_vector(0 downto 0);
-	signal reset_rstn : std_logic_vector(0 downto 0);
+	signal reset_clks 				: std_logic_vector(0 downto 0);
+	signal reset_rstn 				: std_logic_vector(0 downto 0);
+
+	-- Global Clock Single ended
+	signal sys_clk_gen				: std_logic;
 
 	-- GPIO LED signals
-	signal gpio_slave_led_o : t_wishbone_slave_out;
-	signal gpio_slave_led_i : t_wishbone_slave_in;
-	signal leds_gpio_dummy_in : std_logic_vector(c_leds_num_pins-1 downto 0);
+	signal gpio_slave_led_o 		: t_wishbone_slave_out;
+	signal gpio_slave_led_i 		: t_wishbone_slave_in;
+	-- signal leds_gpio_dummy_in 		: std_logic_vector(c_leds_num_pins-1 downto 0);
 
 	-- GPIO Button signals
-	signal gpio_slave_button_o : t_wishbone_slave_out;
-	signal gpio_slave_button_i : t_wishbone_slave_in;
+	signal gpio_slave_button_o 		: t_wishbone_slave_out;
+	signal gpio_slave_button_i 		: t_wishbone_slave_in;
 
 	-- IRQ manager  signals
-	signal gpio_slave_irqmngr_o : t_wishbone_slave_out;
-	signal gpio_slave_irqmngr_i : t_wishbone_slave_in;
+	signal gpio_slave_irqmngr_o 	: t_wishbone_slave_out;
+	signal gpio_slave_irqmngr_i 	: t_wishbone_slave_in;
 
 	-- LEDS, button and irq manager signals
 	--signal r_leds : std_logic_vector(7 downto 0);
@@ -122,14 +128,24 @@ architecture rtl of dbe_demo_top is
 
 	-- Components
 
+	-- Clock generation
+	component clk_gen is
+	port(
+		sys_clk_p_i					: in std_logic;
+		sys_clk_n_i					: in std_logic;
+		sys_clk_o					: out std_logic
+	);
+	end component;
+
 	-- Xilinx Megafunction
   	component sys_pll is
     port(
-    	inclk0 				: in  std_logic;			-- 100 MHz free running clock
-     	areset 				: in  std_logic;
-      	c0     				: out std_logic;			-- 100 MHz locked clock
-      	c1     				: out std_logic;			-- 200 MHz locked clock
-      	mmcm_locked 		: out std_logic);
+		rst_i						: in std_logic  := '0';
+		clk_i						: in std_logic  := '0';
+		clk0_o						: out std_logic;
+		clk1_o						: out std_logic;
+		locked_o					: out std_logic 
+	);
   	end component;
 
 	component xwb_irq_mngr is
@@ -156,35 +172,47 @@ architecture rtl of dbe_demo_top is
 		);
 	end component;
 begin
-	-- Obtain core clocking. Replace with Xilinx function!
-	sys_pll_inst : sys_pll
+
+	-- Clock generation
+	cmp_clk_gen : clk_gen
 	port map (
-		inclk0 				=> clk100_i,    -- 100MHz free running clock from board
-		areset 				=> '0',
-		c0     				=> clk_sys,     -- 100MHz locked clock
-		c1     				=> open,     	-- 200Mhz locked clock
-		mmcm_locked 		=> locked);     -- '1' when the PLL has locked
+		sys_clk_p_i				=> sys_clk_p_i,
+		sys_clk_n_i				=> sys_clk_n_i,
+		sys_clk_o				=> sys_clk_gen
+	);
+
+	-- Obtain core locking. Replace with Xilinx function!
+	cmp_sys_pll_inst : sys_pll
+	port map (
+		rst_i					=> '0',
+		clk_i					=> sys_clk_gen,
+		clk0_o					=> open,     	-- 200Mhz locked clock
+		clk1_o					=> clk_sys,     -- 100MHz locked clock
+		locked_o				=> locked		-- '1' when the PLL has locked
+	);
   
 	-- Reset synchronization
-	reset : gc_reset
+	cmp_reset : gc_reset
 	port map(
-		free_clk_i 			=> clk100_i,
+		free_clk_i 			=> sys_clk_gen,
 		locked_i   			=> locked,
 		clks_i     			=> reset_clks,
-		rstn_o     			=> reset_rstn);
+		rstn_o     			=> reset_rstn
+	);
 
 	reset_clks(0) <= clk_sys;
 	clk_sys_rstn <= reset_rstn(0);
   
   -- The top-most Wishbone B.4 crossbar
-	interconnect : xwb_sdb_crossbar
+	cmp_interconnect : xwb_sdb_crossbar
 	generic map(
 		g_num_masters => c_masters,
 		g_num_slaves  => c_slaves,
 		g_registered  => true,
 		g_wraparound  => false, -- Should be true for nested buses
 		g_layout      => c_layout,
-		g_sdb_addr    => c_sdb_address)
+		g_sdb_addr    => c_sdb_address
+	)
 	port map(
 		clk_sys_i     => clk_sys,
 		rst_n_i       => clk_sys_rstn,
@@ -193,12 +221,13 @@ begin
 		slave_o       => cbar_slave_o,
 		-- Slave connections (INTERCON is a master)
 		master_i      => cbar_master_i,
-		master_o      => cbar_master_o);
+		master_o      => cbar_master_o
+	);
   
 	-- The LM32 is master 1+2
 	lm32_rstn <= clk_sys_rstn; --and not r_reset;
 
-	LM32 : xwb_lm32
+	cmp_lm32 : xwb_lm32
 	generic map(
 		g_profile => "medium_icache_debug") -- Including JTAG and I-cache (no divide)
 	port map(
@@ -208,21 +237,22 @@ begin
 		dwb_o     => cbar_slave_i(0), -- Data bus
 		dwb_i     => cbar_slave_o(0),
 		iwb_o     => cbar_slave_i(1), -- Instruction bus
-		iwb_i     => cbar_slave_o(1));
+		iwb_i     => cbar_slave_o(1)
+	);
   
-	-- The other 31 interrupt pins are unconnected
-	lm32_interrupt(31 downto 1) <= (others => '0');
+	-- Interrupts disabled for now
+	lm32_interrupt(31 downto 0) <= (others => '0');
   
   	-- Slave 1+2 is the RAM. Load a input file containing a simple led blink program!
-	ram : xwb_dpram
+	cmp_ram : xwb_dpram
 	generic map(
-      g_size                  => c_dpram_size, -- must agree with sw/target/lm32/ram.ld:LENGTH / 4
-      g_init_file             => "sw/main.ram",
-      g_must_have_init_file   => true,
-      g_slave1_interface_mode => PIPELINED,
-      g_slave2_interface_mode => PIPELINED,
-      g_slave1_granularity    => BYTE,
-      g_slave2_granularity    => BYTE)
+		g_size                  => c_dpram_size, -- must agree with sw/target/lm32/ram.ld:LENGTH / 4
+		g_init_file             => "../../top/ml_605_dbe/dbe_demo/sw/main.ram",
+		g_must_have_init_file   => true,
+		g_slave1_interface_mode => PIPELINED,
+		g_slave2_interface_mode => PIPELINED,
+		g_slave1_granularity    => BYTE,
+		g_slave2_granularity    => BYTE)
 	port map(
 		clk_sys_i 				=> clk_sys,
 		rst_n_i   				=> clk_sys_rstn,
@@ -231,15 +261,17 @@ begin
 		slave1_o  				=> cbar_master_i(0),
 		-- Second port connected to the crossbar
 		slave2_i  				=> cbar_master_o(1),
-		slave2_o  				=> cbar_master_i(1));
+		slave2_o  				=> cbar_master_i(1)
+	);
 
 	-- Slave 1 is the example LED driver
 	cmp_leds : xwb_gpio_port
 	generic map(
-	--g_interface_mode         => CLASSIC;
-	--g_address_granularity    => WORD;
-	g_num_pins => c_leds_num_pins,
-	g_with_builtin_tristates => false)
+		--g_interface_mode         => CLASSIC;
+		--g_address_granularity    => WORD;
+		g_num_pins => c_leds_num_pins,
+		g_with_builtin_tristates => false
+	)
 	port map(
 		clk_sys_i 				=> clk_sys,
 		rst_n_i   				=> clk_sys_rstn,
@@ -252,17 +284,18 @@ begin
 		--gpio_b : inout std_logic_vector(g_num_pins-1 downto 0);
 
 		gpio_out_o 				=> leds_o,
-		gpio_in_i 				=> leds_gpio_dummy_in,
+		gpio_in_i 				=> x"00",
 		gpio_oen_o 				=> open
     );
 
   	-- Slave 2 is the example Button driver
 	cmp_buttons : xwb_gpio_port
 	generic map(
-	--g_interface_mode         => CLASSIC;
-	--g_address_granularity    => WORD;
-	g_num_pins => c_buttons_num_pins,
-	g_with_builtin_tristates => false)
+		--g_interface_mode         => CLASSIC;
+		--g_address_granularity    => WORD;
+		g_num_pins => c_buttons_num_pins,
+		g_with_builtin_tristates => false
+	)
 	port map(
 		clk_sys_i 				=> clk_sys,
 		rst_n_i   				=> clk_sys_rstn,
@@ -296,5 +329,4 @@ begin
 	  	-- Component external signals
 	 -- 	irq_req_o           	=> lm32_interrupt(0)
 	--);
-
 end rtl;

@@ -4,7 +4,7 @@ run
 -ifn dbe_demo_top.prj
 -ofn dbe_demo_top
 -ofmt NGC
--p xc6vlx75t-1-ff484
+-p xc6vlx240t-1-ff1156
 -top dbe_demo_top
 -opt_mode Speed
 -opt_level 1
