@@ -2,7 +2,6 @@
 #define __GPIO_H
 
 #include "inttypes.h"
-
 #include "board.h"
 
 /* 	

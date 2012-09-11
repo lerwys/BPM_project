@@ -23,7 +23,7 @@ all: 		$(OBJS)
 				./genraminit $(OUTPUT).bin 0 > $(OUTPUT).ram
 
 clean:	
-	rm -f $(OBJS) $(OUTPUT).elf $(OUTPUT).bin $(OUTPUT).ram
+	rm -f $(OBJS) $(OUTPUT).elf $(OUTPUT).bin $(OUTPUT).ram $(OUTPUT)_disasm.S
 
 %.o:		%.c
 				${CC} $(CFLAGS) $(PTPD_CFLAGS) $(INCLUDE_DIR) $(LIB_DIR) -c $^ -o $@
