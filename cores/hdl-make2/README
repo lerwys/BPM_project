@@ -1,0 +1,6 @@
+This is a modification of hdlmake utility build by Pawel Szostek
+and Tomasz Wlostowski.
+
+The inteded modification is to allow iSim simulation.
+
+Original project in: http://www.ohwr.org/projects/hdl-make
