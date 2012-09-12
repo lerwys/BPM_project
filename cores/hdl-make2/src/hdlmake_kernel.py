@@ -18,6 +18,7 @@
 #    along with this program; if not, write to the Free Software
 #    Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA
 #
+# Modified to allow iSim simulation by Lucas Russo (lucas.russo@lnls.br)
 
 
 import os
@@ -50,17 +51,29 @@ class HdlmakeKernel(object):
             self.fetch(unfetched_only = True)
 
         if tm.action == "simulation":
-            self.generate_modelsim_makefile()
+			# Defaults to isim simulator tool
+            self.generate_isim_makefile()
+			# Force declaration of sim_tool varible in Manifest
+#			if tm.sim_tool == None:
+#				p.error("sim_tool variable must be defined in the manifest")
+#				quit()
+#			# Make distintion between isim and vsim simulators
+#			if tm.sim_tool == "vsim":
+#            	self.generate_modelsim_makefile()
+#			elif tm.sim_tool == "isim":
+#				self.generate_isim_makefile()
+#			else:
+#				raise RuntimeError("Unrecognized sim tool: "+tm.sim_tool)
         elif tm.action == "synthesis":
             if tm.syn_project == None:
-                p.error("syn_project variable must be defined in the manfiest")
+                p.error("syn_project variable must be defined in the manifest")
                 quit()
             if tm.target.lower() == "xilinx":
-                self.generate_ise_project()
-                self.generate_ise_makefile()
-                self.generate_remote_synthesis_makefile()
+				self.generate_ise_project()
+				self.generate_ise_makefile()
+				self.generate_remote_synthesis_makefile()
             elif tm.target.lower() == "altera":
-                self.generate_quartus_project()
+                 self.generate_quartus_project()
 #                self.generate_quartus_makefile()
 #                self.generate_quartus_remote_synthesis_makefile()
             else:
@@ -99,20 +112,37 @@ class HdlmakeKernel(object):
         self.modules_pool.fetch_all(unfetched_only)
         p.vprint(str(self.modules_pool))
 
-    def generate_modelsim_makefile(self):
-        p.info("Generating makefile for simulation.")
-        solver = DependencySolver()
+	def generate_modelsim_makefile(self):
+#        p.info("Generating makefile for simulation.")
+		p.info("Generating ModelSim makefile for simulation.")
+		solver = DependencySolver()
 
-        pool = self.modules_pool
-        if not pool.is_everything_fetched():
-            p.echo("A module remains unfetched. "
-                "Fetching must be done prior to makefile generation")
-            p.echo(str([str(m) for m in self.modules_pool.modules if not m.isfetched]))
-            quit()
-        top_module = pool.get_top_module()
-        flist = pool.build_global_file_list();
-        flist_sorted = solver.solve(flist);
-        self.make_writer.generate_modelsim_makefile(flist_sorted, top_module)
+		pool = self.modules_pool
+		if not pool.is_everything_fetched():
+			p.echo("A module remains unfetched. "
+				"Fetching must be done prior to makefile generation")
+			p.echo(str([str(m) for m in self.modules_pool.modules if not m.isfetched]))
+			quit()
+		top_module = pool.get_top_module()
+		flist = pool.build_global_file_list();
+		flist_sorted = solver.solve(flist);
+		self.make_writer.generate_modelsim_makefile(flist_sorted, top_module)
+
+	def generate_isim_makefile(self):
+#        p.info("Generating makefile for simulation.")
+		p.info("Generating iSim makefile for simulation.")
+		solver = DependencySolver()
+
+		pool = self.modules_pool
+		if not pool.is_everything_fetched():
+			p.echo("A module remains unfetched. "
+				"Fetching must be done prior to makefile generation")
+			p.echo(str([str(m) for m in self.modules_pool.modules if not m.isfetched]))
+			quit()
+		top_module = pool.get_top_module()
+		flist = pool.build_global_file_list();
+		flist_sorted = solver.solve(flist);
+		self.make_writer.generate_isim_makefile(flist_sorted, top_module)
 
     def generate_ise_makefile(self):
         p.info("Generating makefile for local synthesis.")

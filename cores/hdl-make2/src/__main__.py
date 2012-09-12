@@ -18,6 +18,7 @@
 #    along with this program; if not, write to the Free Software
 #    Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA
 #
+# Modified to allow iSim simulation by Lucas Russo (lucas.russo@lnls.br)
 
 
 import os
@@ -34,8 +35,13 @@ def main():
     parser.add_option("--manifest-help", action="store_true",
     dest="manifest_help", help="print manifest file variables description")
 
-    parser.add_option("--make-sim", dest="make_sim", action="store_true",
-    default=None, help="generate a simulation Makefile")
+ #   parser.add_option("--make-sim", dest="make_sim", action="store_true",
+ #   default=None, help="generate a simulation Makefile")
+    parser.add_option("--make-vsim", dest="make_vsim", action="store_true",
+    default=None, help="generate a ModelSim simulation Makefile")
+
+    parser.add_option("--make-isim", dest="make_isim", action="store_true",
+    default=None, help="generate a iSim simulation Makefile")
 
     parser.add_option("--make-fetch", dest="make_fetch", action="store_true",
     default=None, help="generate a makefile for modules' fetching")
@@ -86,6 +92,8 @@ def main():
     default="false", help="verbose mode")
 
     (options, _) = parser.parse_args()
+
+	# Setting global variable (global_mod.py)
     global_mod.options = options
 
     if options.manifest_help == True:
@@ -94,15 +102,25 @@ def main():
         quit()
 
     p.vprint("LoadTopManifest")
+
+	# Initialize empty module list
     pool = ModulePool()
+
+	# Initialize top module and setting looking fot its manifest in URL (local | remote) path
     top_module = Module(parent=None, url=os.getcwd(), source="local",
         fetchto=".", pool=pool)
+
+	# Setting top_module as top module of design (ModulePool class)
     pool.set_top_module(top_module)
 
     if top_module.manifest == None:
         p.echo("No manifest found. At least an empty one is needed")
         quit()
+
+	# Setting global variable (global_mod.py)
     global_mod.top_module = top_module
+
+	# Parse manifest of top_module
     global_mod.top_module.parse_manifest()
 
     global_mod.global_target = global_mod.top_module.target
@@ -115,7 +133,9 @@ def main():
 
     options_kernel_mapping = {
         "fetch" : "fetch",
-        "make_sim" : "generate_modelsim_makefile",
+#        "make_sim" : "generate_modelsim_makefile",
+        "make_vsim" : "generate_modelsim_makefile",
+        "make_isim" : "generate_isim_makefile",
         "ise_proj" : "generate_ise_project",
         "local" : "run_local_synthesis",
         "remote": "run_remote_synthesis",

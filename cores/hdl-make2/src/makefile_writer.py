@@ -350,6 +350,115 @@ clean:
                     self.write(" \\\n"+ os.path.join(dep_file.library, name, "."+name))
                 self.write('\n\n')
 
+# Modification here
+    def generate_isim_makefile(self, fileset, top_module):
+        from srcfile import VerilogFile, VHDLFile, SVFile
+        from flow import ModelsiminiReader
+        make_preambule_p1 = """## variables #############################
+PWD := $(shell pwd)
+
+MODELSIM_INI_PATH := """ + ModelsiminiReader.modelsim_ini_dir() + """
+
+VCOM_FLAGS := -quiet -modelsimini modelsim.ini
+VSIM_FLAGS :=
+VLOG_FLAGS := -quiet -modelsimini modelsim.ini """ + self.__get_rid_of_incdirs(top_module.vlog_opt) + """
+""" 
+        make_preambule_p2 = """## rules #################################
+sim: modelsim.ini $(LIB_IND) $(VERILOG_OBJ) $(VHDL_OBJ)
+$(VERILOG_OBJ): $(VHDL_OBJ) 
+$(VHDL_OBJ): $(LIB_IND) modelsim.ini
+
+modelsim.ini: $(MODELSIM_INI_PATH)/modelsim.ini
+\t\tcp $< .
+clean:
+\t\trm -rf ./modelsim.ini $(LIBS)
+.PHONY: clean
+
+"""
+        #open the file and write the above preambule (part 1)
+        self.initialize()
+        self.write(make_preambule_p1)
+
+        rp = os.path.relpath
+        self.write("VERILOG_SRC := ")
+        for vl in fileset.filter(VerilogFile):
+            self.write(vl.rel_path() + " \\\n")
+        self.write("\n")
+
+        self.write("VERILOG_OBJ := ")
+        for vl in fileset.filter(VerilogFile):
+            #make a file compilation indicator (these .dat files are made even if
+            #the compilation process fails) and add an ending according to file's
+            #extension (.sv and .vhd files may have the same corename and this
+            #causes a mess
+            self.write(os.path.join(vl.library, vl.purename, "."+vl.purename+"_"+vl.extension()) + " \\\n")
+        self.write('\n')
+
+        libs = set(f.library for f in fileset)
+
+        self.write("VHDL_SRC := ")
+        for vhdl in fileset.filter(VHDLFile):
+            self.write(vhdl.rel_path() + " \\\n")
+        self.writeln()
+
+        #list vhdl objects (_primary.dat files)
+        self.write("VHDL_OBJ := ")
+        for vhdl in fileset.filter(VHDLFile):
+            #file compilation indicator (important: add _vhd ending)
+            self.write(os.path.join(vhdl.library, vhdl.purename,"."+vhdl.purename+"_"+vhdl.extension()) + " \\\n")
+        self.write('\n')
+
+        self.write('LIBS := ')
+        self.write(' '.join(libs))
+        self.write('\n')
+        #tell how to make libraries
+        self.write('LIB_IND := ')
+        self.write(' '.join([lib+"/."+lib for lib in libs]))
+        self.write('\n')
+        self.write(make_preambule_p2)
+
+        for lib in libs:
+            self.write(lib+"/."+lib+":\n")
+            self.write(' '.join(["\t(vlib",  lib, "&&", "vmap", "-modelsimini modelsim.ini", 
+            lib, "&&", "touch", lib+"/."+lib,")"]))
+
+            self.write(' '.join(["||", "rm -rf", lib, "\n"]))
+            self.write('\n')
+
+        #rules for all _primary.dat files for sv
+        for vl in fileset.filter(VerilogFile):
+            self.write(os.path.join(vl.library, vl.purename, '.'+vl.purename+"_"+vl.extension())+': ')
+            self.write(vl.rel_path() + ' ')
+            self.writeln(' '.join([f.rel_path() for f in vl.dep_depends_on]))
+            self.write("\t\tvlog -work "+vl.library)
+            self.write(" $(VLOG_FLAGS) ")
+            if isinstance(vl, SVFile):
+                self.write(" -sv ")
+            incdir = "+incdir+"
+            incdir += '+'.join(vl.include_dirs)
+            incdir += " "
+            self.write(incdir)
+            self.writeln(vl.vlog_opt+" $<")
+            self.write("\t\t@mkdir -p $(dir $@)")
+            self.writeln(" && touch $@ \n\n")
+        self.write("\n")
+
+        #list rules for all _primary.dat files for vhdl
+        for vhdl in fileset.filter(VHDLFile):
+            lib = vhdl.library
+            purename = vhdl.purename 
+            #each .dat depends on corresponding .vhd file
+            self.write(os.path.join(lib, purename, "."+purename+"_"+ vhdl.extension()) + ": "+vhdl.rel_path()+'\n')
+            self.writeln(' '.join(["\t\tvcom $(VCOM_FLAGS)", vhdl.vcom_opt, "-work", lib, "$< "]))
+            self.writeln("\t\t@mkdir -p $(dir $@) && touch $@\n")
+            self.writeln()
+            if len(vhdl.dep_depends_on) != 0:
+                self.write(os.path.join(lib, purename, "."+purename) +":")
+                for dep_file in vhdl.dep_depends_on:
+                    name = dep_file.purename
+                    self.write(" \\\n"+ os.path.join(dep_file.library, name, "."+name))
+                self.write('\n\n')
+
     def __get_rid_of_incdirs(self, vlog_opt):
         vlog_opt = self.__emit_string(vlog_opt)
         vlogs = vlog_opt.split(' ')
