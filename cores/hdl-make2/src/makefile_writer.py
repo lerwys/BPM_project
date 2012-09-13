@@ -472,7 +472,8 @@ clean:
         vlogs = vlog_opt.split(' ')
         ret = []
         for v in vlogs:
-            if not v.startswith("+incdir+"):
+            #if not v.startswith("+incdir+"):
+            if not v.startswith("-i"):
                 ret.append(v)
         return ' '.join(ret)
 
