@@ -321,3 +321,67 @@ class ModelsiminiReader(object):
         vsim_path = os.popen("which vsim").read().strip()
         bin_path = os.path.dirname(vsim_path)
         return os.path.abspath(bin_path+"/../")
+
+class XilinxsiminiReader(object):
+    def __init__(self, path = None):
+        if path == None:
+            path = self.xilinx_ini_dir() + "/xilinxsim.ini"
+        self.path = path
+
+    # Parse the xilinxsim.ini file to get the referenced libraries
+    def get_libraries(self):
+        libs = []
+
+        try:
+            ini = open(self.path, "r")
+        except Exception:
+            raise RuntimeError("Can't open existing xilinxsim.ini file")
+
+        p.vprint("Reading 'xilinxsim.ini' located in: '"+ str(path))
+
+        # Read loggical libraries name, skipping comments and other 
+        #possible sections
+        reading_libraries = False
+        for line in ini:
+            # Read line by line, skipping comments and striping newline
+            line = line.split('--')[0].strip()
+            # Still in comments section
+            if line == "": continue
+
+            # Not in comments section. Library section: 
+            #<logical_library> = <phisical_path>
+            line = line.split('=')
+            lib = line[0].strip()
+            libs.append(lib.lower())
+        return libs
+
+    @staticmethod
+    def xilinxsim_ini_dir():
+        import os
+        # Does not really need this
+        try:  
+            xilinx_path = os.environ["XILINX"]
+        except KeyError: 
+            p.error("Please set the environment variable XILINX")
+            # Fail completely for now
+            quit()
+
+        # Does not really need this
+        try:  
+            host_platform = os.environ["HOST_PLATFORM"]
+        except KeyError: 
+            p.error("Please set the environment variable HOST_PLATFORM")
+            # Fail completely for now
+            quit()
+
+        # Option 1. Look for path through env vars
+        xilinx_ini_path = str(xilinx_path + "/ISE/vhdl/hdp/" + host_platform)
+        # Ensure the path is absolute and normalized
+        return os.path.abspath(xilinx_ini_path)
+
+        # Option 2. look for path through a known-location xilinx program.
+        # Search for "fuse" path. it could be vhlcomp or vlogcomp as well.
+        # Read the command output and strip the trailing newlines
+        #fuse_path = os.popen("which fuse").read().strip()
+        #bin_path = os.path.dirname(vsim_path)
+        #return os.path.abspath(bin_path+"/../")

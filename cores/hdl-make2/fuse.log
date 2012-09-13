@@ -1,5 +1,0 @@
-Running: /opt/Xilinx/13.4/ISE_DS/ISE/bin/lin64/unwrapped/fuse 
-ISim O.87xd (signature 0x8ddf5b5d)
-Number of CPUs detected in this system: 4
-Turning on mult-threading, number of parallel sub-compilation jobs: 8 
-ERROR:Simulator:747 - No design top(s) specified

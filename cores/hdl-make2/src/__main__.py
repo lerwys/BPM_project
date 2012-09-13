@@ -41,7 +41,7 @@ def main():
     default=None, help="generate a ModelSim simulation Makefile")
 
     parser.add_option("--make-isim", dest="make_isim", action="store_true",
-    default=None, help="generate a iSim simulation Makefile")
+    default=None, help="generate a ISE Simulation (ISim) simulation Makefile")
 
     parser.add_option("--make-fetch", dest="make_fetch", action="store_true",
     default=None, help="generate a makefile for modules' fetching")
