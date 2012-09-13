@@ -1,0 +1,7 @@
+<<<<<<< HEAD
+*~
+*.swp
+=======
+*.swp
+*.~
+>>>>>>> .gitignore updates

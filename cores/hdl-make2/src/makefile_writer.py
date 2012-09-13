@@ -353,25 +353,25 @@ clean:
 # Modification here
     def generate_isim_makefile(self, fileset, top_module):
         from srcfile import VerilogFile, VHDLFile, SVFile
-        from flow import ModelsiminiReader
+        from flow import XilinxsiminiReader
         make_preambule_p1 = """## variables #############################
 PWD := $(shell pwd)
 
-MODELSIM_INI_PATH := """ + ModelsiminiReader.modelsim_ini_dir() + """
+XILINX_INI_PATH := """ + XilinxsiminiReader.xilinxsim_ini_dir() + """
 
-VCOM_FLAGS := -quiet -modelsimini modelsim.ini
-VSIM_FLAGS :=
-VLOG_FLAGS := -quiet -modelsimini modelsim.ini """ + self.__get_rid_of_incdirs(top_module.vlog_opt) + """
+VHPCOMP_FLAGS := -intstyle default -incremental -initfile xilinxsim.ini
+ISIM_FLAGS :=
+VLOGCOMP_FLAGS := -intstyle default -incremental -initfile xilinxsim.ini """ + self.__get_rid_of_incdirs(top_module.vlog_opt) + """
 """ 
         make_preambule_p2 = """## rules #################################
-sim: modelsim.ini $(LIB_IND) $(VERILOG_OBJ) $(VHDL_OBJ)
+sim: xilinxsim.ini $(LIB_IND) $(VERILOG_OBJ) $(VHDL_OBJ)
 $(VERILOG_OBJ): $(VHDL_OBJ) 
-$(VHDL_OBJ): $(LIB_IND) modelsim.ini
+$(VHDL_OBJ): $(LIB_IND) xilinxsim.ini
 
-modelsim.ini: $(MODELSIM_INI_PATH)/modelsim.ini
+xilinxsim.ini: $(XILINX_INI_PATH)/xilinxsim.ini
 \t\tcp $< .
 clean:
-\t\trm -rf ./modelsim.ini $(LIBS)
+\t\trm -rf ./xilinxsim.ini $(LIBS)
 .PHONY: clean
 
 """
@@ -417,25 +417,29 @@ clean:
         self.write('\n')
         self.write(make_preambule_p2)
 
+        # ISim does not have a vmap command to insert additional libraries in 
+        #.ini file. 
         for lib in libs:
             self.write(lib+"/."+lib+":\n")
-            self.write(' '.join(["\t(vlib",  lib, "&&", "vmap", "-modelsimini modelsim.ini", 
-            lib, "&&", "touch", lib+"/."+lib,")"]))
-
+            self.write(' '.join(["\t(mkdir", lib, "&&", "touch", lib+"/."+lib+" "]))
+            self.write(' '.join(["&&", "echo", "\""+lib+"="+lib+"/."+lib+"\" ", ">>", "xilinxsim.ini) "]))
             self.write(' '.join(["||", "rm -rf", lib, "\n"]))
             self.write('\n')
+
+            # Modify xilinxsim.ini file by including the extra local libraries
+            #self.write(' '.join(["\t(echo """, lib+"="+lib+"/."+lib, ">>", "${XILINX_INI_PATH}/xilinxsim.ini"]))
 
         #rules for all _primary.dat files for sv
         for vl in fileset.filter(VerilogFile):
             self.write(os.path.join(vl.library, vl.purename, '.'+vl.purename+"_"+vl.extension())+': ')
             self.write(vl.rel_path() + ' ')
             self.writeln(' '.join([f.rel_path() for f in vl.dep_depends_on]))
-            self.write("\t\tvlog -work "+vl.library)
-            self.write(" $(VLOG_FLAGS) ")
-            if isinstance(vl, SVFile):
-                self.write(" -sv ")
-            incdir = "+incdir+"
-            incdir += '+'.join(vl.include_dirs)
+            self.write("\t\tvlogcomp -work "+vl.library+"=./"+vl.library)
+            self.write(" $(VLOGCOMP_FLAGS) ")
+            #if isinstance(vl, SVFile):
+            #    self.write(" -sv ")
+            incdir = "-i "
+            incdir += " -i ".join(vl.include_dirs)
             incdir += " "
             self.write(incdir)
             self.writeln(vl.vlog_opt+" $<")
@@ -449,7 +453,7 @@ clean:
             purename = vhdl.purename 
             #each .dat depends on corresponding .vhd file
             self.write(os.path.join(lib, purename, "."+purename+"_"+ vhdl.extension()) + ": "+vhdl.rel_path()+'\n')
-            self.writeln(' '.join(["\t\tvcom $(VCOM_FLAGS)", vhdl.vcom_opt, "-work", lib, "$< "]))
+            self.writeln(' '.join(["\t\tvhpcomp $(VHPCOMP_FLAGS)", vhdl.vcom_opt, "-work", lib+"=./"+lib, "$< "]))
             self.writeln("\t\t@mkdir -p $(dir $@) && touch $@\n")
             self.writeln()
             if len(vhdl.dep_depends_on) != 0:
@@ -464,7 +468,8 @@ clean:
         vlogs = vlog_opt.split(' ')
         ret = []
         for v in vlogs:
-            if not v.startswith("+incdir+"):
+            #if not v.startswith("+incdir+"):
+            if not v.startswith("-i"):
                 ret.append(v)
         return ' '.join(ret)
 

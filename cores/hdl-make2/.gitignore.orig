@@ -3,6 +3,11 @@ examples
 hdlmake.aux
 hdlmake.pdf
 hdlmake.log
+<<<<<<< HEAD
 fuse.log
 fuseRelaunch.cmd
 fuse.xmsgs
+=======
+hdlmake.dvi
+missfont.log
+>>>>>>> .gitignore updates

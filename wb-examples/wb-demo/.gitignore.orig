@@ -1,0 +1,7 @@
+*~
+<<<<<<< HEAD
+=======
+*.bin
+*.elf
+>>>>>>> .gitignore updates
+*.o

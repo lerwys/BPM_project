@@ -112,37 +112,37 @@ class HdlmakeKernel(object):
         self.modules_pool.fetch_all(unfetched_only)
         p.vprint(str(self.modules_pool))
 
-	def generate_modelsim_makefile(self):
+    def generate_modelsim_makefile(self):
 #        p.info("Generating makefile for simulation.")
-		p.info("Generating ModelSim makefile for simulation.")
-		solver = DependencySolver()
+        p.info("Generating ModelSim makefile for simulation.")
+        solver = DependencySolver()
 
-		pool = self.modules_pool
-		if not pool.is_everything_fetched():
-			p.echo("A module remains unfetched. "
-				"Fetching must be done prior to makefile generation")
-			p.echo(str([str(m) for m in self.modules_pool.modules if not m.isfetched]))
-			quit()
-		top_module = pool.get_top_module()
-		flist = pool.build_global_file_list();
-		flist_sorted = solver.solve(flist);
-		self.make_writer.generate_modelsim_makefile(flist_sorted, top_module)
+        pool = self.modules_pool
+        if not pool.is_everything_fetched():
+            p.echo("A module remains unfetched. "
+                "Fetching must be done prior to makefile generation")
+            p.echo(str([str(m) for m in self.modules_pool.modules if not m.isfetched]))
+            quit()
+        top_module = pool.get_top_module()
+        flist = pool.build_global_file_list();
+        flist_sorted = solver.solve(flist);
+        self.make_writer.generate_modelsim_makefile(flist_sorted, top_module)
 
-	def generate_isim_makefile(self):
+    def generate_isim_makefile(self):
 #        p.info("Generating makefile for simulation.")
-		p.info("Generating iSim makefile for simulation.")
-		solver = DependencySolver()
+        p.info("Generating iSim makefile for simulation.")
+        solver = DependencySolver()
 
-		pool = self.modules_pool
-		if not pool.is_everything_fetched():
-			p.echo("A module remains unfetched. "
-				"Fetching must be done prior to makefile generation")
-			p.echo(str([str(m) for m in self.modules_pool.modules if not m.isfetched]))
-			quit()
-		top_module = pool.get_top_module()
-		flist = pool.build_global_file_list();
-		flist_sorted = solver.solve(flist);
-		self.make_writer.generate_isim_makefile(flist_sorted, top_module)
+        pool = self.modules_pool
+        if not pool.is_everything_fetched():
+            p.echo("A module remains unfetched. "
+                "Fetching must be done prior to makefile generation")
+            p.echo(str([str(m) for m in self.modules_pool.modules if not m.isfetched]))
+            quit()
+        top_module = pool.get_top_module()
+        flist = pool.build_global_file_list();
+        flist_sorted = solver.solve(flist);
+        self.make_writer.generate_isim_makefile(flist_sorted, top_module)
 
     def generate_ise_makefile(self):
         p.info("Generating makefile for local synthesis.")
