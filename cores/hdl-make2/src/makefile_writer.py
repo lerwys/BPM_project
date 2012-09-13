@@ -358,20 +358,31 @@ clean:
 PWD := $(shell pwd)
 
 XILINX_INI_PATH := """ + XilinxsiminiReader.xilinxsim_ini_dir() + """
+FUSE_PROJ := fuse_proj
+TOP_DESIGN := 
 
 VHPCOMP_FLAGS := -intstyle default -incremental -initfile xilinxsim.ini
 ISIM_FLAGS :=
 VLOGCOMP_FLAGS := -intstyle default -incremental -initfile xilinxsim.ini """ + self.__get_rid_of_incdirs(top_module.vlog_opt) + """
 """ 
         make_preambule_p2 = """## rules #################################
-sim: xilinxsim.ini $(LIB_IND) $(VERILOG_OBJ) $(VHDL_OBJ)
+sim: xilinxsim.ini $(FUSE_PROJ) $(LIB_IND) $(VERILOG_OBJ) $(VHDL_OBJ)
 $(VERILOG_OBJ): $(VHDL_OBJ) 
 $(VHDL_OBJ): $(LIB_IND) xilinxsim.ini
 
 xilinxsim.ini: $(XILINX_INI_PATH)/xilinxsim.ini
 \t\tcp $< .
+$(FUSE_PROJ):
+\t\ttouch $(FUSE_PROJ).prj
+fuse:
+ifeq ($(TOP_DESIGN),)
+\t\techo "Enviroenment variable TOP_DESIGN not set!"
+else
+\t\tfuse -intstyle ise -incremental -o test -prj $(FUSE_PROJ).prj $(TOP_DESIGN) 
+endif
+.PHONY: $(FUSE_PROJ)
 clean:
-\t\trm -rf ./xilinxsim.ini $(LIBS)
+\t\trm -rf ./xilinxsim.ini $(LIBS) *.prj
 .PHONY: clean
 
 """
@@ -421,8 +432,9 @@ clean:
         #.ini file. 
         for lib in libs:
             self.write(lib+"/."+lib+":\n")
-            self.write(' '.join(["\t(mkdir", lib, "&&", "touch", lib+"/."+lib+" "]))
-            self.write(' '.join(["&&", "echo", "\""+lib+"="+lib+"/."+lib+"\" ", ">>", "xilinxsim.ini) "]))
+            self.write(' '.join(["\t\t(mkdir", lib, "&&", "touch", lib+"/."+lib+" "]))
+            #self.write(' '.join(["&&", "echo", "\""+lib+"="+lib+"/."+lib+"\" ", ">>", "xilinxsim.ini) "]))
+            self.write(' '.join(["&&", "echo", "\""+lib+"="+lib+"\" ", ">>", "xilinxsim.ini) "]))
             self.write(' '.join(["||", "rm -rf", lib, "\n"]))
             self.write('\n')
 
@@ -434,17 +446,19 @@ clean:
             self.write(os.path.join(vl.library, vl.purename, '.'+vl.purename+"_"+vl.extension())+': ')
             self.write(vl.rel_path() + ' ')
             self.writeln(' '.join([f.rel_path() for f in vl.dep_depends_on]))
-            self.write("\t\tvlogcomp -work "+vl.library+"=./"+vl.library)
-            self.write(" $(VLOGCOMP_FLAGS) ")
+            self.writeln(' '.join(["\t\techo", "\"verilog", vl.library, "\"$<", ">>", "$(FUSE_PROJ).prj"]))
+            #self.write("\t\tvlogcomp -work "+vl.library+"=./"+vl.library)
+            #self.write(" $(VLOGCOMP_FLAGS) ")
             #if isinstance(vl, SVFile):
             #    self.write(" -sv ")
-            incdir = "-i "
-            incdir += " -i ".join(vl.include_dirs)
-            incdir += " "
-            self.write(incdir)
-            self.writeln(vl.vlog_opt+" $<")
-            self.write("\t\t@mkdir -p $(dir $@)")
-            self.writeln(" && touch $@ \n\n")
+            #incdir = "-i "
+            #incdir += " -i ".join(vl.include_dirs)
+            #incdir += " "
+            #self.write(incdir)
+            #self.writeln(vl.vlog_opt+" $<")
+            #self.write("\t\t@mkdir -p $(dir $@)")
+            #self.writeln(" && touch $@ \n\n")
+            self.write("\n\n")
         self.write("\n")
 
         #list rules for all _primary.dat files for vhdl
@@ -453,8 +467,10 @@ clean:
             purename = vhdl.purename 
             #each .dat depends on corresponding .vhd file
             self.write(os.path.join(lib, purename, "."+purename+"_"+ vhdl.extension()) + ": "+vhdl.rel_path()+'\n')
-            self.writeln(' '.join(["\t\tvhpcomp $(VHPCOMP_FLAGS)", vhdl.vcom_opt, "-work", lib+"=./"+lib, "$< "]))
-            self.writeln("\t\t@mkdir -p $(dir $@) && touch $@\n")
+            #self.writeln(' '.join(["\t\tvhpcomp $(VHPCOMP_FLAGS)", vhdl.vcom_opt, "-work", lib+"=./"+lib, "$< "]))
+            self.writeln(' '.join(["\t\techo", "\"vhdl", lib, "\"$<", ">>", "$(FUSE_PROJ).prj"]))
+            #self.writeln("\t\t@mkdir -p $(dir $@) && touch $@\n")
+            self.write("\n\n")
             self.writeln()
             if len(vhdl.dep_depends_on) != 0:
                 self.write(os.path.join(lib, purename, "."+purename) +":")
@@ -469,7 +485,7 @@ clean:
         ret = []
         for v in vlogs:
             #if not v.startswith("+incdir+"):
-            if not v.startswith("-i"):
+            if not v.startswith("-i") or not v.startswith("+incdir+"):
                 ret.append(v)
         return ' '.join(ret)
 
