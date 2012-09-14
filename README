@@ -33,7 +33,6 @@ For older versions of Git (<1.6.5), use the following:
 	or
 	$ git clone git@github.com:lerwys/BPM_project.git
 
-	$ cd <path_to_submodule>
 	$ git submodule init
 	$ git submodule update
 

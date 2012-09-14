@@ -372,6 +372,9 @@ $(VHDL_OBJ): $(LIB_IND) xilinxsim.ini
 
 xilinxsim.ini: $(XILINX_INI_PATH)/xilinxsim.ini
 \t\tcp $< .
+$(FUSE_PROJ):
+\t\ttouch $(FUSE_PROJ).prj
+.PHONY: $(FUSE_PROJ)
 clean:
 \t\trm -rf ./xilinxsim.ini $(LIBS) *.prj fuse.log fuseRelaunch.cmd fuse.xmsgs
 .PHONY: clean
@@ -461,8 +464,10 @@ clean:
             purename = vhdl.purename 
             #each .dat depends on corresponding .vhd file
             self.write(os.path.join(lib, purename, "."+purename+"_"+ vhdl.extension()) + ": "+vhdl.rel_path()+'\n')
-            self.writeln(' '.join(["\t\tvcom $(VCOM_FLAGS)", vhdl.vcom_opt, "-work", lib, "$< "]))
-            self.writeln("\t\t@mkdir -p $(dir $@) && touch $@\n")
+            #self.writeln(' '.join(["\t\tvhpcomp $(VHPCOMP_FLAGS)", vhdl.vcom_opt, "-work", lib+"=./"+lib, "$< "]))
+            self.writeln(' '.join(["\t\techo", "\"vhdl", lib, "\"$<", ">>", "$(FUSE_PROJ).prj"]))
+            #self.writeln("\t\t@mkdir -p $(dir $@) && touch $@\n")
+            self.write("\n\n")
             self.writeln()
             if len(vhdl.dep_depends_on) != 0:
                 self.write(os.path.join(lib, purename, "."+purename) +":")
@@ -471,13 +476,39 @@ clean:
                     self.write(" \\\n"+ os.path.join(dep_file.library, name, "."+name))
                 self.write('\n\n')
 
-    def __get_rid_of_incdirs(self, vlog_opt):
+        # Write fuse rule
+        self.writeln("fuse:")
+        self.writeln("ifeq ($(TOP_DESIGN),)")
+        self.writeln("\t\techo \"Enviroenment variable TOP_DESIGN not set!\"")
+        self.writeln("else")
+        self.writeln(' '.join(["\t\tfuse -intstyle ise -incremental", incdir, "-o test -prj $(FUSE_PROJ).prj $(TOP_DESIGN)"]))
+        self.writeln("endif")
+        self.write("\n\n")
+
+    def __get_rid_of_vsim_incdirs(self, vlog_opt):
         vlog_opt = self.__emit_string(vlog_opt)
         vlogs = vlog_opt.split(' ')
         ret = []
         for v in vlogs:
             if not v.startswith("+incdir+"):
                 ret.append(v)
+        return ' '.join(ret)
+
+    # FIX
+    def __get_rid_of_isim_incdirs(self, vlog_opt):
+        vlog_opt = self.__emit_string(vlog_opt)
+        vlogs = vlog_opt.split(' ')
+        ret = []
+        skip = False
+        for v in vlogs:
+            if skip:
+                skip = False
+                continue
+
+            if not v.startswith("-i"):
+                ret.append(v)
+            else:
+                skip = True
         return ' '.join(ret)
 
     def __emit_string(self, s):

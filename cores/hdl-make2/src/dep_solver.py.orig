@@ -116,6 +116,7 @@ class DependencySolver:
                 p.warning("Include path "+dir+" doesn't exist")
                 continue
             h_file = os.path.join(dir, req)
+<<<<<<< HEAD
             p.vprint("NEW h_file name is: " + ''.join(h_file))
             if os.path.exists(h_file) and not os.path.isdir(h_file):
                 p.vprint("h_file found: " + ''.join(h_file))
@@ -126,6 +127,12 @@ class DependencySolver:
                     return sff_valid
                 else:
                     p.vprint("could not create sff object")         
+=======
+            p.vprint("h_file is: " + ''.join(h_file))
+            if os.path.exists(h_file) and not os.path.isdir(h_file):
+                p.vprint("h_file OK is: " + ''.join(h_file))
+                return sff.new(h_file)
+>>>>>>> Finalizing hdlmake2
         return None
 
     def __parse_vlog_opt(self, vlog_opt):
@@ -135,27 +142,49 @@ class DependencySolver:
         inc_vsim_vlog = re.compile(".*?\+incdir\+([^ ]+)")
         # Either a normal (non-special) character or an escaped special character repeated >= 1 times
         #unix_path = re.compile(r"([^\0 \!\$\`\&\*\(\)\+]|\\(:? |\!|\$|\`|\&|\*|\(|\)|\+))+")
+<<<<<<< HEAD
         vlog_vsim_opt = vlog_opt
+=======
+
+        #unix_path = re.compile(r"((:?(:?[^\0 \!\$\`\&\*\(\)\+])|(:?\\[ |\!|\$|\`|\&|\*|\(|\)|\+]))+)")
+        #unix_path = re.compile(r"((:?[^\0 \!\$\`\&\*\(\)\+]|(:?\\ |\\!|\\$|\\`|\\&|\\*|\\(|\\)|\\+))+)")
+        #unix_path = re.compile(r"([^\0\s\!\$\`\&\*\(\)\+]|\\\s)")
+>>>>>>> Finalizing hdlmake2
         # -i unix_path one or more times
         inc_isim_vlog = re.compile(r"\s*\-i\s*((\w|/|\\ |\.|\.\.)+)\s*")
 
         # Try ModelSim include format (+incdir+<path>)
         while True:
+<<<<<<< HEAD
             vsim_inc = re.match(inc_vsim_vlog, vlog_vsim_opt)
             if vsim_inc:
                 ret.append(vsim_inc.group(1))
                 vlog_vsim_opt = vlog_vsim_opt[vsim_inc.end():]
+=======
+            vsim_inc = re.match(inc_vsim_vlog, vlog_opt)
+            if vsim_inc:
+                ret.append(vsim_inc.group(1))
+                vlog_opt = vlog_opt[vsim_inc.end():]
+>>>>>>> Finalizing hdlmake2
             else:
                 break
 
         # Try ISim include format (-i <path>)
         if not ret:
+<<<<<<< HEAD
             vlog_isim_opt = vlog_opt
             while True:
                 isim_inc = re.match(inc_isim_vlog, vlog_isim_opt)
                 if isim_inc:
                     ret.append(isim_inc.group(1))
                     vlog_isim_opt = vlog_isim_opt[isim_inc.end():]
+=======
+            while True:
+                isim_inc = re.match(inc_isim_vlog, vlog_opt)
+                if isim_inc:
+                    ret.append(isim_inc.group(1))
+                    vlog_opt = vlog_opt[isim_inc.end():]
+>>>>>>> Finalizing hdlmake2
                 else:
                     break
 
@@ -244,4 +273,6 @@ class DependencySolver:
 
         for k in newobj:
             p.vprint(str(k.dep_index) + " " + k.path + str(k._dep_fixed))
+
+        #p.vprint("newobj is: " + str(newobj))
         return newobj
