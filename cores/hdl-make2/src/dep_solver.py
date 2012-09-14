@@ -19,6 +19,7 @@
 #
 
 import msg as p
+import global_mod
 
 
 class IDependable:
@@ -94,35 +95,69 @@ class DependencySolver:
         from srcfile import SourceFileFactory
         import os
         vf_dirname = v_file.dirname
+        p.vprint("vf_dirname name is: " + ''.join(vf_dirname))
         sff = SourceFileFactory()
 
         h_file = os.path.join(vf_dirname, req)
+        p.vprint("req name is: " + ''.join(req))
+        p.vprint("h_file name is: " + ''.join(h_file))
         if os.path.exists(h_file) and not os.path.isdir(h_file):
             return sff.new(h_file)
 
         inc_dirs = self.__parse_vlog_opt(v_file.vlog_opt)
+        p.vprint("inc_dirs are: " + ''.join(inc_dirs))
+
+        sff = SourceFileFactory()
 
         for dir in inc_dirs:
             dir = os.path.join(vf_dirname, dir)
+            p.vprint("dir is: " + ''.join(dir))
             if not os.path.exists(dir) or not os.path.isdir(dir):
                 p.warning("Include path "+dir+" doesn't exist")
                 continue
             h_file = os.path.join(dir, req)
+            p.vprint("h_file is: " + ''.join(h_file))
             if os.path.exists(h_file) and not os.path.isdir(h_file):
+                p.vprint("h_file OK is: " + ''.join(h_file))
                 return sff.new(h_file)
         return None
 
     def __parse_vlog_opt(self, vlog_opt):
         import re
         ret = []
-        inc_pat = re.compile(".*?\+incdir\+([^ ]+)")
+        #inc_pat = re.compile(".*?\+incdir\+([^ ]+)")
+        inc_vsim_vlog = re.compile(".*?\+incdir\+([^ ]+)")
+        # Either a normal (non-special) character or an escaped special character repeated >= 1 times
+        #unix_path = re.compile(r"([^\0 \!\$\`\&\*\(\)\+]|\\(:? |\!|\$|\`|\&|\*|\(|\)|\+))+")
+
+        #unix_path = re.compile(r"((:?(:?[^\0 \!\$\`\&\*\(\)\+])|(:?\\[ |\!|\$|\`|\&|\*|\(|\)|\+]))+)")
+        #unix_path = re.compile(r"((:?[^\0 \!\$\`\&\*\(\)\+]|(:?\\ |\\!|\\$|\\`|\\&|\\*|\\(|\\)|\\+))+)")
+        #unix_path = re.compile(r"([^\0\s\!\$\`\&\*\(\)\+]|\\\s)")
+        # -i unix_path one or more times
+        inc_isim_vlog = re.compile(r"\s*\-i\s*((\w|/|\\ |\.|\.\.)+)\s*")
+
+        # Try ModelSim include format (+incdir+<path>)
         while True:
-            m = re.match(inc_pat, vlog_opt)
-            if m:
-                ret.append(m.group(1))
-                vlog_opt = vlog_opt[m.end():]
+            vsim_inc = re.match(inc_vsim_vlog, vlog_opt)
+            if vsim_inc:
+                ret.append(vsim_inc.group(1))
+                vlog_opt = vlog_opt[vsim_inc.end():]
             else:
                 break
+
+        # Try ISim include format (-i <path>)
+        if not ret:
+            while True:
+                isim_inc = re.match(inc_isim_vlog, vlog_opt)
+                if isim_inc:
+                    ret.append(isim_inc.group(1))
+                    vlog_opt = vlog_opt[isim_inc.end():]
+                else:
+                    break
+
+        if global_mod.options.verbose == True:
+            print "Include paths are: \n"
+            print ret
         return ret
 
     def solve(self, fileset):

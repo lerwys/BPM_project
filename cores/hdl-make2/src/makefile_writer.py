@@ -252,7 +252,7 @@ MODELSIM_INI_PATH := """ + ModelsiminiReader.modelsim_ini_dir() + """
 
 VCOM_FLAGS := -quiet -modelsimini modelsim.ini
 VSIM_FLAGS :=
-VLOG_FLAGS := -quiet -modelsimini modelsim.ini """ + self.__get_rid_of_incdirs(top_module.vlog_opt) + """
+VLOG_FLAGS := -quiet -modelsimini modelsim.ini """ + self.__get_rid_of_vsim_incdirs(top_module.vlog_opt) + """
 """ 
         make_preambule_p2 = """## rules #################################
 sim: modelsim.ini $(LIB_IND) $(VERILOG_OBJ) $(VHDL_OBJ)
@@ -363,7 +363,7 @@ TOP_DESIGN :=
 
 VHPCOMP_FLAGS := -intstyle default -incremental -initfile xilinxsim.ini
 ISIM_FLAGS :=
-VLOGCOMP_FLAGS := -intstyle default -incremental -initfile xilinxsim.ini """ + self.__get_rid_of_incdirs(top_module.vlog_opt) + """
+VLOGCOMP_FLAGS := -intstyle default -incremental -initfile xilinxsim.ini """ + self.__get_rid_of_isim_incdirs(top_module.vlog_opt) + """
 """ 
         make_preambule_p2 = """## rules #################################
 sim: xilinxsim.ini $(FUSE_PROJ) $(LIB_IND) $(VERILOG_OBJ) $(VHDL_OBJ)
@@ -374,15 +374,9 @@ xilinxsim.ini: $(XILINX_INI_PATH)/xilinxsim.ini
 \t\tcp $< .
 $(FUSE_PROJ):
 \t\ttouch $(FUSE_PROJ).prj
-fuse:
-ifeq ($(TOP_DESIGN),)
-\t\techo "Enviroenment variable TOP_DESIGN not set!"
-else
-\t\tfuse -intstyle ise -incremental -o test -prj $(FUSE_PROJ).prj $(TOP_DESIGN) 
-endif
 .PHONY: $(FUSE_PROJ)
 clean:
-\t\trm -rf ./xilinxsim.ini $(LIBS) *.prj
+\t\trm -rf ./xilinxsim.ini $(LIBS) *.prj fuse.log fuseRelaunch.cmd fuse.xmsgs
 .PHONY: clean
 
 """
@@ -451,9 +445,9 @@ clean:
             #self.write(" $(VLOGCOMP_FLAGS) ")
             #if isinstance(vl, SVFile):
             #    self.write(" -sv ")
-            #incdir = "-i "
-            #incdir += " -i ".join(vl.include_dirs)
-            #incdir += " "
+            incdir = "-i "
+            incdir += " -i ".join(vl.include_dirs)
+            incdir += " "
             #self.write(incdir)
             #self.writeln(vl.vlog_opt+" $<")
             #self.write("\t\t@mkdir -p $(dir $@)")
@@ -479,14 +473,39 @@ clean:
                     self.write(" \\\n"+ os.path.join(dep_file.library, name, "."+name))
                 self.write('\n\n')
 
-    def __get_rid_of_incdirs(self, vlog_opt):
+        # Write fuse rule
+        self.writeln("fuse:")
+        self.writeln("ifeq ($(TOP_DESIGN),)")
+        self.writeln("\t\techo \"Enviroenment variable TOP_DESIGN not set!\"")
+        self.writeln("else")
+        self.writeln(' '.join(["\t\tfuse -intstyle ise -incremental", incdir, "-o test -prj $(FUSE_PROJ).prj $(TOP_DESIGN)"]))
+        self.writeln("endif")
+        self.write("\n\n")
+
+    def __get_rid_of_vsim_incdirs(self, vlog_opt):
         vlog_opt = self.__emit_string(vlog_opt)
         vlogs = vlog_opt.split(' ')
         ret = []
         for v in vlogs:
-            #if not v.startswith("+incdir+"):
-            if not v.startswith("-i") or not v.startswith("+incdir+"):
+            if not v.startswith("+incdir+"):
                 ret.append(v)
+        return ' '.join(ret)
+
+    # FIX
+    def __get_rid_of_isim_incdirs(self, vlog_opt):
+        vlog_opt = self.__emit_string(vlog_opt)
+        vlogs = vlog_opt.split(' ')
+        ret = []
+        skip = False
+        for v in vlogs:
+            if skip:
+                skip = False
+                continue
+
+            if not v.startswith("-i"):
+                ret.append(v)
+            else:
+                skip = True
         return ' '.join(ret)
 
     def __emit_string(self, s):

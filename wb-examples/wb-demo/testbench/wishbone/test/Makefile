@@ -202,15 +202,9 @@ xilinxsim.ini: $(XILINX_INI_PATH)/xilinxsim.ini
 		cp $< .
 $(FUSE_PROJ):
 		touch $(FUSE_PROJ).prj
-fuse:
-ifeq ($(TOP_DESIGN),)
-		echo "Enviroenment variable TOP_DESIGN not set!"
-else
-		fuse -intstyle ise -incremental -o test -prj $(FUSE_PROJ).prj $(TOP_DESIGN) 
-endif
 .PHONY: $(FUSE_PROJ)
 clean:
-		rm -rf ./xilinxsim.ini $(LIBS) *.prj
+		rm -rf ./xilinxsim.ini $(LIBS) *.prj fuse.log fuseRelaunch.cmd fuse.xmsgs
 .PHONY: clean
 
 work/.work:
@@ -638,5 +632,13 @@ work/wbgen2_fifo_sync/.wbgen2_fifo_sync_vhd: ../../../../../cores/general-cores/
 work/wbgen2_pkg/.wbgen2_pkg_vhd: ../../../../../cores/general-cores/modules/wishbone/wbgen2/wbgen2_pkg.vhd
 		echo "vhdl work "$< >> $(FUSE_PROJ).prj
 
+
+
+fuse:
+ifeq ($(TOP_DESIGN),)
+		echo "Enviroenment variable TOP_DESIGN not set!"
+else
+		fuse -intstyle ise -incremental -o test -prj $(FUSE_PROJ).prj $(TOP_DESIGN)
+endif
 
 
