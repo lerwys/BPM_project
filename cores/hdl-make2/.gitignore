@@ -4,4 +4,6 @@ Makefile
 hdlmake.aux
 hdlmake.pdf
 hdlmake.log
-
+fuse.log
+fuseRelaunch.cmd
+fuse.xmsgs
