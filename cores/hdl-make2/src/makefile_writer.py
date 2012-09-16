@@ -435,6 +435,7 @@ clean:
             # Modify xilinxsim.ini file by including the extra local libraries
             #self.write(' '.join(["\t(echo """, lib+"="+lib+"/."+lib, ">>", "${XILINX_INI_PATH}/xilinxsim.ini"]))
 
+        incdir = ""
         #rules for all _primary.dat files for sv
         for vl in fileset.filter(VerilogFile):
             self.write(os.path.join(vl.library, vl.purename, '.'+vl.purename+"_"+vl.extension())+': ')
@@ -445,7 +446,7 @@ clean:
             #self.write(" $(VLOGCOMP_FLAGS) ")
             #if isinstance(vl, SVFile):
             #    self.write(" -sv ")
-            incdir = "-i "
+            incdir += "-i "
             incdir += " -i ".join(vl.include_dirs)
             incdir += " "
             #self.write(incdir)
@@ -454,6 +455,8 @@ clean:
             #self.writeln(" && touch $@ \n\n")
             self.write("\n\n")
         self.write("\n")
+
+        print("incdir is: " + incdir)
 
         #list rules for all _primary.dat files for vhdl
         for vhdl in fileset.filter(VHDLFile):
@@ -473,15 +476,22 @@ clean:
                     self.write(" \\\n"+ os.path.join(dep_file.library, name, "."+name))
                 self.write('\n\n')
 
+<<<<<<< Updated upstream
         # Write fuse rule
         self.writeln("fuse:")
         self.writeln("ifeq ($(TOP_DESIGN),)")
-        self.writeln("\t\techo \"Enviroenment variable TOP_DESIGN not set!\"")
+        self.writeln("\t\techo \"Environment variable TOP_DESIGN not set!\"")
         self.writeln("else")
+        # Check if incdir is set
+        #try:
         self.writeln(' '.join(["\t\tfuse -intstyle ise -incremental", incdir, "-o test -prj $(FUSE_PROJ).prj $(TOP_DESIGN)"]))
+        #except NameError:
+        #    self.writeln(' '.join(["\t\tfuse -intstyle ise -incremental", "-o test -prj $(FUSE_PROJ).prj $(TOP_DESIGN)"]))
         self.writeln("endif")
         self.write("\n\n")
 
+=======
+>>>>>>> Stashed changes
     def __get_rid_of_vsim_incdirs(self, vlog_opt):
         vlog_opt = self.__emit_string(vlog_opt)
         vlogs = vlog_opt.split(' ')
@@ -491,7 +501,11 @@ clean:
                 ret.append(v)
         return ' '.join(ret)
 
+<<<<<<< Updated upstream
     # FIX
+=======
+    # FIX. Make it more robust
+>>>>>>> Stashed changes
     def __get_rid_of_isim_incdirs(self, vlog_opt):
         vlog_opt = self.__emit_string(vlog_opt)
         vlogs = vlog_opt.split(' ')

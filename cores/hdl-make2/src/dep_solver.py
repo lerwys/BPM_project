@@ -116,10 +116,16 @@ class DependencySolver:
                 p.warning("Include path "+dir+" doesn't exist")
                 continue
             h_file = os.path.join(dir, req)
-            p.vprint("h_file is: " + ''.join(h_file))
+            p.vprint("NEW h_file name is: " + ''.join(h_file))
             if os.path.exists(h_file) and not os.path.isdir(h_file):
-                p.vprint("h_file OK is: " + ''.join(h_file))
-                return sff.new(h_file)
+                p.vprint("h_file found: " + ''.join(h_file))
+                sff_valid = sff.new(h_file)
+
+                if sff_valid:
+                    p.vprint("creating sff object")
+                    return sff_valid
+                else:
+                    p.vprint("could not create sff object")         
         return None
 
     def __parse_vlog_opt(self, vlog_opt):
@@ -129,29 +135,27 @@ class DependencySolver:
         inc_vsim_vlog = re.compile(".*?\+incdir\+([^ ]+)")
         # Either a normal (non-special) character or an escaped special character repeated >= 1 times
         #unix_path = re.compile(r"([^\0 \!\$\`\&\*\(\)\+]|\\(:? |\!|\$|\`|\&|\*|\(|\)|\+))+")
-
-        #unix_path = re.compile(r"((:?(:?[^\0 \!\$\`\&\*\(\)\+])|(:?\\[ |\!|\$|\`|\&|\*|\(|\)|\+]))+)")
-        #unix_path = re.compile(r"((:?[^\0 \!\$\`\&\*\(\)\+]|(:?\\ |\\!|\\$|\\`|\\&|\\*|\\(|\\)|\\+))+)")
-        #unix_path = re.compile(r"([^\0\s\!\$\`\&\*\(\)\+]|\\\s)")
+        vlog_vsim_opt = vlog_opt
         # -i unix_path one or more times
         inc_isim_vlog = re.compile(r"\s*\-i\s*((\w|/|\\ |\.|\.\.)+)\s*")
 
         # Try ModelSim include format (+incdir+<path>)
         while True:
-            vsim_inc = re.match(inc_vsim_vlog, vlog_opt)
+            vsim_inc = re.match(inc_vsim_vlog, vlog_vsim_opt)
             if vsim_inc:
                 ret.append(vsim_inc.group(1))
-                vlog_opt = vlog_opt[vsim_inc.end():]
+                vlog_vsim_opt = vlog_vsim_opt[vsim_inc.end():]
             else:
                 break
 
         # Try ISim include format (-i <path>)
         if not ret:
+            vlog_isim_opt = vlog_opt
             while True:
-                isim_inc = re.match(inc_isim_vlog, vlog_opt)
+                isim_inc = re.match(inc_isim_vlog, vlog_isim_opt)
                 if isim_inc:
                     ret.append(isim_inc.group(1))
-                    vlog_opt = vlog_opt[isim_inc.end():]
+                    vlog_isim_opt = vlog_isim_opt[isim_inc.end():]
                 else:
                     break
 
@@ -225,6 +229,10 @@ class DependencySolver:
             #get rid of duplicates by making a set from the list and vice versa
             f.dep_depends_on = list(set(f.dep_depends_on))
 
+            p.vprint("f.dep_depends_on is: ")
+            for index in range(len(f.dep_depends_on)):
+                p.vprint("[ " + str(index) + " ]: " + ''.join(f.dep_depends_on[index].path))          
+
         newobj = sf.SourceFileSet();
         newobj.add(f_nondep);
         for f in fset:
@@ -236,4 +244,6 @@ class DependencySolver:
 
         for k in newobj:
             p.vprint(str(k.dep_index) + " " + k.path + str(k._dep_fixed))
+
+        #p.vprint("newobj is: " + str(newobj))
         return newobj

@@ -130,7 +130,7 @@ class HdlmakeKernel(object):
 
     def generate_isim_makefile(self):
 #        p.info("Generating makefile for simulation.")
-        p.info("Generating iSim makefile for simulation.")
+        p.info("Generating ISE Simulation (ISim) makefile for simulation.")
         solver = DependencySolver()
 
         pool = self.modules_pool

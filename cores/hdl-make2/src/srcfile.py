@@ -223,6 +223,7 @@ class VerilogFile(SourceFile):
                 if include_dirs:
                     self.include_dirs.extend(include_dirs)
                 self.include_dirs.append(path_mod.relpath(self.dirname))
+                #print("VerilogFile: include_dirs is: " + ''.join(include_dirs))
 
         def __create_deps(self):
                 self.dep_requires = self.__search_includes()
@@ -350,7 +351,8 @@ class SourceFileFactory:
                         nf = VHDLFile(path, library, vcom_opt)
                 elif extension == 'v' or extension == 'vh' or extension == 'vo':
                         nf = VerilogFile(path, library, vlog_opt, include_dirs)
-                elif extension == 'sv':
+                # Could not found svh files without svh extension
+                elif extension == 'sv' or extension == 'svh':
                         nf = SVFile(path, library, vlog_opt, include_dirs)
                 elif extension == 'ngc':
                         nf = NGCFile(path)

@@ -6,7 +6,7 @@
 ## variables #############################
 PWD := $(shell pwd)
 
-XILINX_INI_PATH := /opt/Xilinx/13.4/ISE_DS/ISE/vhdl/hdp/lin64
+XILINX_INI_PATH := /opt/Xilinx/ISE/vhdl/hdp/lin64
 FUSE_PROJ := fuse_proj
 TOP_DESIGN := 
 
@@ -636,9 +636,9 @@ work/wbgen2_pkg/.wbgen2_pkg_vhd: ../../../../../cores/general-cores/modules/wish
 
 fuse:
 ifeq ($(TOP_DESIGN),)
-		echo "Enviroenment variable TOP_DESIGN not set!"
+		echo "Environment variable TOP_DESIGN not set!"
 else
-		fuse -intstyle ise -incremental -o test -prj $(FUSE_PROJ).prj $(TOP_DESIGN)
+		fuse -intstyle ise -incremental -i ../../../../../cores/general-cores/modules/wishbone/wb_lm32/platform/generic  -o test -prj $(FUSE_PROJ).prj $(TOP_DESIGN)
 endif
 
 
