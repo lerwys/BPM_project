@@ -464,13 +464,33 @@ clean:
                 self.write('\n\n')
 
     def __get_rid_of_incdirs(self, vlog_opt):
+        vlog_opt_vsim = self.__get_rid_of_vsim_incdirs(vlog_opt)
+        return self.__get_rid_of_isim_incdirs(vlog_opt_vsim)
+
+    def __get_rid_of_vsim_incdirs(self, vlog_opt):
         vlog_opt = self.__emit_string(vlog_opt)
         vlogs = vlog_opt.split(' ')
         ret = []
         for v in vlogs:
-            #if not v.startswith("+incdir+"):
+            if not v.startswith("+incdir+"):
+                ret.append(v)
+        return ' '.join(ret)
+
+    # FIX. Make it more robust
+    def __get_rid_of_isim_incdirs(self, vlog_opt):
+        vlog_opt = self.__emit_string(vlog_opt)
+        vlogs = vlog_opt.split(' ')
+        ret = []
+        skip = False
+        for v in vlogs:
+            if skip:
+                skip = False
+                continue
+
             if not v.startswith("-i"):
                 ret.append(v)
+            else:
+                skip = True
         return ' '.join(ret)
 
     def __emit_string(self, s):

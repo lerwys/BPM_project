@@ -350,7 +350,8 @@ class SourceFileFactory:
                         nf = VHDLFile(path, library, vcom_opt)
                 elif extension == 'v' or extension == 'vh' or extension == 'vo':
                         nf = VerilogFile(path, library, vlog_opt, include_dirs)
-                elif extension == 'sv':
+                # Fixed missing svh extension
+                elif extension == 'sv' or extension == 'svh':
                         nf = SVFile(path, library, vlog_opt, include_dirs)
                 elif extension == 'ngc':
                         nf = NGCFile(path)
