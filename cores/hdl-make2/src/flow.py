@@ -31,6 +31,10 @@ ISE_STANDARD_LIBS = ['ieee','ieee_proposed','iSE','simprims','std',
 'synopsys','unimacro','unisims','XilinxCoreLib']
 QUARTUS_STANDARD_LIBS = ['altera', 'altera_mf', 'lpm', 'ieee', 'std']
 MODELSIM_STANDARD_LIBS = ['ieee', 'std']
+ISIM_STARDAND_LIBS = ['std', 'ieee', 'ieee_proposed', 'vl', 'synopsys',
+'simprim', 'unisim', 'unimacro', 'aim', 'cpld', 'pls', 'xilinxcorelib',
+'aim_ver', 'cpld_ver', 'simprims_ver', 'unisims_ver', 'uni9000_ver',
+'unimacro_ver', 'xilinxcorelib_ver', 'secureip']
 
 class ISEProjectProperty:
         def __init__(self,  name, value, is_default = False):
@@ -295,6 +299,8 @@ class ModelsiminiReader(object):
         except Exception:
             raise RuntimeError("Can't open existing Modelsim installation")
 
+        #p.info("Reading 'modelsim.ini' located in: '"+ str(self.path))
+
         reading_libraries = False
         for line in ini:
             line = line.split(";")[0]
@@ -325,7 +331,7 @@ class ModelsiminiReader(object):
 class XilinxsiminiReader(object):
     def __init__(self, path = None):
         if path == None:
-            path = self.xilinx_ini_dir() + "/xilinxsim.ini"
+            path = self.xilinxsim_ini_dir() + "/xilinxsim.ini"
         self.path = path
 
     # Parse the xilinxsim.ini file to get the referenced libraries
@@ -337,7 +343,7 @@ class XilinxsiminiReader(object):
         except Exception:
             raise RuntimeError("Can't open existing xilinxsim.ini file")
 
-        p.vprint("Reading 'xilinxsim.ini' located in: '"+ str(path))
+        #p.info("Reading 'xilinxsim.ini' located in: '"+ str(self.path))
 
         # Read loggical libraries name, skipping comments and other 
         #possible sections

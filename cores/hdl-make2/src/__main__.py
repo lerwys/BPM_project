@@ -101,6 +101,13 @@ def main():
         ManifestParser().help()
         quit()
 
+    # Check later if a simulatuion tool should have been specified
+    if options.make_isim == True:
+        global_mod.sim_tool = "isim"
+    elif options.make_vsim == True:
+        global_mod.sim_tool = "vsim"
+    p.info("Simulation tool: " + global_mod.sim_tool)
+
     p.vprint("LoadTopManifest")
 
 	# Initialize empty module list

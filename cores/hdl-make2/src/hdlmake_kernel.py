@@ -128,7 +128,7 @@ class HdlmakeKernel(object):
 		flist_sorted = solver.solve(flist);
 		self.make_writer.generate_modelsim_makefile(flist_sorted, top_module)
 
-	def generate_isim_makefile(self):
+    def generate_isim_makefile(self):
 #        p.info("Generating makefile for simulation.")
         p.info("Generating ISE Simulation (ISim) makefile for simulation.")
         solver = DependencySolver()

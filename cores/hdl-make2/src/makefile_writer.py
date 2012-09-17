@@ -371,7 +371,7 @@ $(VHDL_OBJ): $(LIB_IND) xilinxsim.ini
 xilinxsim.ini: $(XILINX_INI_PATH)/xilinxsim.ini
 \t\tcp $< .
 clean:
-\t\trm -rf ./xilinxsim.ini $(LIBS)
+\t\trm -rf ./xilinxsim.ini $(LIBS) fuse.xmsgs
 .PHONY: clean
 
 """
@@ -451,17 +451,18 @@ clean:
         for vhdl in fileset.filter(VHDLFile):
             lib = vhdl.library
             purename = vhdl.purename 
-            #each .dat depends on corresponding .vhd file
-            self.write(os.path.join(lib, purename, "."+purename+"_"+ vhdl.extension()) + ": "+vhdl.rel_path()+'\n')
+            #each .dat depends on corresponding .vhd file and its dependencies
+            self.write(os.path.join(lib, purename, "."+purename+"_"+ vhdl.extension()) + ": "+ vhdl.rel_path()+" " + os.path.join(lib, purename, "."+purename) + '\n')
             self.writeln(' '.join(["\t\tvhpcomp $(VHPCOMP_FLAGS)", vhdl.vcom_opt, "-work", lib+"=./"+lib, "$< "]))
             self.writeln("\t\t@mkdir -p $(dir $@) && touch $@\n")
             self.writeln()
-            if len(vhdl.dep_depends_on) != 0:
-                self.write(os.path.join(lib, purename, "."+purename) +":")
-                for dep_file in vhdl.dep_depends_on:
-                    name = dep_file.purename
-                    self.write(" \\\n"+ os.path.join(dep_file.library, name, "."+name))
-                self.write('\n\n')
+            # dependency meta-target. This rule just list the dependencies of the above file
+            #if len(vhdl.dep_depends_on) != 0:
+            self.write(os.path.join(lib, purename, "."+purename) +":")
+            for dep_file in vhdl.dep_depends_on:
+                name = dep_file.purename
+                self.write(" \\\n"+ os.path.join(dep_file.library, name, "."+name+ "_" + vhdl.extension()))
+            self.write('\n\n')
 
     def __get_rid_of_incdirs(self, vlog_opt):
         vlog_opt_vsim = self.__get_rid_of_vsim_incdirs(vlog_opt)
@@ -472,8 +473,7 @@ clean:
         vlogs = vlog_opt.split(' ')
         ret = []
         for v in vlogs:
-            #if not v.startswith("+incdir+"):
-            if not v.startswith("-i"):
+            if not v.startswith("+incdir+"):
                 ret.append(v)
         return ' '.join(ret)
 

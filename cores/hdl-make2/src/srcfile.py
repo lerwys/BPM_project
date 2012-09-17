@@ -103,7 +103,7 @@ class SourceFile(IDependable, File):
 class VHDLFile(SourceFile):
         def __init__(self, path, library = None, vcom_opt = None):
                 SourceFile.__init__(self, path, library);
-                ##self.__create_deps();
+                self.__create_deps();
                 if not vcom_opt:
                     self.vcom_opt = ""
                 else:
@@ -134,11 +134,23 @@ class VHDLFile(SourceFile):
                 non-standard library a tuple (lib, file) is returned in a list.
 
                 """
+                # Modification here!
+                std_libs = []
                 if global_mod.top_module.action == "simulation":
                     try:
-                        std_libs = flow.ModelsiminiReader().get_libraries()
+                        if global_mod.sim_tool == "isim":
+                            std_libs = flow.XilinxsiminiReader().get_libraries()
+                            print "isim seleted!":q
+
+                        elif global_mod.sim_tool == "vsim":
+                            std_libs = flow.ModelsiminiReader().get_libraries()
+                        else:   # global_mod.sim_tool == None:
+                            p.warning("Could not determine simulation tool. Defaulting to ISim")
+                            std_libs =  flow.ISIM_STARDAND_LIBS
                     except RuntimeError:
-                        std_libs =  flow.MODELSIM_STANDARD_LIBS
+                        #std_libs =  flow.MODELSIM_STANDARD_LIBS
+                        p.error("Defaulting simulation tool to ISim")
+                        std_libs =  flow.ISIM_STARDAND_LIBS
                 elif global_mod.top_module.action == "synthesis":
                     if global_mod.top_module.target == "xilinx":
                         std_libs = flow.ISE_STANDARD_LIBS
@@ -163,24 +175,35 @@ class VHDLFile(SourceFile):
                         if m != None:
                                 use_lines.append(m.group(1))
 
+
+                #print("use_lines: " + ' '.join(use_lines))
+                #print("std_libs: " + ' '.join(std_libs))
                 ret = set() 
                 for line in use_lines:
                         m = re.match(lib_pattern, line)
                         if m != None:
-                                #omit standard libraries
+                                #omit standard libraries. Fix this. Ignore ISim std libraries
+                                print("m.group(1): " + (m.group(1)).lower())
+                                print("std_libs: " + ' '.join(std_libs))
                                 if (m.group(1)).lower() in std_libs:
-                                        continue
+                                    
+                                    continue
+                                print("Did not take the continue statement")
                                 if self.library != "work":
                                     #if a file is put in a library, `work' points this library
                                     new = (self.library.lower(), m.group(2).lower())
                                 else:
                                     new = (m.group(1).lower(), m.group(2).lower())
+
+                                p.vprint("new: " + ' '.join(new))
                                 #dont add if the tuple is already in the list
                                 if new in self.dep_provides:
                                     continue
                                 ret.add(new)
 
                 f.close()
+                print("ret: ")
+                print(ret) 
                 return ret
 
         def __search_packages(self):
