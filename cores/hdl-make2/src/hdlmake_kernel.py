@@ -24,6 +24,7 @@
 import os
 import msg as p
 import path
+import global_mod
 from help_printer import HelpPrinter as hp
 from makefile_writer import MakefileWriter
 from flow import ISEProject, ISEProjectProperty
@@ -52,7 +53,13 @@ class HdlmakeKernel(object):
 
         if tm.action == "simulation":
 			# Defaults to isim simulator tool
-            self.generate_isim_makefile()
+            if global_mod.sim_tool == "isim":
+                self.generate_isim_makefile()
+            elif global_mod.sim_tool == "vsim":
+                self.generate_vsim_makefile()
+            else:
+                raise RuntimeError("Unrecognized or not specified simulation tool: "+ str(global_mod.sim_tool))
+                quit()
 			# Force declaration of sim_tool varible in Manifest
 #			if tm.sim_tool == None:
 #				p.error("sim_tool variable must be defined in the manifest")
@@ -136,7 +143,7 @@ class HdlmakeKernel(object):
         pool = self.modules_pool
         if not pool.is_everything_fetched():
             p.echo("A module remains unfetched. "
-                "Fetching must be done prior to makefile generation")
+                "Fetching must be done prior to makefile generation. Try issuing \"hdlmake2 --fetch\"")
             p.echo(str([str(m) for m in self.modules_pool.modules if not m.isfetched]))
             quit()
         top_module = pool.get_top_module()

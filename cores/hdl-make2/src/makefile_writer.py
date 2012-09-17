@@ -356,6 +356,9 @@ clean:
         from flow import XilinxsiminiReader
         make_preambule_p1 = """## variables #############################
 PWD := $(shell pwd)
+FUSE_OUTPUT := fuse_proj
+TOP_MODULE := 
+FUSE_OUTPUT ?= fuse_output
 
 XILINX_INI_PATH := """ + XilinxsiminiReader.xilinxsim_ini_dir() + """
 
@@ -370,8 +373,15 @@ $(VHDL_OBJ): $(LIB_IND) xilinxsim.ini
 
 xilinxsim.ini: $(XILINX_INI_PATH)/xilinxsim.ini
 \t\tcp $< .
+fuse: ;
+ifeq ($(TOP_MODULE),)
+\t\t@echo \"Environment variable TOP_MODULE not set!\"
+else
+\t\tfuse work.${TOP_MODULE} -intstyle ise -incremental -o fuse_output
+endif
 clean:
-\t\trm -rf ./xilinxsim.ini $(LIBS) fuse.xmsgs
+\t\trm -rf ./xilinxsim.ini $(LIBS) fuse.xmsgs fuse.log fuseRelaunch.cmd isim isim.log \
+isim.wdb 
 .PHONY: clean
 
 """
@@ -422,7 +432,8 @@ clean:
         for lib in libs:
             self.write(lib+"/."+lib+":\n")
             self.write(' '.join(["\t(mkdir", lib, "&&", "touch", lib+"/."+lib+" "]))
-            self.write(' '.join(["&&", "echo", "\""+lib+"="+lib+"/."+lib+"\" ", ">>", "xilinxsim.ini) "]))
+            #self.write(' '.join(["&&", "echo", "\""+lib+"="+lib+"/."+lib+"\" ", ">>", "xilinxsim.ini) "]))
+            self.write(' '.join(["&&", "echo", "\""+lib+"="+lib+"\" ", ">>", "xilinxsim.ini) "]))
             self.write(' '.join(["||", "rm -rf", lib, "\n"]))
             self.write('\n')
 
@@ -430,8 +441,13 @@ clean:
             #self.write(' '.join(["\t(echo """, lib+"="+lib+"/."+lib, ">>", "${XILINX_INI_PATH}/xilinxsim.ini"]))
 
         #rules for all _primary.dat files for sv
+        #incdir = ""
+        objs = []
         for vl in fileset.filter(VerilogFile):
-            self.write(os.path.join(vl.library, vl.purename, '.'+vl.purename+"_"+vl.extension())+': ')
+            comp_obj = os.path.join(vl.library, vl.purename)
+            objs.append(comp_obj)
+            #self.write(os.path.join(vl.library, vl.purename, '.'+vl.purename+"_"+vl.extension())+': ')
+            self.write(os.path.join(comp_obj, '.'+vl.purename+"_"+vl.extension())+': ')
             self.write(vl.rel_path() + ' ')
             self.writeln(' '.join([f.rel_path() for f in vl.dep_depends_on]))
             self.write("\t\tvlogcomp -work "+vl.library+"=./"+vl.library)
@@ -451,8 +467,11 @@ clean:
         for vhdl in fileset.filter(VHDLFile):
             lib = vhdl.library
             purename = vhdl.purename 
+            comp_obj = os.path.join(lib, purename)
+            objs.append(comp_obj)
             #each .dat depends on corresponding .vhd file and its dependencies
-            self.write(os.path.join(lib, purename, "."+purename+"_"+ vhdl.extension()) + ": "+ vhdl.rel_path()+" " + os.path.join(lib, purename, "."+purename) + '\n')
+            #self.write(os.path.join(lib, purename, "."+purename+"_"+ vhdl.extension()) + ": "+ vhdl.rel_path()+" " + os.path.join(lib, purename, "."+purename) + '\n')
+            self.write(os.path.join(comp_obj, "."+purename+"_"+ vhdl.extension()) + ": "+ vhdl.rel_path()+" " + os.path.join(lib, purename, "."+purename) + '\n')
             self.writeln(' '.join(["\t\tvhpcomp $(VHPCOMP_FLAGS)", vhdl.vcom_opt, "-work", lib+"=./"+lib, "$< "]))
             self.writeln("\t\t@mkdir -p $(dir $@) && touch $@\n")
             self.writeln()
@@ -463,6 +482,14 @@ clean:
                 name = dep_file.purename
                 self.write(" \\\n"+ os.path.join(dep_file.library, name, "."+name+ "_" + vhdl.extension()))
             self.write('\n\n')
+
+            # Fuse rule
+            #self.write("fuse:")
+            #self.write("ifeq ($(TOP_DESIGN),)")
+            #self.write("\t\techo \"Environment variable TOP_DESIGN not set!\"")
+            #self.write("else")
+            #self.write("\t\tfuse -intstyle ise -incremental")
+            #self.write(".PHONY: $(FUSE_PROJ)")
 
     def __get_rid_of_incdirs(self, vlog_opt):
         vlog_opt_vsim = self.__get_rid_of_vsim_incdirs(vlog_opt)

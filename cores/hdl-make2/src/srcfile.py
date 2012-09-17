@@ -134,14 +134,13 @@ class VHDLFile(SourceFile):
                 non-standard library a tuple (lib, file) is returned in a list.
 
                 """
-                # Modification here!
-                std_libs = []
+                # Modification here! global_mod.top_module.action does not
+                # get set for top module in time. FIX this
+                std_libs = ['std', 'ieee']
                 if global_mod.top_module.action == "simulation":
                     try:
                         if global_mod.sim_tool == "isim":
                             std_libs = flow.XilinxsiminiReader().get_libraries()
-                            print "isim seleted!":q
-
                         elif global_mod.sim_tool == "vsim":
                             std_libs = flow.ModelsiminiReader().get_libraries()
                         else:   # global_mod.sim_tool == None:
@@ -152,6 +151,7 @@ class VHDLFile(SourceFile):
                         p.error("Defaulting simulation tool to ISim")
                         std_libs =  flow.ISIM_STARDAND_LIBS
                 elif global_mod.top_module.action == "synthesis":
+                    print("setting std libs for synthesis...")
                     if global_mod.top_module.target == "xilinx":
                         std_libs = flow.ISE_STANDARD_LIBS
                     elif global_mod.top_module.target == "altera":
@@ -183,27 +183,25 @@ class VHDLFile(SourceFile):
                         m = re.match(lib_pattern, line)
                         if m != None:
                                 #omit standard libraries. Fix this. Ignore ISim std libraries
-                                print("m.group(1): " + (m.group(1)).lower())
-                                print("std_libs: " + ' '.join(std_libs))
+                                #print("m.group(1): " + (m.group(1)).lower())
+                                #print("std_libs: " + ' '.join(std_libs))
                                 if (m.group(1)).lower() in std_libs:
                                     
                                     continue
-                                print("Did not take the continue statement")
+                                #print("Did not take the continue statement")
                                 if self.library != "work":
                                     #if a file is put in a library, `work' points this library
                                     new = (self.library.lower(), m.group(2).lower())
                                 else:
                                     new = (m.group(1).lower(), m.group(2).lower())
 
-                                p.vprint("new: " + ' '.join(new))
+                                #p.vprint("new: " + ' '.join(new))
                                 #dont add if the tuple is already in the list
                                 if new in self.dep_provides:
                                     continue
                                 ret.add(new)
 
                 f.close()
-                print("ret: ")
-                print(ret) 
                 return ret
 
         def __search_packages(self):

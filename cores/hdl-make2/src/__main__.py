@@ -53,7 +53,7 @@ def main():
     default=None, help="generate a makefile for remote synthesis")
 
     parser.add_option("-f", "--fetch", action="store_true", dest="fetch",
-    default=None, help="fetch and/or update remote modules listed in Manifet")
+    default=None, help="fetch and/or update remote modules listed in Manifest")
 
     parser.add_option("--clean", action="store_true", dest="clean",
     default=None, help="remove all modules fetched for this one")
@@ -106,7 +106,7 @@ def main():
         global_mod.sim_tool = "isim"
     elif options.make_vsim == True:
         global_mod.sim_tool = "vsim"
-    p.info("Simulation tool: " + global_mod.sim_tool)
+    p.info("Simulation tool: " + str(global_mod.sim_tool))
 
     p.vprint("LoadTopManifest")
 
