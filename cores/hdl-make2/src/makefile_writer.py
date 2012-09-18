@@ -356,9 +356,8 @@ clean:
         from flow import XilinxsiminiReader
         make_preambule_p1 = """## variables #############################
 PWD := $(shell pwd)
-FUSE_OUTPUT := fuse_proj
 TOP_MODULE := 
-FUSE_OUTPUT ?= fuse_output
+FUSE_OUTPUT ?= isim_proj
 
 XILINX_INI_PATH := """ + XilinxsiminiReader.xilinxsim_ini_dir() + """
 
@@ -377,7 +376,7 @@ fuse: ;
 ifeq ($(TOP_MODULE),)
 \t\t@echo \"Environment variable TOP_MODULE not set!\"
 else
-\t\tfuse work.${TOP_MODULE} -intstyle ise -incremental -o fuse_output
+\t\tfuse work.$(TOP_MODULE) -intstyle ise -incremental -o $(FUSE_OUTPUT)
 endif
 clean:
 \t\trm -rf ./xilinxsim.ini $(LIBS) fuse.xmsgs fuse.log fuseRelaunch.cmd isim isim.log \

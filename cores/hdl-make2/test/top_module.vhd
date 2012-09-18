@@ -8,6 +8,7 @@ use work.gencores_pkg.all;
 entity top_module is
 	port(
 		clk_i	                    : in std_logic;
+		locked_i					: in std_logic;
         blink_o                     : out std_logic_vector(7 downto 0)
 	);
 end top_module;
@@ -18,7 +19,7 @@ architecture rtl of top_module is
     constant c_counter_width        : natural := 4;
 
     -- Global clock and reset signals
-	signal locked 					: std_logic;
+	--signal s_locked 				: std_logic;
 	signal clk_sys_rstn 			: std_logic;
 
 	-- Only one clock domain
@@ -38,13 +39,12 @@ begin
 	cmp_reset : gc_reset
 	port map(
 		free_clk_i 			        => clk_sys,
-		locked_i   			        => locked,
+		locked_i   			        => locked_i,
 		clks_i     			        => reset_clks,
 		rstn_o     			        => reset_rstn
 	);
 
-	-- Simulation only!
-	locked	                        <= '1';
+	-- Simulation only
 	clk_sys		                    <= clk_i;
 	-- End of simulation only!
 	reset_clks(0)                   <= clk_sys;

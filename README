@@ -50,7 +50,7 @@ Known Issues:
 	hdlmake) with Xilinx simulation tool (ISim), there is a know
 	bug. 
 
-	The ISim tool issues an error when trying to return a value
+	The ISim tool may issue an error when trying to return a value
 	with structured access. See example below (extracted from
 	Xilinx Foruns: http://forums.xilinx.com/t5/Simulation-and
 	-Verification/FATAL-ERROR-in-ISIM-Simulator-when-

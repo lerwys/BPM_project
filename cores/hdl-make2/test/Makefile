@@ -5,9 +5,8 @@
 
 ## variables #############################
 PWD := $(shell pwd)
-FUSE_OUTPUT := fuse_proj
 TOP_MODULE := 
-FUSE_OUTPUT ?= fuse_output
+FUSE_OUTPUT ?= isim_proj
 
 XILINX_INI_PATH := /opt/Xilinx/13.4/ISE_DS/ISE/vhdl/hdp/lin64
 
@@ -46,7 +45,8 @@ work/lm32_shifter/.lm32_shifter_v \
 work/lm32_multiplier/.lm32_multiplier_v \
 work/jtag_tap/.jtag_tap_v \
 
-VHDL_SRC := top_module.vhd \
+VHDL_SRC := top_module_tb.vhd \
+top_module.vhd \
 ../../general-cores/modules/common/gencores_pkg.vhd \
 ../../general-cores/modules/common/gc_crc_gen.vhd \
 ../../general-cores/modules/common/gc_moving_average.vhd \
@@ -117,7 +117,8 @@ VHDL_SRC := top_module.vhd \
 ../../general-cores/modules/wishbone/wbgen2/wbgen2_fifo_sync.vhd \
 ../../general-cores/modules/wishbone/wbgen2/wbgen2_pkg.vhd \
 
-VHDL_OBJ := work/top_module/.top_module_vhd \
+VHDL_OBJ := work/top_module_tb/.top_module_tb_vhd \
+work/top_module/.top_module_vhd \
 work/gencores_pkg/.gencores_pkg_vhd \
 work/gc_crc_gen/.gc_crc_gen_vhd \
 work/gc_moving_average/.gc_moving_average_vhd \
@@ -201,7 +202,7 @@ fuse: ;
 ifeq ($(TOP_MODULE),)
 		@echo "Environment variable TOP_MODULE not set!"
 else
-		fuse work.${TOP_MODULE} -intstyle ise -incremental -o fuse_output
+		fuse work.$(TOP_MODULE) -intstyle ise -incremental -o $(FUSE_OUTPUT)
 endif
 clean:
 		rm -rf ./xilinxsim.ini $(LIBS) fuse.xmsgs fuse.log fuseRelaunch.cmd isim isim.log isim.wdb 
@@ -288,6 +289,14 @@ work/jtag_tap/.jtag_tap_v: ../../general-cores/modules/wishbone/wb_lm32/platform
 		@mkdir -p $(dir $@) && touch $@ 
 
 
+
+work/top_module_tb/.top_module_tb_vhd: top_module_tb.vhd work/top_module_tb/.top_module_tb
+		vhpcomp $(VHPCOMP_FLAGS)  -work work=./work $< 
+		@mkdir -p $(dir $@) && touch $@
+
+
+work/top_module_tb/.top_module_tb: \
+work/gencores_pkg/.gencores_pkg_vhd
 
 work/top_module/.top_module_vhd: top_module.vhd work/top_module/.top_module
 		vhpcomp $(VHPCOMP_FLAGS)  -work work=./work $< 
