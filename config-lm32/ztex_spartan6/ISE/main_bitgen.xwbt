@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=C:\Elektronik\FPGA\LM32\Spartan6\ztex_spartan6\ISE\main.ncd
-OUTFILE=C:\Elektronik\FPGA\LM32\Spartan6\ztex_spartan6\ISE\main.bit
-FAMILY=Spartan6
-PART=xc6slx25-3ftg256
-WORKINGDIR=C:\Elektronik\FPGA\LM32\Spartan6\ztex_spartan6\ISE
-LICENSE=WebPack
-USER_INFO=0_0_132

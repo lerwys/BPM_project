@@ -38,5 +38,5 @@ For older versions of Git (<1.6.5), use the following:
 
 To update each submodule within this project use:
 
-	$ git sumodule foreach git rebase origin master
+	$ git submodule foreach git rebase origin master
 
