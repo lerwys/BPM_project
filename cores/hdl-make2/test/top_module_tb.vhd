@@ -62,15 +62,15 @@ begin
 		blink_o							=> s_blink
 	);
 
-	p_locked : process
-	begin
-		s_locked                    <= '1';
-		wait for c_clk_period;
+	--p_locked : process
+	--begin
+	--	s_locked                    <= '0';
+	--	wait for 20 ns;
 		--wait until rising_edge(clk100);
 		--wait until rising_edge(clk100);
 		--wait until rising_edge(clk100);
-		--s_locked                    <= '1';
-	end process p_locked;
+	--	s_locked                    <= '1';
+	--end process p_locked;
 	
 	p_clk_gen : process is
 	begin
@@ -85,9 +85,16 @@ begin
 	
 	p_main_simulation : process is
 	begin
-		wait for c_sim_time;
+	--	wait for c_sim_time;
+	--	g_end_simulation <= true;
+	--	wait;
+		s_locked <= '0';
+		wait for 2*c_clk_period;
+		s_locked <= '1';
+		wait for 100*c_clk_period;
+
+		-- End simualtion
 		g_end_simulation <= true;
-		wait;
 	end process p_main_simulation;
 
 end sim;

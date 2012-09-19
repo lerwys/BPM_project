@@ -37,6 +37,10 @@ architecture rtl of top_module is
 begin
     -- Reset synchronization
 	cmp_reset : gc_reset
+	generic map(
+		g_logdelay					=> 1,
+		g_syncdepth					=> 2
+	)
 	port map(
 		free_clk_i 			        => clk_sys,
 		locked_i   			        => locked_i,
@@ -66,6 +70,8 @@ begin
 			end if;
 		end if;
 	end process;
+
+	blink_o						<= s_blink;
 
 
 end rtl;
