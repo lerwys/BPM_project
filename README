@@ -21,6 +21,12 @@ This repository makes use of git submodules, located at 'cores' folder:
 	cores/wishbone-gen
 	cores/wr-cores
 
+And custom modules (based or not on others):
+	cores/hdl-make2
+
+	Also, there is a modification to the hdlmake program, called
+	hdlmake2, in order to support the ISim simulation software.
+
 To clone the whole repository use the following command:
 
 	$ git clone --recursive git://github.com/lerwys/BPM_project.git
@@ -40,3 +46,31 @@ To update each submodule within this project use:
 
 	$ git submodule foreach git rebase origin master
 
+===============================================
+
+Known Issues:
+
+	If you plan on using the hdlmake2 (modified from the original 
+	hdlmake) with Xilinx simulation tool (ISim), there is a know
+	bug. 
+
+	The ISim tool may issue an error when trying to return a value
+	with structured access. See example below (extracted from
+	Xilinx Foruns: http://forums.xilinx.com/t5/Simulation-and
+	-Verification/FATAL-ERROR-in-ISIM-Simulator-when-
+	derefencing-pointer-to-array/td-p/189894:
+
+	function toString(vector: std_ulogic_vector) return string is
+	begin
+		return toLine(vector).all;
+	end toString;
+
+	The above snippet won't compile. The workaround to this
+	bug is breaking the return line into two.
+
+	function toString(vector:std_ulogic_vector) return string is
+		variable templ : line;
+	begin
+		templ := toLine(vector);
+		return templ.all;
+	end toString;

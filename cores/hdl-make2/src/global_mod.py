@@ -22,4 +22,5 @@
 options = None
 top_module = None
 global_target = "''"
+sim_tool = None
 

@@ -41,7 +41,7 @@ def main():
     default=None, help="generate a ModelSim simulation Makefile")
 
     parser.add_option("--make-isim", dest="make_isim", action="store_true",
-    default=None, help="generate a iSim simulation Makefile")
+    default=None, help="generate a ISE Simulation (ISim) simulation Makefile")
 
     parser.add_option("--make-fetch", dest="make_fetch", action="store_true",
     default=None, help="generate a makefile for modules' fetching")
@@ -53,7 +53,7 @@ def main():
     default=None, help="generate a makefile for remote synthesis")
 
     parser.add_option("-f", "--fetch", action="store_true", dest="fetch",
-    default=None, help="fetch and/or update remote modules listed in Manifet")
+    default=None, help="fetch and/or update remote modules listed in Manifest")
 
     parser.add_option("--clean", action="store_true", dest="clean",
     default=None, help="remove all modules fetched for this one")
@@ -100,6 +100,13 @@ def main():
         from helper_classes import ManifestParser
         ManifestParser().help()
         quit()
+
+    # Check later if a simulatuion tool should have been specified
+    if options.make_isim == True:
+        global_mod.sim_tool = "isim"
+    elif options.make_vsim == True:
+        global_mod.sim_tool = "vsim"
+    p.info("Simulation tool: " + str(global_mod.sim_tool))
 
     p.vprint("LoadTopManifest")
 
