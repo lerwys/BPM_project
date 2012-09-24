@@ -13,3 +13,6 @@
 [submodule "cores/fpga-pcie-drivers"]
 	path = cores/fpga-pcie-drivers
 	url = git://github.com/lerwys/FPGA_PCIe_drivers.git
+[submodule "cores/wrpc-sw"]
+	path = cores/wrpc-sw
+	url = git://ohwr.org/hdl-core-lib/wr-cores/wrpc-sw.git
